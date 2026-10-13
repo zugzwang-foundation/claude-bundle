@@ -1,0 +1,17 @@
+# macOS and editors
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Dependencies and tool folders
+node_modules/
+.vercel/
+
+# Claude Code's local files
+.claude/settings.local.json
+.claude/worktrees/
