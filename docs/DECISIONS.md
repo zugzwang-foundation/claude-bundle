@@ -2,6 +2,19 @@
 
 Status: the project's decision log, one dated line per decision, newest first. Mistakes are fixed in place, with a dated note saying what changed.
 
+- 2026-10-16 — D1 Product: Bundle is an open decision model that sorts a person's AI chats into bundles, with a demo website and a public scoreboard, offered as an open proposal any chat platform can adopt (technical co-founder, BDL-3): docs/SPEC.md.
+- 2026-10-16 — D2 Visitors: the site stores nothing about visitors (no chats, quiz answers, accounts, cookies or analytics), and the model never trains on anything visitors do. Reason: privacy, and test-drive input is noise (technical co-founder, BDL-3): docs/ARCHITECTURE.md.
+- 2026-10-16 — D3 Training data: lessons and exams are written by an open-licensed teacher model we run ourselves; never real chats, never copied web text. Reason: privacy, copyright, and a dataset anyone can reproduce (technical co-founder, BDL-3): pipeline/.
+- 2026-10-16 — D4 Demo content: the website's library is written separately and never used for lessons or exams. Reason: it keeps the demo an honest test (technical co-founder, BDL-3): web/src/content/library/.
+- 2026-10-16 — D5 Model: a small student fine-tuned from an open encoder answers "which bundle, or none" with probabilities and is small enough to run in a browser. Reason: no servers, no cost per use, chats never leave the device (technical co-founder, BDL-3): docs/ARCHITECTURE.md.
+- 2026-10-16 — D6 Rules: file, suggest or leave loose. Cut-offs come from calibration on practice data (targets: 95% precision to file, 80% to suggest) (technical co-founder, BDL-3): docs/ARCHITECTURE.md.
+- 2026-10-16 — D7 Evaluation: lessons, practice tests and a sealed exam are split by person and never mixed. A release ships only if it beats the previous one on the exam. Every result is published (technical co-founder, BDL-3): scoreboard/.
+- 2026-10-16 — D8 Web stack: a static site (Vite, React, TypeScript) to be hosted on Vercel; no backend; Supabase unused until something needs it; Node pinned to 24.21.0. Reason: version 1 has no server work (technical co-founder, BDL-3): web/, .node-version.
+- 2026-10-16 — D9 ML stack: a Python pipeline managed by uv. The teacher is reached over an OpenAI-compatible HTTP API, so the same code runs on the Mac and on the DGX Spark (technical co-founder, BDL-3): pipeline/.
+- 2026-10-16 — D10 Compute: the DGX Spark runs the teacher and the real training from BDL-4. BDL-3's Mac run only proves the loop (technical co-founder, BDL-3).
+- 2026-10-16 — D11 Comparators: a no-training baseline, the previous student, Clef-flash (open), and Claude Haiku 5.5 checked weekly. Haiku needs a paid API key and Hrishikesh's approval, and is never part of the product (technical co-founder, BDL-3): scoreboard/.
+- 2026-10-16 — D12 Licences: datasets CC BY 4.0, like the docs; model weights Apache-2.0, so base models must be Apache-2.0 or MIT (technical co-founder, BDL-3): README.md.
+- 2026-10-16 — D13 Naming and publishing: "Bundle" is a working name. Nothing is deployed or published until the public name is settled (open item 3). SPEC.md and ARCHITECTURE.md join the files mirrored to project knowledge (technical co-founder, BDL-3): CLAUDE.md.
 - 2026-10-13 — The setup went straight to main as the first commit; from then on, every change goes through a pull request (BDL-1): CLAUDE.md.
 - 2026-10-13 — Licences: code Apache-2.0; documentation, meaning the Markdown files and docs/, CC BY 4.0 (technical co-founder): LICENSE, LICENSE-docs, README.md.
 - 2026-10-13 — Pull requests from outside contributors are merged only by the founder (founder): CLAUDE.md.
