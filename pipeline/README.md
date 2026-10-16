@@ -199,8 +199,9 @@ difficulty labels in each person. 6.8 KB. `tests/test_schema.py` checks it loads
 into `Person` and meets those counts; `tests/test_cli.py` checks the subcommand
 set, that stubs fail loudly and that `--data-root` rebuilds every default path.
 The whole suite runs offline (`HF_HUB_OFFLINE=1 uv run pytest`): the teacher is
-`httpx.MockTransport`, the encoder a hash-based fake. 129 passed, 1 skipped,
-about 1.5 s, on 2026-10-16.
+`httpx.MockTransport`, the encoder a hash-based fake. 137 passed, 1 skipped,
+about 1 s, on 2026-10-16 (`test_followup_toy.py` adds the pair contract, the
+rank-based AUC against scikit-learn and the `followup-toy` CLI on the fixture).
 
 ## Disk, recorded on 2026-10-16
 
@@ -228,6 +229,7 @@ timed on a 1000-example replica. Nothing here needs `datasets`, `accelerate`,
 | `exam.py` | the metrics (definitions in the module docstring) and the sealed exam: checks `splits/exam.sha256`, runs B0, B1 (defaults, or `--b1-calibration`) and B2 (student + `calibration.json`), writes `runs/exam-<run-id>.json`. |
 | `scoreboard.py` | `runs/exam-<run-id>.json` -> `scoreboard/runs/<run-id>.json` at the repository root in the contract shape (sorter entries carry exactly the fourteen contract keys; parameters go into `notes`), plus the winner line (B2 beats B1 or the site keeps B1). |
 | `export.py` | `torch.onnx.export(dynamo=False)` of the student's transformer (opset 14, dynamic batch and sequence), `quantize_dynamic` int8 per-channel, Transformers.js layout, `manifest.json`, `export_report.json`, `compare_embeddings` (PyTorch vs onnxruntime on 32 fixture texts). |
+| `followup_toy.py` | the second question at toy scale, `followup-toy`: (later chat, earlier chat) pairs inside one person, positives from the same thread, balanced anchor-matched negatives from other threads and loose chats; cosine score, threshold fit on practice, ROC-AUC, precision and recall for "follow-up" with bootstrap intervals; `scripts/w6_followup_paired.py` adds the paired student-minus-base bootstrap. |
 
 ### Commands, in order (after `generate`, `validate`, `split`, `tasks`)
 
@@ -239,6 +241,7 @@ uv run bundle-pipeline calibrate                            # practice -> data/m
 uv run bundle-pipeline exam --run-id 2026-10-16-toy-v0      # sealed exam: B0, B1, B2 -> data/runs/exam-<run-id>.json
 uv run bundle-pipeline export --run-id 2026-10-16-toy-v0    # -> data/models/student-v0-onnx/{config.json,tokenizer*.json,onnx/,manifest.json}
 uv run bundle-pipeline scoreboard --run-id 2026-10-16-toy-v0  # -> scoreboard/runs/2026-10-16-toy-v0.json (repo root)
+uv run bundle-pipeline followup-toy --device mps            # the second question at toy scale -> data/runs/followup-toy.json
 ```
 
 Useful switches: `--device cpu|mps` everywhere a model loads (default `auto`:
@@ -262,11 +265,28 @@ for the smaller, worse int8 variant.
 The relay asks for cosine >= 0.999 between PyTorch and the browser runtime.
 fp32 ONNX meets it; **no int8 variant does on this stack** (best 0.994 with
 per-channel weights), and `export_report.json` records the gap
-(`int8_meets_target: false`). The Transformers.js (Node) comparison is W6's,
-not run here. `dtype` in `manifest.json` is `"q8"`, the name Transformers.js
-uses for its dynamically quantised int8 weights (NOT VERIFIED against the
-installed Transformers.js version). transformers 5 no longer writes
+(`int8_meets_target: false`). The Transformers.js (Node) comparison
+(docs/parity.md) reproduces both figures on the student's export: fp32 min
+cosine 1.00000000, int8 0.99153044, so the gap is the quantisation, not the
+runtime. `dtype` in `manifest.json` is `"q8"`, the string that makes
+Transformers.js 4.3.0 open `onnx/model_quantized.onnx` (verified in the
+installed library, docs/parity.md). transformers 5 no longer writes
 `special_tokens_map.json`; `export` writes it from `tokenizer.special_tokens_map`.
+
+### W6 scripts and documents (the toy run of 2026-10-16)
+
+`scripts/w6_*.py` (run with `uv run python scripts/<name>.py`) add to the board
+what the CLI does not compute: `w6_bootstrap_cutoffs.py` (bootstrap intervals of
+the calibration), `w6_history_buckets.py` (accuracy by history length, answer
+type and difficulty; the paired B2-minus-B1 bootstrap; the int8 exam effect),
+`w6_board_extras.py` (counts, calibration, teacher, student, export and the
+buckets onto the board), `w6_second_encoder.py` (B1b), `w6_parity_torch.py`,
+`w6_parity_node.mjs` and `w6_parity_compare.py` (Transformers.js in Node against
+PyTorch), `w6_followup_paired.py` and `w6_followup_board.py` (the follow-up toy)
+and `w6_board_finalise.py` (checks the finished board and fixes its gaps). The
+results are written up in `docs/toy-run.md` (the run and the verdict),
+`docs/toy-teacher.md`, `docs/parity.md` and `docs/follow-up-toy.md`; the board
+format is described in `scoreboard/README.md` at the repository root.
 
 ### Known limits
 
