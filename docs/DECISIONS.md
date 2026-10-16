@@ -2,6 +2,11 @@
 
 Status: the project's decision log, one dated line per decision, newest first. Mistakes are fixed in place, with a dated note saying what changed.
 
+- 2026-10-16 — The site keeps the untrained base encoder (B1) with its toy calibration: student v0 beat it by 3 of 114 exam decisions, inside the bootstrap interval of the difference, and a shipped student needs a hosted model file, which the 5 MB rule forbids in the repository (Claude Code, BDL-3): scoreboard/runs/2026-10-16-toy-v0.json, web/src/sorter/calibration.json.
+- 2026-10-16 — The toy teacher runs on llama.cpp's llama-server, not mlx-lm or Ollama, which were absent; llama-server documents JSON mode, seeds and parallel slots. Model: Qwen3-4B-Instruct-2507 Q4_K_M, Apache-2.0 (Claude Code, BDL-3): pipeline/docs/toy-teacher.md.
+- 2026-10-16 — Export uses torch.onnx.export plus onnxruntime quantize_dynamic, because optimum-onnx pins transformers below 4.58 and cannot coexist with sentence-transformers 6 (Claude Code, BDL-3): pipeline/README.md.
+- 2026-10-16 — The website pins Vite 8.3.2 and TypeScript 7.0.2, where research track R4 would have chosen 8.3.3 and 6.0.3; kept because typecheck, tests, build and e2e were green, and recorded here rather than churned (Claude Code, BDL-3): web/package.json, docs/research/README.md.
+- 2026-10-16 — Mistake, fixed from PR #3 on: the squash commits of PR #1 and PR #2 carry a Co-authored-by trailer against the founder rule; main is never rewritten, so they stay (Claude Code, BDL-3).
 - 2026-10-16 — D1 Product: Bundle is an open decision model that sorts a person's AI chats into bundles, with a demo website and a public scoreboard, offered as an open proposal any chat platform can adopt (technical co-founder, BDL-3): docs/SPEC.md.
 - 2026-10-16 — D2 Visitors: the site stores nothing about visitors (no chats, quiz answers, accounts, cookies or analytics), and the model never trains on anything visitors do. Reason: privacy, and test-drive input is noise (technical co-founder, BDL-3): docs/ARCHITECTURE.md.
 - 2026-10-16 — D3 Training data: lessons and exams are written by an open-licensed teacher model we run ourselves; never real chats, never copied web text. Reason: privacy, copyright, and a dataset anyone can reproduce (technical co-founder, BDL-3): pipeline/.

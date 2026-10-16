@@ -1,0 +1,40 @@
+{
+  "name": "bundle-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "24.21.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run precompute && npm run typecheck && npm run build:web",
+    "build:web": "vite build",
+    "prebuild:web": "node scripts/copy-ort.mjs",
+    "predev": "node scripts/copy-ort.mjs",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "test": "vitest run",
+    "pree2e": "npm run build:web",
+    "e2e": "playwright test",
+    "precompute": "node scripts/precompute-embeddings.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "4.3.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@biomejs/biome": "2.5.15",
+    "@playwright/test": "1.63.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.2",
+    "vitest": "5.0.3"
+  }
+}

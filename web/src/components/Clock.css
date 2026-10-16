@@ -1,0 +1,84 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  max-width: 100%;
+}
+
+.clock__dial {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.clock__face {
+  fill: var(--surface);
+  stroke: var(--line);
+  stroke-width: 1.5;
+}
+
+.clock__ring {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.clock__tick {
+  stroke: var(--muted);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+}
+
+.clock__tick--major {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.clock__hand {
+  stroke: var(--ink);
+  stroke-linecap: round;
+}
+
+.clock__hand--hour {
+  stroke-width: 4;
+}
+
+.clock__hand--minute {
+  stroke-width: 2.5;
+}
+
+.clock__pin {
+  fill: var(--accent);
+}
+
+.clock__label {
+  min-height: 1.4em;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-align: center;
+}
+
+.clock__month {
+  display: inline-block;
+  animation: clock-flip var(--dur) var(--ease);
+}
+
+@keyframes clock-flip {
+  from {
+    opacity: 0;
+    transform: translateY(0.6em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
