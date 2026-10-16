@@ -1,0 +1,248 @@
+{
+  "interest": "study",
+  "label": "Study",
+  "threads": [
+    {
+      "id": "study-t1",
+      "topic": "Passing a professional exam while working full time",
+      "chats": [
+        {
+          "id": "study-t1-c1",
+          "title": "Studying again after ten years",
+          "question": "ok so i signed up for a professional cert exam and i havent studied for anything since uni like 10 yrs ago. where do i even start",
+          "reply": "Start smaller than feels productive. Day one is just reading the exam outline and splitting it into topics. Day two, do twenty minutes on the easiest one. You are rebuilding a habit, not cramming yet. The rust comes off faster than you expect, usually within a couple of weeks of showing up.",
+          "paraphrase": "the one where i had just signed up for a cert and asked how to even begin"
+        },
+        {
+          "id": "study-t1-c2",
+          "title": "Fitting study around a nine to five",
+          "question": "i work 9-5 and im wiped by 7. when am i supposed to actually study for this thing?",
+          "reply": "Mornings, probably. Forty-five minutes before work, when your brain is fresh and nobody is messaging you, beats two tired hours at night. Keep weekday evenings for light review only, and put one longer block on the weekend. Protect the morning slot like a meeting you cannot move.",
+          "paraphrase": "when i was too tired after work and wanted to know when to do the exam prep"
+        },
+        {
+          "id": "study-t1-c3",
+          "title": "Using the commute to learn",
+          "question": "40 min train each way. can i actually use that for studying or is it a waste",
+          "reply": "It is a gift. Mornings on the train suit active recall: flashcards or quizzing yourself on yesterday's topic. Evenings suit listening, so record yourself explaining a concept and play it back. Skip anything that needs a desk, like practice problems. Eighty minutes a day adds up to several hours a week you did not have.",
+          "paraphrase": "the chat about whether forty minutes on the train could count as revision"
+        },
+        {
+          "id": "study-t1-c4",
+          "title": "Memorising hundreds of definitions",
+          "question": "there are like 300 definitions i have to know and they all blur together. brute force or is there a trick",
+          "reply": "Not brute force. Group them into families first, since a definition sticks better next to its cousins. Then test yourself instead of rereading: cover the answer, say it out loud, check. Space the reviews out, with a day, then three, then a week. The ones you keep missing go on a short list you hit every morning.",
+          "paraphrase": "when the terminology list was blurring together and i wanted a smarter way than cramming"
+        },
+        {
+          "id": "study-t1-c5",
+          "title": "Practice exam scores are low",
+          "question": "did my first practice test and got 52%. exam is in 3 months. should i panic",
+          "reply": "No. A first practice score is a map, not a verdict. Go question by question and sort each miss into did not know, misread, or ran out of time. Those are three different fixes. Most people jump a lot between the first and second attempt simply because they learn how the questions are worded.",
+          "paraphrase": "the one where my first mock result was bad and i asked if i should be worried"
+        },
+        {
+          "id": "study-t1-c6",
+          "title": "Losing steam in month four",
+          "question": "month 4 and i just dont care anymore. i sit down and scroll instead. how do people keep going",
+          "reply": "Month four is where almost everyone sags, so this is normal rather than a character flaw. Shrink the sessions to twenty minutes for a week and finish each one on purpose. Change the room. Tell one person your exam date. Motivation comes back once you see progress again, and progress needs small wins, not willpower.",
+          "paraphrase": "when i was scrolling instead of revising and asked how to get motivation back"
+        },
+        {
+          "id": "study-t1-c7",
+          "title": "The last week before the exam",
+          "question": "exam is next thursday. do i cram everything this week or chill",
+          "reply": "Neither. Light and specific. Spend the first half of the week on your weakest two topics and one timed practice paper. Then taper: short reviews, good sleep, and nothing new after the weekend. The day before, pack your bag, check the route, and stop by early evening. A rested brain outperforms a stuffed one.",
+          "paraphrase": "the chat where i asked whether to go hard or take it easy in the final days"
+        },
+        {
+          "id": "study-t1-c8",
+          "title": "Passed, now what",
+          "question": "I PASSED. ok now that its done, how do i not forget everything in six months",
+          "reply": "Congratulations. You will forget the trivia and keep the structure, and that is fine. To hold onto the useful parts, pick one topic a month to use at work or explain to a colleague. Keep your notes somewhere you can find them. And take a proper fortnight off before you even think about the next certificate.",
+          "paraphrase": "the one right after the result came through, asking how to keep the knowledge"
+        }
+      ],
+      "continuation": {
+        "question": "thinking about doing the next level cert. anything i should do differently this time?",
+        "reply": "Yes, a few things. Go back to {{chat:2}} and lock the morning slot in from week one rather than month two. Keep what worked in {{chat:3}}, since that train time carried you. Book a practice paper early and remember {{chat:5}}: the first result teaches you more than it judges you. Expect the dip from {{chat:6}} and plan a lighter week before it arrives."
+      }
+    },
+    {
+      "id": "study-t2",
+      "topic": "Learning Italian from scratch for a family dinner",
+      "chats": [
+        {
+          "id": "study-t2-c1",
+          "title": "Italian in a year, realistic?",
+          "question": "my partners family is italian and barely speaks english. dinner with them next summer. can i learn enough italian in a year from literally zero",
+          "reply": "Enough to be warm and understood at a dinner table, yes. Fluent, no, and nobody there will expect it. Aim for the conversations that will actually happen: greetings, food, family, compliments, and a few questions you can ask. Twenty focused minutes a day beats a two-hour Sunday binge. Start with sounds, since Italian pronunciation is friendly.",
+          "paraphrase": "the one where i asked if twelve months was enough to chat with my partner's relatives"
+        },
+        {
+          "id": "study-t2-c2",
+          "title": "Learning vocabulary that sticks",
+          "question": "i learn 30 words, next day i know 4 of them. what am i doing wrong",
+          "reply": "Nothing wrong, just learning words naked. Give each one a sentence you would actually say, ideally about your own life. Review them tomorrow, then in three days, then next week, and always from Italian to meaning and back. Say them out loud. Six words that stick beat thirty that evaporate.",
+          "paraphrase": "when the new words kept vanishing overnight and i wanted them to stay"
+        },
+        {
+          "id": "study-t2-c3",
+          "title": "Why does every noun have a gender",
+          "question": "why is a table female and a book male. how am i supposed to remember this stuff for every single noun",
+          "reply": "You mostly will not memorise it; you will absorb it. Always learn a noun with its article attached, so it becomes one sound. Italian is kind here, since the ending usually tells you. Learn the handful of exceptions as a short list and let the rest come with exposure. Native speakers forgive gender slips instantly.",
+          "paraphrase": "the chat about tables being feminine and books masculine and how to cope"
+        },
+        {
+          "id": "study-t2-c4",
+          "title": "Can't follow fast native speech",
+          "question": "i can read a menu fine but when actual italians talk it's just one long noise. how do i get my ears to catch up",
+          "reply": "Your ears are behind your eyes, which is normal at this stage. Listen to the same short clip several times: first for the gist, then with a transcript, then without. Shadow it by repeating a half-second behind the speaker. Slow spoken content at first, then real speed. Comprehension arrives in jumps, not a slope.",
+          "paraphrase": "when spoken conversation sounded like one long noise and i wanted to understand it"
+        },
+        {
+          "id": "study-t2-c5",
+          "title": "Stuck on a plateau after four months",
+          "question": "4 months in and i feel like ive stopped improving. same mistakes, same level. is this normal or am i done",
+          "reply": "Completely normal and nowhere near done. The early gains are loud; the middle ones are quiet. You are consolidating. Change the input for two weeks: switch from lessons to something you enjoy, like a cooking show in Italian, with no studying attached. Then write three sentences a day. The next jump usually comes right after the flat stretch.",
+          "paraphrase": "the one where i felt my progress had flatlined and asked if that was okay"
+        },
+        {
+          "id": "study-t2-c6",
+          "title": "Practising speaking with nobody around",
+          "question": "no italians near me and my partner laughs when i try. how do i practice actually talking",
+          "reply": "Talk to yourself, seriously. Narrate what you are doing while cooking or walking, in Italian, badly. Record a one-minute voice note each day about your day and listen back the next morning. Shadow native speech out loud. Ask your partner for one honest sentence correction a day, with a no-laughing clause attached.",
+          "paraphrase": "when i had no conversation partner and asked how to get my mouth moving in italian"
+        },
+        {
+          "id": "study-t2-c7",
+          "title": "Phrases for the family dinner",
+          "question": "dinner is in 3 weeks. give me the phrases that will actually matter at an italian family table",
+          "reply": "Compliment the food early and often, and mean it. Learn how to say that something is delicious, that you would love a little more, and that you are full but happy. Have one question ready for each person: where they grew up, what they cook best. And the magic one: asking someone to repeat more slowly, with a smile.",
+          "paraphrase": "the chat where i wanted the sentences that would matter most at the table"
+        },
+        {
+          "id": "study-t2-c8",
+          "title": "Dinner went fine, keeping it up",
+          "question": "dinner happened!! i understood maybe half and they were so nice about it. how do i not lose this now that the deadline is gone",
+          "reply": "Half is a real achievement for a year from zero. Now swap the deadline for a habit: a short voice message to one relative each week, and ten minutes of listening with your morning coffee. Set the next goal as a conversation, not an exam, like calling someone on their birthday. Language fades slowly if you keep touching it.",
+          "paraphrase": "the one after the big meal, asking how to hold onto the language without a target date"
+        }
+      ],
+      "continuation": {
+        "question": "theyve invited us to stay with them for two weeks next spring. how do i level up before then?",
+        "reply": "Two weeks living with them will teach you more than the whole year did. Before you go, revisit {{chat:4}}, because listening is what breaks down first in a loud kitchen. Keep the daily voice notes from {{chat:6}} going, and widen {{chat:7}} to everyday life: shops, directions, asking where the towels are. Expect a flat day or two, like {{chat:5}}, and push through it."
+      }
+    },
+    {
+      "id": "study-t3",
+      "topic": "Writing a master's dissertation over nine months",
+      "chats": [
+        {
+          "id": "study-t3-c1",
+          "title": "Picking a dissertation topic",
+          "question": "have to choose my masters dissertation topic by friday and everything sounds either boring or impossible. help",
+          "reply": "Look for the question you keep arguing about with classmates, then shrink it until it fits in nine months. Boring usually means too broad; impossible usually means too much data. Pick something your supervisor has actually touched, so the help is real. Then write the question as one sentence and see if you still care tomorrow.",
+          "paraphrase": "when i had until friday to decide what my thesis would be about"
+        },
+        {
+          "id": "study-t3-c2",
+          "title": "How much reading for a lit review",
+          "question": "how many papers is a lit review supposed to cover. ive got 40 open tabs and im scared to close any",
+          "reply": "Enough to show you know the conversation, not the whole library. For a master's, a few dozen that you actually use is plenty. Sort your tabs into three piles: central, supporting, and skim. Read the central ones properly. Close the rest with a one-line note each. Nobody fails for missing the fortieth paper.",
+          "paraphrase": "the one about forty open tabs and how many sources were enough"
+        },
+        {
+          "id": "study-t3-c3",
+          "title": "Reading academic papers faster",
+          "question": "each paper takes me 2 hours and i understand half. is there a way to read these things faster",
+          "reply": "Read out of order. Abstract, then the conclusion, then the figures, then decide whether the method section deserves you. Most papers want you to know one finding and one caveat. Write a three-line summary in your own words before moving on; if you cannot, read the discussion again. Two hours becomes forty minutes with practice.",
+          "paraphrase": "when each journal article was eating two hours and i wanted a quicker method"
+        },
+        {
+          "id": "study-t3-c4",
+          "title": "Emailing my supervisor without dread",
+          "question": "i havent emailed my supervisor in 6 weeks because i feel like i have nothing to show. how do i write this email",
+          "reply": "Write it today, short and plain. Say where you are, name the one thing you are stuck on, and ask for twenty minutes. Supervisors worry about silence far more than about slow progress. Nobody expects a breakthrough every month. Six weeks is not a scandal; six months would be. Send it before you reread it.",
+          "paraphrase": "the one where i had gone quiet on my advisor for weeks and needed to break the silence"
+        },
+        {
+          "id": "study-t3-c5",
+          "title": "My first draft is terrible",
+          "question": "wrote the first full draft and its honestly garbage. repetitive, no argument, half the citations missing. do i start over",
+          "reply": "No, and congratulations: a bad full draft is the hardest thing in the whole project, and you have one. Everything from here is editing, which is a kinder job. Leave it for three days. Then read it once without a pen, just to find the argument hiding in it. Rewrite the introduction last.",
+          "paraphrase": "when i finished a complete version and hated it and asked whether to begin again"
+        },
+        {
+          "id": "study-t3-c6",
+          "title": "Four thousand words over the limit",
+          "question": "limit is 15000 words and im at 19000. what gets cut without wrecking the argument",
+          "reply": "Cut in this order: throat-clearing openings to each section, summaries of things you already said, quotations that could be paraphrases, and your third example wherever two would do. Then look at the literature review, which is usually bloated. Keep every sentence that moves the argument forward. Four thousand words is one honest afternoon.",
+          "paraphrase": "the chat about trimming a bloated thesis down to the allowed length"
+        },
+        {
+          "id": "study-t3-c7",
+          "title": "Referencing is a nightmare",
+          "question": "formatting 60 references by hand at midnight. is there a sane way to do citations or do i just suffer",
+          "reply": "There is a sane way: a reference manager, any decent one. It stores each source once and formats the list for you in whatever style the department wants. Set it up now, even this late, and import as you go. Still check the final list by eye, because the tools mangle capital letters and page ranges.",
+          "paraphrase": "the one where i was formatting sixty citations by hand at midnight"
+        },
+        {
+          "id": "study-t3-c8",
+          "title": "Preparing for the viva",
+          "question": "submitted!!! the oral defence is in 3 weeks. what do they actually ask and how do i prep without going insane",
+          "reply": "They ask why: why this question, why this method, why this conclusion and not another. Reread your own work once, slowly, and write the three weaknesses you would attack if it were someone else's. Prepare a two-minute summary you could say to a stranger. Then stop. Examiners want a conversation, not a performance.",
+          "paraphrase": "when the thesis was handed in and i wanted to get ready for the questions panel"
+        }
+      ],
+      "continuation": {
+        "question": "viva went well, minor corrections only. im thinking about a phd. am i mad?",
+        "reply": "Not mad, but go in with your eyes open. A doctorate starts the way {{chat:1}} did, then stretches over years, so the question has to be one you still love when it is boring. Remember how {{chat:4}} felt, because the supervisor relationship matters even more. And {{chat:5}} will happen three or four times, not once. If that sounds survivable rather than terrifying, you are probably ready."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "study-o1",
+      "title": "Does highlighting actually work",
+      "question": "i highlight basically everything in my textbook. does that do anything or am i just colouring in",
+      "reply": "Mostly colouring in, sadly. Highlighting feels like learning because the page looks worked on, but your brain did not have to retrieve anything. If you like the pens, keep them for one rule: highlight only after you have closed the book and tried to recall the page. Then mark what you missed, not what sounded important.",
+      "paraphrase": "the one where i wondered if colouring my textbook in yellow was doing anything"
+    },
+    {
+      "id": "study-o2",
+      "title": "Studying in bed, bad idea?",
+      "question": "i do all my reading in bed because my desk is depressing. is that actually bad for studying",
+      "reply": "Bad for two things: your focus and your sleep. Your brain links places with activities, so a bed that is also a library becomes worse at both. If the desk is the problem, fix the desk: a lamp, a plant, a chair you do not hate. Keep the bed for the thing it is good at.",
+      "paraphrase": "when i asked whether doing all my reading under the duvet was a mistake"
+    },
+    {
+      "id": "study-o3",
+      "title": "Music or silence while studying",
+      "question": "do i focus better with music or silence? everyone says different things",
+      "reply": "Depends on the task. Reading and writing compete with lyrics for the same part of your attention, so instrumental or silence wins there. Repetitive tasks like copying out or organising notes go fine with anything you enjoy. If a track makes you want to sing along, it is costing you. Try a week of each and notice.",
+      "paraphrase": "the chat where i asked if having something playing in the background helps me concentrate"
+    },
+    {
+      "id": "study-o4",
+      "title": "Handwritten notes versus typing",
+      "question": "is writing notes by hand actually better or is that just something teachers say",
+      "reply": "Partly true, for an unglamorous reason: writing by hand is slow, so you are forced to summarise instead of transcribing, and the summarising is the learning. Typing lets you catch everything and understand nothing. If you prefer a keyboard, keep the benefit by closing the slides and typing from memory afterwards.",
+      "paraphrase": "when i wanted to know if pen and paper beat a laptop in class"
+    },
+    {
+      "id": "study-o5",
+      "title": "Can you learn while asleep",
+      "question": "if i play a recording of my notes while i sleep will any of it go in",
+      "reply": "Not the content, no. Your sleeping brain is busy filing what you learned while awake, and it does not take new deliveries. What sleep does do is huge: a full night after a study session cements it far better than the same hours spent cramming. So the recording is useless, but the early bedtime is the trick.",
+      "paraphrase": "the one where i asked if playing a recording overnight would sink in"
+    },
+    {
+      "id": "study-o6",
+      "title": "Is speed reading a real thing",
+      "question": "my mate says he reads 1000 words a minute with some speed reading technique. is that real or is he skimming and calling it reading",
+      "reply": "Mostly skimming with good PR. Eyes can move faster, but understanding has a ceiling, and past a point you are just recognising words without holding them. What does help: knowing what you are looking for before you start, reading the headings first, and skipping what you already know. Slower on the hard bits, faster on the rest.",
+      "paraphrase": "when a friend claimed to get through a thousand words a minute and i asked if that was legit"
+    }
+  ]
+}

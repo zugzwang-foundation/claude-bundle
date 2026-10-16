@@ -1,0 +1,248 @@
+{
+  "interest": "health",
+  "label": "Health and wellbeing",
+  "threads": [
+    {
+      "id": "health-t1",
+      "topic": "Fixing months of broken sleep",
+      "chats": [
+        {
+          "id": "health-t1-c1",
+          "title": "Waking at 3am every night",
+          "question": "ok so i keep waking up at like 3am and then just lie there for ages. why does this happen and how do i stop it",
+          "reply": "Common, and usually nothing serious. Lighter sleep comes in the second half of the night, so a noise, a warm room or a busy mind can tip you awake. Keep the lights off, don't check the time, and if you're still awake after twenty minutes, get up and do something dull. If it drags on, a doctor can check.",
+          "paraphrase": "the chat about staring at the ceiling in the small hours"
+        },
+        {
+          "id": "health-t1-c2",
+          "title": "Afternoon coffee and sleep",
+          "question": "how late is too late for coffee? had one at 4pm and was wired till 1am lol",
+          "reply": "Caffeine hangs around longer than it feels: a good chunk of a 4pm cup is still in your system at bedtime. Many people sleep better with a cut-off in the early afternoon, say before 2pm. Try it for a week and compare. Decaf or herbal tea covers the ritual without the kick.",
+          "paraphrase": "the time i asked when my last caffeine of the day should be"
+        },
+        {
+          "id": "health-t1-c3",
+          "title": "Phone in bed and sleep quality",
+          "question": "be honest, is scrolling in bed actually that bad or is that just a thing people say",
+          "reply": "A bit of both. The light matters less than the content: one more clip is designed to keep you going, and that alertness is what delays sleep. Try charging your phone across the room and reading something on paper for the last half hour. Boring is the goal.",
+          "paraphrase": "the one about doomscrolling before lights out"
+        },
+        {
+          "id": "health-t1-c4",
+          "title": "Building a wind-down routine",
+          "question": "i need some kind of evening routine so my brain knows its bedtime. what actually works?",
+          "reply": "Keep it short and repeatable, about thirty minutes. Same order each night: dim the main lights, do a slow tidy, warm shower, then something quiet like stretching or a paper book. Pick a consistent lights-out time, even on nights you don't feel tired. Your brain learns the sequence faster than you'd expect.",
+          "paraphrase": "the chat where i wanted a nightly ritual to signal that it is time to rest"
+        },
+        {
+          "id": "health-t1-c5",
+          "title": "Weekend lie-ins and Monday tiredness",
+          "question": "why am i MORE tired after sleeping till 11 on sunday?? makes no sense",
+          "reply": "That's social jet lag: a long lie-in shifts your body clock later, so Monday morning feels like an early flight. Keep weekend wake-up within about an hour of your weekday time, and get outside into daylight soon after. If you're short on sleep, a twenty-minute nap beats a three-hour lie-in.",
+          "paraphrase": "the one about feeling worse after sleeping in on a sunday"
+        },
+        {
+          "id": "health-t1-c6",
+          "title": "Racing thoughts at bedtime",
+          "question": "lying in bed and my brain just replays every conversation i had today. how do people shut that off",
+          "reply": "You can't switch it off, but you can park it. Ten minutes before bed, write tomorrow's to-dos and whatever is bugging you on paper, then close the notebook. In bed, try slow breathing: in for four, out for six, for a few minutes. If worry fills the days too, a doctor or counsellor can help.",
+          "paraphrase": "the chat about my brain replaying the whole day when i lie down"
+        },
+        {
+          "id": "health-t1-c7",
+          "title": "Trying a sleep tracker",
+          "question": "thinking about getting a sleep tracker, will it actually help or just stress me out",
+          "reply": "They're decent at spotting patterns, like late caffeine or short nights, and rough at scoring sleep stages. Use one for two or three weeks to learn your habits, then step back. If you find yourself fretting about your score, that fretting is worse for sleep than whatever the number says.",
+          "paraphrase": "the one where i asked if wearing a gadget to measure my nights was a good idea"
+        },
+        {
+          "id": "health-t1-c8",
+          "title": "Keeping good sleep going",
+          "question": "update: i've slept properly for like 3 weeks straight!! how do i keep this going without being obsessive about it",
+          "reply": "That's a big deal, well done. Keep the two anchors that matter most: a steady wake time and the caffeine cut-off. Let everything else flex. One bad night is noise, not failure; go back to the routine the next evening. Check in on yourself monthly rather than nightly.",
+          "paraphrase": "the chat celebrating three solid weeks of rest and asking how to hold onto it"
+        }
+      ],
+      "continuation": {
+        "question": "i'm flying across time zones next month for work, how do i not undo all of this?",
+        "reply": "You've got the tools already. Lean on what we worked out about {{chat:4}} and {{chat:5}}: keep the routine, and shift your wake time toward the new zone by an hour a day before you go. Get daylight soon after landing. Our chat on {{chat:2}} applies too: no coffee after early afternoon, local time. A rough first night or two is normal, not a relapse."
+      }
+    },
+    {
+      "id": "health-t2",
+      "topic": "Neck, back and wrist pain from a desk job",
+      "chats": [
+        {
+          "id": "health-t2-c1",
+          "title": "Stiff neck after long workdays",
+          "question": "my neck is stiff and achy every evening after work. is that just what being 30 feels like or",
+          "reply": "Ha, not quite. A stiff neck at the end of a screen-heavy day usually points at hours in one position, often with the head jutting forward. Set a timer to move every forty minutes, roll your shoulders, and look at something far away. If it's sharp, numb or tingly down the arm, a doctor should check.",
+          "paraphrase": "the one about my sore, tight shoulders at the end of every day at the office"
+        },
+        {
+          "id": "health-t2-c2",
+          "title": "Setting up a desk properly",
+          "question": "ok how is a desk supposed to be set up? screen height, chair, all that. i've been working off a kitchen table for a year",
+          "reply": "Top of the screen roughly at eye level and an arm's length away. Elbows about level with the desk, forearms resting lightly. Feet flat, knees around hip height; a cushion or a box under your feet fixes most kitchen tables. A laptop on a stack of books plus a separate keyboard gets you most of the way.",
+          "paraphrase": "the chat about screen height and chair position when working from a dining table"
+        },
+        {
+          "id": "health-t2-c3",
+          "title": "Stretches for a tight upper back",
+          "question": "any quick stretches i can do at my desk without looking weird in the office",
+          "reply": "Three that pass as fidgeting: chin tucks, gently drawing your chin back as if making a double chin, held for five seconds; slow, big shoulder rolls; and a doorway chest stretch whenever you fetch water. Little and often beats one long session. Stop at a mild pull, never at pain.",
+          "paraphrase": "the one where i wanted office-friendly moves to loosen up between meetings"
+        },
+        {
+          "id": "health-t2-c4",
+          "title": "Standing desk or just more breaks",
+          "question": "is a standing desk worth it or is that a gimmick? colleague swears by hers",
+          "reply": "Standing all day swaps one static posture for another. The win is variety: standing for calls, sitting for focused work, walking when you can. If you can get a sit-stand option, use it to alternate every hour or so. If not, more breaks and a short walk at lunch get you most of the benefit for free.",
+          "paraphrase": "the chat weighing up working on my feet against taking regular pauses"
+        },
+        {
+          "id": "health-t2-c5",
+          "title": "Wrist ache from typing",
+          "question": "now my right wrist aches by the end of the day. mouse hand. is this the start of something bad",
+          "reply": "Most often that is just a grumpy wrist from a lot of mouse time. Keep the wrist straight and the mouse close to the keyboard so you aren't reaching. Shake your hands out when you take breaks, and try switching mouse hand for an hour. If you get numbness, tingling or weakness, a doctor can check.",
+          "paraphrase": "the one about my mouse hand hurting after work"
+        },
+        {
+          "id": "health-t2-c6",
+          "title": "Lower back ache from sitting",
+          "question": "new one: my lower back aches after a long day in the chair. do i need an expensive chair or is it just me slouching",
+          "reply": "Mostly the slouching; a chair only helps if it lets you sit right back. Try a rolled towel in the curve of your lower back, hips to the rear of the seat, and stand up every half hour. If you do buy a chair, test it for an hour, not a minute.",
+          "paraphrase": "the one asking whether a pricey seat would fix the twinge above my hips"
+        },
+        {
+          "id": "health-t2-c7",
+          "title": "When to see a physio",
+          "question": "its been like 3 months of on and off back pain, should i actually see someone about it",
+          "reply": "Three months is long enough to get it looked at, especially if it keeps coming back. A physiotherapist can watch how you move and give you specific exercises, which beats general advice. See a doctor sooner if there's pain spreading down a leg, numbness, or it wakes you at night.",
+          "paraphrase": "the one asking if months of a grumbling back meant booking a professional"
+        },
+        {
+          "id": "health-t2-c8",
+          "title": "Staying pain-free long term",
+          "question": "physio exercises are working! how do i stop this coming back once i stop doing them",
+          "reply": "Great news. The trick is not to stop, just to shrink it: a few minutes of the key exercises most days, bundled into something you already do, like after brushing your teeth. Keep the movement breaks and the desk setup. Flare-ups happen; treat them as a reminder, not a setback.",
+          "paraphrase": "the chat where i asked how to keep my back fixed after the exercises worked"
+        }
+      ],
+      "continuation": {
+        "question": "starting a new job next month with a fancy office. anything i should sort on day one?",
+        "reply": "Nice one. On day one, redo what we covered in {{chat:2}}: screen at eye level, feet flat, keyboard close. Ask for a sit-stand desk if there is one, since {{chat:4}} showed the win is switching positions, not standing all day. Keep the habits from {{chat:3}} going between meetings. Your body won't notice the new building if the setup is right."
+      }
+    },
+    {
+      "id": "health-t3",
+      "topic": "Quitting smoking for good",
+      "chats": [
+        {
+          "id": "health-t3-c1",
+          "title": "Thinking about quitting smoking",
+          "question": "ive been smoking since uni and im finally thinking about stopping. where do i even start",
+          "reply": "Having the thought is the real first step. Pick a quit date a week or two out, and before then notice when you smoke: with coffee, after meals, when stressed. Those are your triggers. Tell one person who'll back you. A pharmacist can talk you through options that take the edge off cravings.",
+          "paraphrase": "the first chat about finally giving up cigarettes"
+        },
+        {
+          "id": "health-t3-c2",
+          "title": "Cold turkey versus cutting down",
+          "question": "cold turkey or cut down slowly? everyone has an opinion",
+          "reply": "Both can work, and the best one is the one you'll actually do. Cutting down suits people who want a runway; a firm stop date suits people who find half measures torturous. Many combine them: cut down for a fortnight, then stop completely on a set day. Support, like patches or gum, improves the odds either way.",
+          "paraphrase": "the one about stopping all at once or tapering off"
+        },
+        {
+          "id": "health-t3-c3",
+          "title": "Surviving the first week",
+          "question": "day 3. im irritable, cant focus and want to bite someone. is this normal and when does it end",
+          "reply": "Completely normal, and day three is often the peak. Most people feel the fog lift within a week or two. Cravings pass in a few minutes whether or not you act on them, so have something ready: a glass of water, a short walk, or a text to your backup person. Be kind to yourself; this is hard.",
+          "paraphrase": "the chat from day three when i was ratty and foggy"
+        },
+        {
+          "id": "health-t3-c4",
+          "title": "Coffee breaks without a cigarette",
+          "question": "my morning coffee feels wrong without a smoke. do i have to give up coffee too??",
+          "reply": "No need to give up coffee, just break the pairing. Change one thing about it: drink it in a different spot, switch to a travel cup, or have it after a shower instead of before. Cravings that ride along with habits fade fast once the habit changes shape. Soon the coffee will feel like coffee again.",
+          "paraphrase": "the one where my morning brew felt incomplete"
+        },
+        {
+          "id": "health-t3-c5",
+          "title": "Weight gain after quitting",
+          "question": "ive put on a few kilos since quitting. is that the smoking or am i just eating my feelings",
+          "reply": "A little of both, and it's expected. Nicotine nudges metabolism up a touch and dampens appetite, so stopping shifts both. Hands and mouth also want something to do. Keep crunchy snacks around, carry water, and walk when a craving hits. A few kilos is a small trade for what your lungs are getting back.",
+          "paraphrase": "the chat about the extra kilos creeping on since i stopped"
+        },
+        {
+          "id": "health-t3-c6",
+          "title": "Slipped up at a party",
+          "question": "had two cigarettes at a party last night. have i ruined everything",
+          "reply": "You haven't. A slip is a slip, not a restart. What matters is the next morning, and you're here asking, which says a lot. Work out what made it easy: drinks, a smoker nearby, a stressful conversation. Plan for that next time. Months of not smoking don't vanish because of one night.",
+          "paraphrase": "the one where i caved after a night out"
+        },
+        {
+          "id": "health-t3-c7",
+          "title": "Three months smoke-free, what's changed",
+          "question": "3 months today! what's actually happening in my body at this point, feels like i can breathe deeper",
+          "reply": "Congratulations, three months is a real milestone. Many people notice easier breathing, less coughing, and a sharper sense of taste and smell by now. Circulation tends to improve too, so hands and feet may feel warmer. Everyone's timeline is different, so treat these as common experiences, not promises. You've done the hardest stretch.",
+          "paraphrase": "the chat marking a quarter of a year without cigarettes"
+        },
+        {
+          "id": "health-t3-c8",
+          "title": "Helping a friend quit too",
+          "question": "my mate wants to quit now too. how do i help without being preachy about it",
+          "reply": "Lovely that your story nudged them. Share what worked for you, then ask what they think will work for them; it's their quit, not yours. Offer to be their text-when-craving person. Don't police slips. Celebrate small wins with them, like the first week. Having walked it yourself is the most useful thing you bring.",
+          "paraphrase": "the one about supporting a pal who wants to give up as well"
+        }
+      ],
+      "continuation": {
+        "question": "a year smoke-free next week and i'm weirdly nervous about celebrating with drinks. thoughts?",
+        "reply": "A year is huge, and the nerves make sense. Remember {{chat:6}}: drinks and old company were the risky mix. Decide beforehand how many you'll have, and keep a craving plan ready, the same tricks from {{chat:3}}. Maybe celebrate with something that marks what you've gained, like a long hike where you notice the easier breathing from {{chat:7}}. Enjoy it; you earned this."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "health-o1",
+      "title": "Why hiccups happen",
+      "question": "why do i get hiccups literally every time i eat too fast",
+      "reply": "Eating quickly stretches the stomach and gulps in air, which can irritate the nerve that drives your diaphragm into those sudden spasms. Slowing down and taking smaller mouthfuls usually fixes it. For a bout in progress, a slow sip of cold water or holding a breath for a count of ten often settles things.",
+      "paraphrase": "the chat about diaphragm spasms from wolfing down my dinner"
+    },
+    {
+      "id": "health-o2",
+      "title": "Is cracking knuckles bad",
+      "question": "my flatmate says cracking my knuckles will give me arthritis. true?",
+      "reply": "Probably a myth. The pop is a gas bubble collapsing in the joint fluid, and no clear link to arthritis has been shown in people who do it for years. It can annoy flatmates, though. If a joint is painful or swollen when it pops, that's worth getting a doctor to look at.",
+      "paraphrase": "the one about popping my finger joints and the arthritis rumour"
+    },
+    {
+      "id": "health-o3",
+      "title": "Ears popping on planes",
+      "question": "why do my ears go weird on planes and whats the trick to make them pop back",
+      "reply": "Cabin pressure changes faster than the air behind your eardrum can catch up, so the drum bows and feels blocked. Swallowing, yawning or chewing opens the tube that equalises it. For a stubborn one, pinch your nose, close your mouth and gently blow. Start before descent rather than waiting for the ache.",
+      "paraphrase": "the chat about blocked hearing during landing"
+    },
+    {
+      "id": "health-o4",
+      "title": "What brain freeze actually is",
+      "question": "ate ice cream too fast and got the worst brain freeze. what is that actually",
+      "reply": "The cold hits the roof of your mouth, and the nerves there and the blood vessels just behind them react fast; the brain reads that as pain in the forehead. It passes within a minute. Pressing your tongue to the roof of your mouth warms it quicker. Smaller bites help, though where's the fun in that.",
+      "paraphrase": "the one about the stabbing forehead pain from cold dessert"
+    },
+    {
+      "id": "health-o5",
+      "title": "Wrinkly fingers in the bath",
+      "question": "why do my fingers go all pruney in the bath?? is the skin absorbing water or something",
+      "reply": "It isn't absorption. Your nervous system narrows the blood vessels in your fingertips when they've been wet for a while, and the skin above folds into grooves. One idea is that it improves grip on wet things, like tread on a tyre. It reverses within minutes of drying off.",
+      "paraphrase": "the chat about my hands going prune-like after a long soak"
+    },
+    {
+      "id": "health-o6",
+      "title": "Holding in a sneeze",
+      "question": "is it actually dangerous to hold in a sneeze or is that an urban legend",
+      "reply": "Mostly legend, with a grain of truth. A sneeze pushes air out at speed, and pinching your nose and mouth shut sends that pressure back toward your ears and sinuses. Harm is very rare, but it can hurt. Letting it out into your elbow is the polite and safe compromise.",
+      "paraphrase": "the one about whether stifling an achoo could do any damage"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "interest": "parenting",
+  "label": "Parenting",
+  "threads": [
+    {
+      "id": "parenting-t1",
+      "topic": "Getting a two-year-old to sleep through the night",
+      "chats": [
+        {
+          "id": "parenting-t1-c1",
+          "title": "Bedtime battles with a toddler",
+          "question": "ok so bedtime with my 2yo has become a 90 minute wrestling match every night. she was fine a month ago. what changed",
+          "reply": "Probably her, not you. Around two, toddlers discover they can say no, and bedtime is the first place they test it. Keep the routine short, boring and identical every night: bath, two books, a song, lights out. Give small choices, which pyjamas, which book, so she feels in charge of something. It usually settles within a few weeks.",
+          "paraphrase": "why my little one suddenly fights going to sleep every evening"
+        },
+        {
+          "id": "parenting-t1-c2",
+          "title": "Toddler climbing out of the cot",
+          "question": "she climbed out of the cot last night and appeared at the living room door like a tiny ghost. do we need a bed now??",
+          "reply": "Yes, once they can climb out, the cot is a fall risk. Drop the mattress to the floor tonight as a stopgap, then move to a low bed or just the mattress on the floor. A gate at her door turns the whole room into the cot. Expect a few wild nights while she tests the new freedom.",
+          "paraphrase": "my daughter escaped her crib and whether that means switching to a proper bed"
+        },
+        {
+          "id": "parenting-t1-c3",
+          "title": "Stalling tactics at lights out",
+          "question": "new thing: one more cuddle, one more sip of water, need the toilet, scared of the curtain. 20 requests a night. how do i shut this down kindly",
+          "reply": "Build the requests into the routine so they can't be invented later: water on the bedside, toilet before books, curtain checked together. Then one bedtime pass. She can call you back once, and after that you say goodnight in one calm sentence and leave. Be dull. Attention is the prize, so make the prize boring.",
+          "paraphrase": "endless little excuses my kid makes to delay sleeping and a kind way to stop them"
+        },
+        {
+          "id": "parenting-t1-c4",
+          "title": "Waking at five every morning",
+          "question": "she's finally going down ok but now wakes at 5am ready to party. is 5am just my life now",
+          "reply": "Not forever. Early waking is often too much light, a too-early bedtime, or a nap that is too long. Black out the window, nudge bedtime fifteen minutes later for a week, and cap the daytime nap. A lamp that changes colour at a set time gives her a signal that it is still night. Give it two weeks.",
+          "paraphrase": "my toddler getting up before dawn and whether anything shifts it later"
+        },
+        {
+          "id": "parenting-t1-c5",
+          "title": "Night terrors or nightmares",
+          "question": "she screamed for 10 mins at 11pm with eyes open and didnt seem to see me. terrifying. what was that",
+          "reply": "That pattern is what many parents call a night terror; it looks worse than it feels, and she probably won't remember it. Stay close, keep her safe, and don't try to wake her. They often come when she is overtired or unwell, so an earlier bedtime can help. If they happen most nights or worry you, a doctor can check.",
+          "paraphrase": "my child screaming in her sleep with open eyes and not recognising me"
+        },
+        {
+          "id": "parenting-t1-c6",
+          "title": "Dropping the daytime nap",
+          "question": "nursery says she's refusing her nap and she's a monster by 5pm. is 2 and a half too young to drop it",
+          "reply": "A bit on the early side, but it varies a lot. Try a middle ground first: a quiet hour on her bed with books rather than forced sleep. If she falls asleep, fine; if not, bring bedtime forward by half an hour on no-nap days. Some kids go back and forth for months before it finally goes.",
+          "paraphrase": "whether a two-and-a-half-year-old can go without her afternoon snooze"
+        },
+        {
+          "id": "parenting-t1-c7",
+          "title": "Sleeping away from home",
+          "question": "staying at my parents for a week. travel cot, new room, new everything. how do i not undo three months of progress",
+          "reply": "Take the familiar bits with you: her sheet, the same books, the same song, the white noise if you use it. Do the routine exactly as at home even if the room is strange. Accept a rough first night. Grandparents will want to rescue her at the first whimper, so agree the plan with them before bedtime, not during.",
+          "paraphrase": "keeping my toddler's routine going while we're staying with relatives"
+        },
+        {
+          "id": "parenting-t1-c8",
+          "title": "She slept through, now what",
+          "question": "SHE SLEPT 7 TO 6 FOUR NIGHTS RUNNING. i am a new person. how do i keep it going and not jinx it",
+          "reply": "Enjoy it, and change nothing. Keep the routine, the dark room and the boring responses to night calls. Expect blips when she is ill, teething or learning something new; they pass faster if you don't rebuild old habits during them. And bank some sleep yourself, because the next stage always arrives.",
+          "paraphrase": "my kid finally doing full nights and how to protect that"
+        }
+      ],
+      "continuation": {
+        "question": "she's 3 now and nights have gone bad again since we moved house. where do i even start",
+        "reply": "A move is a big reset, so start with what worked before. Reread {{chat:1}} and repeat that routine exactly, even in the new room. Then revisit {{chat:4}}, because light and nap timing are usually the culprits after a move. The one-pass rule from {{chat:3}} still works at three. Give it two weeks before trying anything clever; she mostly needs the new house to feel like the old one."
+      }
+    },
+    {
+      "id": "parenting-t2",
+      "topic": "Starting school for the first time",
+      "chats": [
+        {
+          "id": "parenting-t2-c1",
+          "title": "Choosing a primary school",
+          "question": "we have to pick schools for our 4yo soon and ive visited two and they both seemed... fine? how do you actually choose",
+          "reply": "Fine is a good sign. Look past the displays: are the children chatting easily to each other and to adults, does the head know names, how do they handle a child who is upset? Ask what a normal Tuesday looks like. Then weigh the walk, because a short route you can do daily matters more than a slightly shinier hall.",
+          "paraphrase": "how to decide between two places for my child's first classroom"
+        },
+        {
+          "id": "parenting-t2-c2",
+          "title": "Worried he is too young",
+          "question": "he'll be one of the youngest in his year, barely 4 when he starts. he still naps sometimes. am i throwing him in too early",
+          "reply": "A very common worry and rarely as bad as feared. First years are built around play, with short bursts of sitting. Ask the school about part-time starts or afternoons off at first; many are flexible. Meanwhile, practise the small things: toilet alone, opening a lunch box, putting on a coat, asking an adult for help.",
+          "paraphrase": "whether my son being the littlest in the class will be a problem"
+        },
+        {
+          "id": "parenting-t2-c3",
+          "title": "Practising the morning routine",
+          "question": "mornings are chaos already and school starts in 6 weeks. how do i get a 4yo out the door by 8.30 without yelling",
+          "reply": "Do as much as possible the night before: clothes laid out, bag packed, shoes by the door. Give him a picture chart of the steps so he follows the chart, not you. Build in ten spare minutes you pretend don't exist. And do a dry run twice a week over the summer, walking the route, so day one feels familiar.",
+          "paraphrase": "getting a small child dressed and out of the house on time without shouting"
+        },
+        {
+          "id": "parenting-t2-c4",
+          "title": "Tears at the classroom door",
+          "question": "first week. he clings to my leg and sobs when i leave and then i cry in the car. teacher says hes fine 2 mins later. help",
+          "reply": "The two minutes later is the truth; the door is the hard part. Make the goodbye short, warm and the same every day: hug, 'see you after stories', go. Lingering tells him there is something to fear. A small thing of yours in his pocket can help. Most children settle within three weeks. The car crying is allowed.",
+          "paraphrase": "my little boy sobbing when I drop him off and whether I should stay longer"
+        },
+        {
+          "id": "parenting-t2-c5",
+          "title": "Won't tell me about his day",
+          "question": "i ask how school was and get 'fine' or 'cant remember'. hes FOUR. how do i get anything out of him",
+          "reply": "Big open questions are hard at four. Try specific ones later, over a snack or in the bath: who did you sit next to, what made someone laugh, did anyone get told off. Tell him one thing about your day first. And accept that silence after school is often just tiredness; the stories tend to leak out at bedtime.",
+          "paraphrase": "ways to get my child talking about what happened in class"
+        },
+        {
+          "id": "parenting-t2-c6",
+          "title": "Reading books coming home",
+          "question": "he came home with a reading book and a record to sign. he can't read?? what am i meant to do with this",
+          "reply": "At this stage the book is mostly for talking about, not decoding. Look at the pictures together, guess what happens next, let him point out letters he knows, and read it to him. Five minutes is plenty. Write one cheerful line in the record. The sounding-out comes slowly over the year, and pushing it early makes it a chore.",
+          "paraphrase": "what to do with the first storybook the school sent for us to practise"
+        },
+        {
+          "id": "parenting-t2-c7",
+          "title": "Nobody to play with",
+          "question": "he says nobody plays with him at lunch and it broke me a bit. do i talk to the teacher or is that overreacting",
+          "reply": "Not overreacting, but check first: at four, 'nobody' often means 'not the one person I wanted'. Ask who he sat near and what the others were doing. Then have a quick, friendly word with the teacher; they see the playground and can pair him up. Inviting one classmate to the park is the fastest friendship starter there is.",
+          "paraphrase": "my son feeling left out in the playground and whether to raise it at school"
+        },
+        {
+          "id": "parenting-t2-c8",
+          "title": "First parents' evening",
+          "question": "parents evening is ten minutes. what do i actually ask so i dont just nod and say great",
+          "reply": "Ask what he is like when you are not there: who he plays with, what he chooses when free, how he handles being told no. Ask what one thing you could do at home that would help most. Mention anything you have noticed, like tiredness or the lunch worry. Ten minutes goes fast, so bring three questions written down.",
+          "paraphrase": "good things to raise in a short meeting with the teacher"
+        }
+      ],
+      "continuation": {
+        "question": "he's moving up a year and says he doesn't want a new teacher. feels like starting all over again",
+        "reply": "It is a smaller version of last year, and you already have the tools. Bring back the dry runs from {{chat:3}} for the new classroom, and keep the short goodbye that got you through {{chat:4}}. Ask the new teacher the same three questions from {{chat:8}}. He is a year older and knows the building and his friends, so this settles much faster than the first time did."
+      }
+    },
+    {
+      "id": "parenting-t3",
+      "topic": "Living with a brand-new teenager",
+      "chats": [
+        {
+          "id": "parenting-t3-c1",
+          "title": "Thirteen and suddenly sullen",
+          "question": "my kid turned 13 and overnight became a grunting door-slammer. she used to tell me everything. is this it for the next 5 years",
+          "reply": "Not the next five years, but yes, this is the stage. Her brain is rewiring, and pulling away from you is the job. Keep showing up without demanding conversation: lifts, snacks, being around in the kitchen. Side-by-side moments beat face-to-face interrogations. She still needs you; she just can't say so right now.",
+          "paraphrase": "my daughter becoming moody and distant the moment she hit her teens"
+        },
+        {
+          "id": "parenting-t3-c2",
+          "title": "Wanting to walk home alone",
+          "question": "she wants to walk home from school with friends instead of me picking her up. 25 min walk, one busy road. am i being paranoid saying no",
+          "reply": "Not paranoid, but this is a good first freedom. Walk the route together once and talk through the busy crossing. Agree she texts when she leaves and when she arrives, and start with a couple of days a week. Trust given in small, visible steps is what makes the bigger asks later go smoothly for both of you.",
+          "paraphrase": "letting my teen make her own way back from school for the first time"
+        },
+        {
+          "id": "parenting-t3-c3",
+          "title": "Door shut, keep out sign",
+          "question": "theres now a keep out sign on her door and she loses it if i walk in. do i just... never go in my own kid's room",
+          "reply": "Knock, wait, and go in when invited, unless safety is at stake. The sign is about control over one small space, which is a healthy thing to want at thirteen. Agree the limits out loud: you knock, she keeps it reasonably tidy and answers when you call. Privacy traded for basic honesty is a fair deal.",
+          "paraphrase": "how much privacy a thirteen-year-old gets in her bedroom"
+        },
+        {
+          "id": "parenting-t3-c4",
+          "title": "Sleepover at a new friend's house",
+          "question": "shes invited to a sleepover at a new friend's and i've never met the parents. how do i check it out without embarrassing her",
+          "reply": "Message the parents to say thanks and swap numbers; most will be relieved you did. Ask casually who else is going and what time pickup is. Drop her at the door rather than the kerb, which gets you a two-minute hello. Agree a code word she can text if she wants collecting early, no questions asked.",
+          "paraphrase": "vetting a household I don't know before my daughter stays the night there"
+        },
+        {
+          "id": "parenting-t3-c5",
+          "title": "The big row and the slammed door",
+          "question": "we had a proper screaming match tonight about nothing, a plate. she said she hates me. i feel sick. how do i fix this tomorrow",
+          "reply": "You don't fix it tonight. Tomorrow, keep it short: you're sorry you shouted, you love her, the plate wasn't the point. Don't ask for an apology back yet. Teenagers say hate when they mean overwhelmed. Then do something ordinary together, a lift or a snack, so she sees the relationship survived. It did.",
+          "paraphrase": "making up with my teenager after we both lost our tempers"
+        },
+        {
+          "id": "parenting-t3-c6",
+          "title": "Clothes I would never pick",
+          "question": "she wants to spend her birthday money on clothes i think look awful. do i get a say or do i bite my tongue",
+          "reply": "Bite your tongue on taste, speak up only on practicality or the dress code of wherever she's going. Clothes are how she tries on who she is, and your horror is half the fun. Go with her, carry the bags, and keep your face neutral. In a year she will cringe at those photos without any help from you.",
+          "paraphrase": "whether to say anything about my teen's questionable fashion choices"
+        },
+        {
+          "id": "parenting-t3-c7",
+          "title": "Friend group drama",
+          "question": "shes been dropped by her friend group over some message thing and is devastated. i want to call the other mums. shouldn't i?",
+          "reply": "Hold off on the mums for now; it usually makes things worse at school. Be the safe place instead: listen without fixing, feed her, let her cry. Help her find one person outside the group, a cousin, a club, an old friend. These shifts often reverse within weeks. If it turns into bullying rather than a fallout, involve the school.",
+          "paraphrase": "my daughter being pushed out by her usual crowd and whether I should step in"
+        },
+        {
+          "id": "parenting-t3-c8",
+          "title": "A good day, out of nowhere",
+          "question": "she sat with me on the sofa for an hour tonight and just talked. like she used to. did i do something right or is this random",
+          "reply": "Both, probably. You stayed available through the grunting months, and tonight she felt like using that. These moments come without warning and leave the same way, so don't make a big thing of it or she will notice. Just be there again tomorrow in the kitchen. This is what the whole year was for.",
+          "paraphrase": "my teen suddenly opening up to me again after months of silence"
+        }
+      ],
+      "continuation": {
+        "question": "her little brother is 11 and starting to go the same way. anything i'd do differently this time round?",
+        "reply": "Start the trust ladder earlier: the walk-home deal from {{chat:2}} and the knock-first rule from {{chat:3}} work better when agreed before the slamming starts. Remember {{chat:5}}, and plan your calm sentence now for the first big blow-up. And keep showing up in the kitchen, because {{chat:8}} will come for him too. He is a different kid, so expect a different flavour of the same storm."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "parenting-o1",
+      "title": "Toddler says no to everything",
+      "question": "my 2yo says no to literally everything including things he wants. no to ice cream?? what is going on",
+      "reply": "He has found the most powerful word in the language and is testing what it does. It isn't really about ice cream. Offer two choices instead of a yes-or-no question, say yes to small things often, and don't react much to the no. It fades once he has other ways to feel in charge, usually within a few months.",
+      "paraphrase": "my little one refusing stuff he actually likes just to be contrary"
+    },
+    {
+      "id": "parenting-o2",
+      "title": "Rainy day games for a seven-year-old",
+      "question": "its been raining for 3 days and my 7yo has said 'im bored' about 400 times. ideas that dont involve a screen pls",
+      "reply": "A sofa-cushion fort with a torch and a rule that grown-ups need a password. A treasure hunt with clues written in rhyme. A living-room obstacle course timed with the kitchen timer. Teaching her a card game you played as a kid. And a bit of boredom is fine; it's where they invent the weird games you'll remember years later.",
+      "paraphrase": "things to do indoors with a child who's been stuck inside all week"
+    },
+    {
+      "id": "parenting-o3",
+      "title": "Kid ate a crayon",
+      "question": "found my 3yo chewing a crayon, half of it is gone. do i panic",
+      "reply": "Usually not. Most children's crayons are made to be non-toxic, and a few bites tend to pass through without trouble. Give him some water, watch for vomiting, tummy pain or trouble breathing, and ring a poison information line or a doctor if anything worries you or the crayon's make is unknown. Then move the art box up a shelf.",
+      "paraphrase": "whether a toddler swallowing a bit of wax colouring stick is dangerous"
+    },
+    {
+      "id": "parenting-o4",
+      "title": "Eight-year-old lying about small things",
+      "question": "my 8yo lies about dumb stuff like brushing his teeth or whether he fed the cat. i can see the dry toothbrush. why lie",
+      "reply": "Small lies at eight are mostly about dodging a telling-off in the moment, not about character. Make honesty cheaper than lying: thank him when he admits something, and keep the consequence for the lie bigger than for the dry toothbrush. And skip the trap questions you already know the answer to; just say go and brush, then move on.",
+      "paraphrase": "why my son fibs about tiny chores and how to handle it"
+    },
+    {
+      "id": "parenting-o5",
+      "title": "How many kids to invite",
+      "question": "sixth birthday party. she wants the whole class (28). i want four. whats the actual rule here",
+      "reply": "A loose old rule is the child's age plus one for a party at home, so about seven. Whole-class parties work if you hire a hall and keep it to two hours with one organised game. Four feels small at six and risks hurt feelings at school. Ask her for her top ten, then quietly trim to eight.",
+      "paraphrase": "picking a guest list size for my daughter's birthday without upsetting anyone"
+    },
+    {
+      "id": "parenting-o6",
+      "title": "Long car trip with two kids",
+      "question": "6 hour drive on saturday with a 4yo and a 9yo who cant stand each other in the back. survival tips",
+      "reply": "Stop every ninety minutes somewhere they can run. Give each one a bag of small surprises to open every hour, which buys silence cheaply. Audio stories everyone can follow beat two separate screens for keeping the peace. Put a cushion as a border between them, and give the nine-year-old a job, like navigator, so he feels too important to fight.",
+      "paraphrase": "stopping two siblings scrapping in the back seat for six hours"
+    }
+  ]
+}
