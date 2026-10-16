@@ -38,6 +38,22 @@
       "size_mb": 91.578415
     },
     {
+      "id": "B1b",
+      "name": "second base encoder, untrained (mxbai-embed-xsmall-v1, calibrated on practice)",
+      "accuracy": 0.614035,
+      "macro_f1": 0.594403,
+      "none_precision": 0.708333,
+      "none_recall": 0.586207,
+      "ece": 0.104183,
+      "brier": 0.194779,
+      "file_precision": 0.861111,
+      "file_coverage": 0.315789,
+      "suggest_precision": 0.6,
+      "suggest_coverage": 0.789474,
+      "latency_ms_per_decision": 4.072397,
+      "size_mb": 49.218165
+    },
+    {
       "id": "B2",
       "name": "student v0",
       "accuracy": 0.657895,
@@ -68,7 +84,16 @@
     "accuracy by history length (<5 / 5-15 / >15 earlier chats; n 10/22/82): B1 0.800/0.636/0.610, B2 0.800/0.591/0.658",
     "paired bootstrap (1000 resamples) of B2 minus B1 on the exam: accuracy +0.0263, 90% [-0.0175, 0.0702], positive in 82% of resamples; macro-F1 +0.0213, 90% [-0.0136, 0.0627]; McNemar B2-only-right 5 vs B1-only-right 2: the lead is within noise at this size",
     "int8 exam effect (research item 4): the int8 ONNX student via onnxruntime makes the same prediction as the PyTorch student on 100% of exam decisions; accuracy 0.658 -> 0.658, macro-F1 0.627 -> 0.627, ECE 0.116 -> 0.134, file precision 0.861 -> 0.842; 0.9 ms per decision on CPU, 23.0 MB",
+    "int8 parity in Node (relay W6): Transformers.js 4.3.0 on Node v24.21.0 with onnxruntime-node 1.30.0, device cpu against PyTorch 2.14.1 on cpu, sentence-transformers 6.1.0, transformers 5.18.0, CPython 3.14.8 on the same 32 fixture texts: fp32 (student-v0-onnx/onnx/model.onnx) min cosine 1.00000000, meets 0.999; int8 (dtype q8, student-v0-onnx/onnx/model_quantized.onnx) min cosine 0.99153044, median 0.99782964, mean 0.99752311, 0 of 32 texts at or above 0.999, the same gap (Python onnxruntime on the same export: 0.99153), so the loss is the dynamic int8 quantisation, not the JavaScript runtime; token ids identical on 32/32 texts; int8 vectors depend on the batch shape (a text alone against the same text in a padded batch of 32: self-cosine min 0.9924; fp32 1.0); 40 single decisions in Node: q8 median 1.64 ms (p90 2.74), fp32 1.66 ms, PyTorch CPU 5.11 ms; docs/parity.md",
     "unusual: the exam and practice splits hold two people each (114 and 117 decisions); all people come from one 4B teacher and one prompt version, so the exam is not an out-of-distribution check; one requested person failed (p42-018, ReadTimeout)",
+    "follow-up toy (is this chat a follow-up to that one? cosine of the two chats, threshold fit on 1040 practice pairs, judged on 904 balanced exam pairs): base AUC 0.735, accuracy 0.678, precision 0.688, recall 0.653; student AUC 0.752, accuracy 0.690, precision 0.681, recall 0.715; toy scale, two people per split",
+    "B1b: second base encoder mixedbread-ai/mxbai-embed-xsmall-v1, untrained, on the board as the relay's extra 2; licence tag apache-2.0 (Hub API https://huggingface.co/api/models/mixedbread-ai/mxbai-embed-xsmall-v1: tags license:apache-2.0, cardData.license apache-2.0, gated false, private false; read 2026-10-16 20:52 IST); downloaded 2026-10-16 20:53 IST by the first load: model.safetensors 48,190,272 B (stored as float16) + tokenizer.json 711,661 B + vocab.txt 231,508 B + README.md 81,201 B + six config files under 1.5 KB each (49,218,165 B in the snapshot); Hub cache 89,480 -> 137,580 KiB (+48,100 KiB); df available 16,442,972 -> 16,378,060 KiB; onnx/, gguf/ and openvino/ files not downloaded",
+    "B1b params: temperature 0.0631, none_score 0.260, file_cutoff 0.8696, suggest_cutoff 0.3442 (calibrated on practice like B1, data/models/calibration-b1b.json; model mixedbread-ai/mxbai-embed-xsmall-v1)",
+    "B1b with the default parameters on the exam: accuracy 0.640, macro-F1 0.625, none P/R 0.656/0.724 (B1 with the defaults: 0.649, 0.629, 0.656/0.724); runs/b1b/baseline-exam.json",
+    "B1b minus B1 on the exam, paired bootstrap (1000 resamples): calibrated pair accuracy -0.0175, 90% [-0.0351, 0.0], positive in 0% of resamples, macro-F1 -0.0113, 90% [-0.0302, 0.0034], McNemar B1b-only-right 0 vs B1-only-right 2; default pair accuracy -0.0088, 90% [-0.0263, 0.0]; the two encoders agree on 96% of calibrated decisions: neither encoder leads at this size",
+    "B1b accuracy by history length (<5 / 5-15 / >15 earlier chats): 0.800/0.591/0.598; by answer type bundle/loose/none: 0.632/0.556/0.586",
+    "B1b runs in torch.float16 as the checkpoint stores it (B1 runs in float32): against a float32 copy on the CPU, min cosine 0.999998 over the exam's 114 distinct texts, same prediction on 100% of exam decisions; both encoders see the first 128 word pieces, which cuts 0 of the exam's distinct texts (max 22), so the 4,096-token context is unused here",
+    "site: the demo keeps B1, the untrained base encoder, with B1's toy calibration from this run (temperature 0.0631, none score 0.26, file cut-off 0.8696, suggest cut-off 0.4016) in web/src/sorter/calibration.json; decision of 2026-10-16 in docs/DECISIONS.md: B2's lead is 3 of 114 exam decisions, inside the 90% bootstrap interval [-0.0175, 0.0702] of the difference, and a shipped student needs a hosted 23.0 MB model file; wiring B2 through the manifest is BDL-4's",
     "B2 beats B1 (accuracy 0.658 vs 0.632); wire B2 into the site through the manifest"
   ],
   "people": {
@@ -222,6 +247,63 @@
           "suggest": 1.0
         }
       }
+    },
+    "B1b": {
+      "temperature": 0.06309573444801933,
+      "none_score": 0.26,
+      "file_cutoff": 0.8696485550804339,
+      "suggest_cutoff": 0.34419332935710845,
+      "practice_size": 117,
+      "source": "practice split, 117 examples; coordinate search over temperature x none_score, NLL 0.838 -> 0.781; file cut-off reached (0.95 precision, support 47); suggest cut-off reached (0.80 precision, support 85); 2026-10-16; tasks practice.jsonl",
+      "model": "mixedbread-ai/mxbai-embed-xsmall-v1",
+      "bootstrap": {
+        "resamples": 200,
+        "interval": "90% (5th to 95th percentile of the bootstrap distribution)",
+        "point_on_practice": {
+          "file_precision": 0.9565217391304348,
+          "file_coverage": 0.39316239316239315,
+          "suggest_precision": 0.8,
+          "suggest_coverage": 0.7264957264957265
+        },
+        "intervals": {
+          "temperature": [
+            0.0559,
+            0.0712
+          ],
+          "none_score": [
+            0.24,
+            0.3
+          ],
+          "file_cutoff": [
+            0.7062,
+            0.9344
+          ],
+          "suggest_cutoff": [
+            0.2623,
+            0.6156
+          ],
+          "file_precision": [
+            0.9046,
+            1.0
+          ],
+          "file_coverage": [
+            0.3244,
+            0.4615
+          ],
+          "suggest_precision": [
+            0.7228,
+            0.8637
+          ],
+          "suggest_coverage": [
+            0.6581,
+            0.7949
+          ]
+        },
+        "target_reached_share": {
+          "file": 1.0,
+          "suggest": 1.0
+        }
+      }
     }
   },
   "teacher": {
@@ -297,6 +379,155 @@
       "torch": "2.14.1",
       "onnx": "1.23.1",
       "onnxruntime": "1.30.0"
+    },
+    "parity_node": {
+      "runtime": "Transformers.js 4.3.0 on Node v24.21.0 with onnxruntime-node 1.30.0, device cpu",
+      "reference": "PyTorch 2.14.1 on cpu, sentence-transformers 6.1.0, transformers 5.18.0, CPython 3.14.8",
+      "texts": 32,
+      "texts_file": "pipeline/data/runs/parity-texts.json",
+      "dtype_to_file": {
+        "fp32": "student-v0-onnx/onnx/model.onnx",
+        "q8": "student-v0-onnx/onnx/model_quantized.onnx"
+      },
+      "target_min_cos": 0.999,
+      "fp32_min_cos": 0.9999999999987983,
+      "fp32_meets_target": true,
+      "int8_min_cos": 0.9915304398163212,
+      "int8_median_cos": 0.997829640732111,
+      "int8_mean_cos": 0.9975231119977983,
+      "int8_texts_at_or_above_target": 0,
+      "int8_meets_target": false,
+      "int8_worst_text": "hi",
+      "int8_batch_vs_single_min_cos": 0.9923991093239541,
+      "comparisons": [
+        {
+          "comparison": "Node q8 batch vs PyTorch CPU batch",
+          "n": 32,
+          "min": 0.9915304398163212,
+          "median": 0.997829640732111,
+          "mean": 0.9975231119977983,
+          "max": 0.9985986710267107,
+          "worst_index": 8,
+          "at_or_above_0.999": 0,
+          "meets_0.999": false
+        },
+        {
+          "comparison": "Node q8 single vs PyTorch CPU single",
+          "n": 32,
+          "min": 0.9944012255015661,
+          "median": 0.9979965549342757,
+          "mean": 0.9978605930675618,
+          "max": 0.9987655510354996,
+          "worst_index": 8,
+          "at_or_above_0.999": 0,
+          "meets_0.999": false
+        },
+        {
+          "comparison": "Node q8 batch vs Node q8 single (padding effect)",
+          "n": 32,
+          "min": 0.9923991093239541,
+          "median": 0.9981801509592312,
+          "mean": 0.9978422325759669,
+          "max": 0.9987386980636743,
+          "worst_index": 8,
+          "at_or_above_0.999": 0,
+          "meets_0.999": false
+        },
+        {
+          "comparison": "Node fp32 batch vs PyTorch CPU batch",
+          "n": 32,
+          "min": 0.9999999999987983,
+          "median": 0.9999999999995152,
+          "mean": 0.9999999999994873,
+          "max": 0.9999999999997089,
+          "worst_index": 8,
+          "at_or_above_0.999": 32,
+          "meets_0.999": true
+        },
+        {
+          "comparison": "Node fp32 single vs PyTorch CPU single",
+          "n": 32,
+          "min": 0.9999999999985282,
+          "median": 0.9999999999995295,
+          "mean": 0.9999999999994738,
+          "max": 0.9999999999997219,
+          "worst_index": 8,
+          "at_or_above_0.999": 32,
+          "meets_0.999": true
+        },
+        {
+          "comparison": "Node fp32 batch vs Node fp32 single (padding effect)",
+          "n": 32,
+          "min": 0.9999999999995226,
+          "median": 0.9999999999998139,
+          "mean": 0.9999999999998472,
+          "max": 1.0000000000000002,
+          "worst_index": 9,
+          "at_or_above_0.999": 32,
+          "meets_0.999": true
+        },
+        {
+          "comparison": "Node q8 vs Node fp32 (quantisation alone)",
+          "n": 32,
+          "min": 0.9915304426815033,
+          "median": 0.9978296415483714,
+          "mean": 0.9975231122111475,
+          "max": 0.9985986723036521,
+          "worst_index": 8,
+          "at_or_above_0.999": 0,
+          "meets_0.999": false
+        },
+        {
+          "comparison": "PyTorch CPU batch vs PyTorch CPU single",
+          "n": 32,
+          "min": 0.9999999999992197,
+          "median": 0.9999999999998117,
+          "mean": 0.9999999999998059,
+          "max": 1.0,
+          "worst_index": 8,
+          "at_or_above_0.999": 32,
+          "meets_0.999": true
+        },
+        {
+          "comparison": "PyTorch MPS batch vs PyTorch CPU batch",
+          "n": 32,
+          "min": 0.9999999999987067,
+          "median": 0.9999999999996211,
+          "mean": 0.9999999999995675,
+          "max": 0.999999999999736,
+          "worst_index": 8,
+          "at_or_above_0.999": 32,
+          "meets_0.999": true
+        }
+      ],
+      "token_ids_identical_texts": {
+        "q8": 32,
+        "fp32": 32
+      },
+      "latency_ms_single_decision": {
+        "node_q8": {
+          "n": 40,
+          "min": 0.589,
+          "median": 1.641,
+          "p90": 2.74,
+          "max": 5.784,
+          "mean": 1.813
+        },
+        "node_fp32": {
+          "n": 40,
+          "min": 1.069,
+          "median": 1.655,
+          "p90": 2.775,
+          "max": 3.801,
+          "mean": 1.874
+        },
+        "pytorch_cpu_median": 5.11
+      },
+      "load_ms": {
+        "q8": 108.498,
+        "fp32": 72.034
+      },
+      "details": "pipeline/docs/parity.md"
     }
   },
   "accuracy_by_history": {
@@ -362,6 +593,20 @@
           "n": 82,
           "accuracy": 0.6585
         }
+      },
+      "B1b": {
+        "<5": {
+          "n": 10,
+          "accuracy": 0.8
+        },
+        "5-15": {
+          "n": 22,
+          "accuracy": 0.5909
+        },
+        ">15": {
+          "n": 82,
+          "accuracy": 0.5976
+        }
       }
     }
   },
@@ -420,6 +665,20 @@
       "bundle": {
         "n": 76,
         "accuracy": 0.6842
+      }
+    },
+    "B1b": {
+      "none": {
+        "n": 29,
+        "accuracy": 0.5862
+      },
+      "loose": {
+        "n": 9,
+        "accuracy": 0.5556
+      },
+      "bundle": {
+        "n": 76,
+        "accuracy": 0.6316
       }
     }
   },
@@ -559,6 +818,40 @@
         "n": 9,
         "accuracy": 0.7778
       }
+    },
+    "B1b": {
+      "new_thread": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "overlap": {
+        "n": 11,
+        "accuracy": 0.5455
+      },
+      "nowhere": {
+        "n": 20,
+        "accuracy": 0.7
+      },
+      "vague": {
+        "n": 13,
+        "accuracy": 0.2308
+      },
+      "very_short": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "plain": {
+        "n": 26,
+        "accuracy": 0.8077
+      },
+      "typos": {
+        "n": 17,
+        "accuracy": 0.8824
+      },
+      "long_gap": {
+        "n": 9,
+        "accuracy": 0.5556
+      }
     }
   },
   "b2_minus_b1": {
@@ -643,5 +936,333 @@
     "prediction_agreement": 1.0,
     "latency_ms_per_decision_cpu_onnxruntime": 0.8880826644599438,
     "size_mb_int8": 22.977287
+  },
+  "second_encoder": {
+    "id": "mixedbread-ai/mxbai-embed-xsmall-v1",
+    "board_id": "B1b",
+    "board_entry_is": "the exam run with the parameters calibrated on practice (calibration-b1b.json), the same treatment as B1 and B2",
+    "why_this_encoder": "R2's challenger (docs/research/student-and-method.md, recommendation 3): same family and tokenizer as all-MiniLM-L6-v2, mean pooling, 384 dimensions; passes the relay's three gates (not gated, Apache-2.0, ships ONNX weights in the Transformers.js layout) and the 150 MB download cap",
+    "licence": "licence tag apache-2.0 (Hub API https://huggingface.co/api/models/mixedbread-ai/mxbai-embed-xsmall-v1: tags license:apache-2.0, cardData.license apache-2.0, gated false, private false; read 2026-10-16 20:52 IST)",
+    "hub_api": {
+      "checked": "2026-10-16T15:22Z",
+      "gated": false,
+      "private": false,
+      "license": "apache-2.0",
+      "sha": "e6ac24e5d6efb8782b59de1647b3ececb4ece94e",
+      "last_modified": "2025-03-13T04:17:01.000Z",
+      "siblings_bytes": {
+        "model.safetensors": 48190272,
+        "tokenizer.json": 711661,
+        "vocab.txt": 231508,
+        "onnx/model.onnx": 96025279,
+        "onnx/model_quantized.onnx": 24448010,
+        "onnx/model_int8.onnx": 24448010,
+        "onnx/model_fp16.onnx": 48142045
+      }
+    },
+    "download": "downloaded 2026-10-16 20:53 IST by the first load: model.safetensors 48,190,272 B (stored as float16) + tokenizer.json 711,661 B + vocab.txt 231,508 B + README.md 81,201 B + six config files under 1.5 KB each (49,218,165 B in the snapshot); Hub cache 89,480 -> 137,580 KiB (+48,100 KiB); df available 16,442,972 -> 16,378,060 KiB; onnx/, gguf/ and openvino/ files not downloaded",
+    "model": {
+      "parameters": 24089472,
+      "architecture": "bert, 6 layers, hidden 384, vocab 30522, max_position_embeddings 4096",
+      "pooling": "mean (1_Pooling/config.json), include_prompt true",
+      "prompts": "query and document prompts both empty strings; no default prompt",
+      "sentence_transformers_max_seq_length": 512,
+      "encoder_max_seq_length_used": 128,
+      "weights_dtype_in_checkpoint": "float16 (config.json dtype)",
+      "load_seconds_including_download": 27.6
+    },
+    "cli_runs": {
+      "exam_defaults": "baseline --split exam --encoder mixedbread-ai/mxbai-embed-xsmall-v1 --out-dir data/runs/b1b (11.4 s wall, 0.7 s of sorting on MPS)",
+      "practice_defaults": "baseline --split practice --encoder ... --out-dir data/runs/b1b (8.3 s wall)",
+      "calibrate": "calibrate --model ... --out data/models/calibration-b1b.json --no-web (7.5 s wall; NLL 0.838 -> 0.781; file cut-off reached at 0.95 precision, support 47; suggest reached at 0.80, support 85)",
+      "exam_calibrated": "baseline --split exam --encoder ... --calibration data/models/calibration-b1b.json --out-dir data/runs/b1b-calibrated (7.8 s wall)",
+      "bootstrap": "scripts/w6_bootstrap_cutoffs.py --model ... --calibration data/models/calibration-b1b.json --resamples 200 (0.8 s after load; data/runs/bootstrap-calibration-b1b.json)"
+    },
+    "exam_default_parameters": {
+      "accuracy": 0.640351,
+      "macro_f1": 0.624984,
+      "none_precision": 0.65625,
+      "none_recall": 0.724138,
+      "ece": 0.143515,
+      "brier": 0.202514,
+      "file_precision": 0.813953,
+      "file_coverage": 0.377193,
+      "suggest_precision": 0.69697,
+      "suggest_coverage": 0.578947,
+      "latency_ms_per_decision": 4.168542,
+      "size_mb": 49.218165
+    },
+    "practice_default_parameters": {
+      "accuracy": 0.726496,
+      "macro_f1": 0.664365,
+      "none_precision": 0.512821,
+      "none_recall": 0.769231,
+      "ece": 0.09305,
+      "brier": 0.167028,
+      "file_precision": 0.92,
+      "file_coverage": 0.42735,
+      "suggest_precision": 0.863636,
+      "suggest_coverage": 0.564103,
+      "latency_ms_per_decision": 4.240208,
+      "size_mb": 49.218165
+    },
+    "b1b_minus_b1": {
+      "calibrated": {
+        "resamples": 1000,
+        "seed": 3,
+        "accuracy_diff": {
+          "point": -0.0175,
+          "interval_90": [
+            -0.0351,
+            0.0
+          ],
+          "share_positive": 0.0
+        },
+        "macro_f1_diff": {
+          "point": -0.0113,
+          "interval_90": [
+            -0.0302,
+            0.0034
+          ],
+          "share_positive": 0.117
+        },
+        "mcnemar": {
+          "b_right_a_wrong": 0,
+          "a_right_b_wrong": 2,
+          "both_right": 70,
+          "both_wrong": 42
+        }
+      },
+      "defaults": {
+        "resamples": 1000,
+        "seed": 3,
+        "accuracy_diff": {
+          "point": -0.0088,
+          "interval_90": [
+            -0.0263,
+            0.0
+          ],
+          "share_positive": 0.0
+        },
+        "macro_f1_diff": {
+          "point": -0.0045,
+          "interval_90": [
+            -0.0132,
+            0.0
+          ],
+          "share_positive": 0.0
+        },
+        "mcnemar": {
+          "b_right_a_wrong": 0,
+          "a_right_b_wrong": 1,
+          "both_right": 73,
+          "both_wrong": 40
+        }
+      }
+    },
+    "prediction_agreement_b1_b1b_calibrated": 0.9649,
+    "dtype_check": {
+      "as_loaded": {
+        "dtype": "torch.float16",
+        "device": "mps"
+      },
+      "reference": {
+        "dtype": "torch.float32",
+        "device": "cpu"
+      },
+      "texts": 114,
+      "min_cos": 0.999998,
+      "mean_cos": 1.0,
+      "reference_metrics": {
+        "accuracy": 0.614035,
+        "macro_f1": 0.594403,
+        "none_precision": 0.708333,
+        "none_recall": 0.586207,
+        "ece": 0.10418,
+        "brier": 0.194744,
+        "file_precision": 0.861111,
+        "file_coverage": 0.315789,
+        "suggest_precision": 0.6,
+        "suggest_coverage": 0.789474
+      },
+      "prediction_agreement_with_reference": 1.0
+    },
+    "token_lengths": {
+      "exam": {
+        "texts": 114,
+        "word_pieces_kept_by_encoder": 128,
+        "max": 22,
+        "mean": 12.3,
+        "over_kept": 0,
+        "over_256": 0
+      },
+      "practice": {
+        "texts": 117,
+        "word_pieces_kept_by_encoder": 128,
+        "max": 46,
+        "mean": 16.2,
+        "over_kept": 0,
+        "over_256": 0
+      }
+    },
+    "details": "pipeline/data/runs/b1b-2026-10-16-toy-v0.json"
+  },
+  "follow_up_toy": {
+    "label": "toy scale",
+    "task": "is this a follow-up to that chat? (cosine of the two chats, one threshold)",
+    "date": "2026-10-16",
+    "seed": 3,
+    "max_pairs": 2000,
+    "pairs": {
+      "exam": {
+        "total": 904,
+        "positive": 452,
+        "negative": 452,
+        "negative_other_thread": 342,
+        "negative_loose": 110,
+        "people": 2
+      },
+      "practice": {
+        "total": 1040,
+        "positive": 520,
+        "negative": 520,
+        "negative_other_thread": 395,
+        "negative_loose": 125,
+        "people": 2
+      }
+    },
+    "threshold_fit_on": "practice pairs, highest accuracy; applied unchanged to the exam pairs",
+    "bootstrap": "90% intervals, percentiles 5 and 95 over 200 resamples of the exam pairs",
+    "encoders": {
+      "base": {
+        "model": "sentence-transformers/all-MiniLM-L6-v2",
+        "practice_auc": 0.7881,
+        "threshold": 0.1941,
+        "exam": {
+          "auc": 0.735,
+          "auc_90": [
+            0.7113,
+            0.7562
+          ],
+          "accuracy": 0.6781,
+          "accuracy_90": [
+            0.6538,
+            0.7014
+          ],
+          "precision": 0.6876,
+          "precision_90": [
+            0.6529,
+            0.7249
+          ],
+          "recall": 0.6527,
+          "recall_90": [
+            0.62,
+            0.687
+          ],
+          "f1": 0.6697,
+          "oracle_accuracy": 0.6892,
+          "positive_recall_by_gap_days": {
+            "0-7": {
+              "n": 75,
+              "recall": 0.72
+            },
+            "8-44": {
+              "n": 178,
+              "recall": 0.6460674157303371
+            },
+            "45+": {
+              "n": 199,
+              "recall": 0.6331658291457286
+            }
+          },
+          "negatives_rejected_by_kind": {
+            "other_thread": {
+              "n": 342,
+              "rejected": 0.6549707602339181
+            },
+            "loose": {
+              "n": 110,
+              "rejected": 0.8545454545454545
+            }
+          }
+        }
+      },
+      "student": {
+        "model": "pipeline/data/models/student-v0",
+        "practice_auc": 0.8163,
+        "threshold": 0.1882,
+        "exam": {
+          "auc": 0.7516,
+          "auc_90": [
+            0.7279,
+            0.7738
+          ],
+          "accuracy": 0.6903,
+          "accuracy_90": [
+            0.667,
+            0.7135
+          ],
+          "precision": 0.6814,
+          "precision_90": [
+            0.6459,
+            0.7119
+          ],
+          "recall": 0.7146,
+          "recall_90": [
+            0.6799,
+            0.7472
+          ],
+          "f1": 0.6976,
+          "oracle_accuracy": 0.6969,
+          "positive_recall_by_gap_days": {
+            "0-7": {
+              "n": 75,
+              "recall": 0.7733333333333333
+            },
+            "8-44": {
+              "n": 178,
+              "recall": 0.6910112359550562
+            },
+            "45+": {
+              "n": 199,
+              "recall": 0.7135678391959799
+            }
+          },
+          "negatives_rejected_by_kind": {
+            "other_thread": {
+              "n": 342,
+              "rejected": 0.6169590643274854
+            },
+            "loose": {
+              "n": 110,
+              "rejected": 0.8181818181818182
+            }
+          }
+        }
+      }
+    },
+    "source": "pipeline/data/runs/followup-toy.json",
+    "command": "uv run bundle-pipeline followup-toy --device mps",
+    "student_minus_base": {
+      "resamples": 1000,
+      "accuracy_diff": 0.0122,
+      "accuracy_diff_90": [
+        -0.0011,
+        0.0265
+      ],
+      "accuracy_diff_positive_share": 0.91,
+      "auc_diff": 0.0166,
+      "auc_diff_90": [
+        0.0105,
+        0.0228
+      ],
+      "auc_diff_positive_share": 1.0,
+      "mcnemar": {
+        "student_only_right": 34,
+        "base_only_right": 23,
+        "both_right": 590,
+        "both_wrong": 257
+      }
+    }
   }
 }

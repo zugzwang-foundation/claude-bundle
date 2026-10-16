@@ -27,6 +27,7 @@ SUBCOMMANDS: dict[str, str] = {
     "exam": "sit the sealed exam (checks exam.sha256) and report metrics",
     "export": "export the student to ONNX int8 and check parity with the browser runtime",
     "scoreboard": "write scoreboard/runs/<run-id>.json at the repository root",
+    "followup-toy": "toy second question: is this chat a follow-up to that one? (cosine on pairs)",
     "smoke": "check the runtime: Python, packages, device, paths, fixture",
 }
 
@@ -170,6 +171,23 @@ def build_parser(data_root: str | Path | None = None) -> argparse.ArgumentParser
     p.add_argument("--notes", action="append", default=None, help="extra note (repeatable)")
     p.add_argument("--out-dir", default=str(config.SCOREBOARD_RUNS_DIR))
 
+    p = sub.add_parser("followup-toy", help=SUBCOMMANDS["followup-toy"])
+    _add_common(p, P)
+    p.add_argument("--exam", default=str(P.split_path("exam")), help="people of the exam split")
+    p.add_argument(
+        "--practice", default=str(P.split_path("practice")), help="people the threshold is fit on"
+    )
+    p.add_argument("--encoder", default=config.BASE_ENCODER, help="the base encoder")
+    p.add_argument(
+        "--student",
+        default=str(P.models_dir / "student-v0"),
+        help="the trained student (skipped when the path does not exist)",
+    )
+    p.add_argument("--max-pairs", type=int, default=2000, help="balanced cap per split")
+    p.add_argument("--resamples", type=int, default=200, help="bootstrap resamples")
+    p.add_argument("--device", choices=("auto", "cpu", "mps"), default="auto")
+    p.add_argument("--out", default=str(P.runs_dir / "followup-toy.json"))
+
     p = sub.add_parser("smoke", help=SUBCOMMANDS["smoke"])
     _add_common(p, P)
     p.add_argument("--encoder", action="store_true", help="also load the base encoder")
@@ -178,7 +196,7 @@ def build_parser(data_root: str | Path | None = None) -> argparse.ArgumentParser
 
 
 def _resolve(command: str) -> Callable[[argparse.Namespace], int]:
-    module = importlib.import_module(f"bundle_pipeline.{command}")
+    module = importlib.import_module(f"bundle_pipeline.{command.replace('-', '_')}")
     fn = getattr(module, "main", None)
     if fn is None:
         raise SystemExit(f"bundle_pipeline.{command} has no main(args) function")

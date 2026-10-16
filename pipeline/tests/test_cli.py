@@ -18,6 +18,7 @@ EXPECTED = {
     "export",
     "scoreboard",
     "smoke",
+    "followup-toy",
 }
 
 
@@ -79,6 +80,9 @@ def test_data_root_rebuilds_every_default(tmp_path) -> None:
     assert Path(x.model) == root / "models" / "student-v0"
     c = parser.parse_args(["calibrate"])
     assert Path(c.out) == root / "models" / "calibration.json"
+    f = parser.parse_args(["followup-toy"])
+    assert Path(f.exam) == root / "splits" / "exam.jsonl"
+    assert Path(f.out) == root / "runs" / "followup-toy.json"
 
 
 def test_data_root_env_is_honoured(monkeypatch: pytest.MonkeyPatch, tmp_path) -> None:
