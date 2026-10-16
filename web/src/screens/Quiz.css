@@ -1,0 +1,326 @@
+/* Step 2: the quiz. Phone first; cards go two-up from 48rem. */
+
+/* .screen.quiz outranks .screen in global.css, which loads after this file. */
+.screen.quiz {
+  gap: var(--space-5);
+}
+
+.quiz__progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quiz__track {
+  display: flex;
+  gap: var(--space-1);
+  max-width: 20rem;
+}
+
+.quiz__segment {
+  flex: 1;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--line);
+  transition: background-color var(--dur) var(--ease);
+}
+
+.quiz__segment[data-state="done"] {
+  background: var(--accent);
+}
+
+.quiz__segment[data-state="current"] {
+  background: var(--accent);
+  opacity: 0.55;
+}
+
+.quiz__question {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  max-width: 24ch;
+  animation: quiz-in var(--dur) var(--ease) both;
+}
+
+/* The heading takes focus for announcement only; it is not interactive. */
+.quiz__question:focus,
+.quiz__type:focus {
+  outline: none;
+}
+
+.quiz__options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.quiz__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 72px;
+  padding: var(--space-4);
+  text-align: left;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  animation: quiz-in var(--dur) var(--ease) both;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    background-color var(--dur-fast) var(--ease);
+}
+
+.quiz__option:nth-child(2) {
+  animation-delay: 40ms;
+}
+
+.quiz__option:nth-child(3) {
+  animation-delay: 80ms;
+}
+
+.quiz__option:nth-child(4) {
+  animation-delay: 120ms;
+}
+
+.quiz__option:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.quiz__option:active {
+  transform: translateY(0);
+}
+
+.quiz__option[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.quiz__option[aria-disabled="true"] {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.quiz__option-key {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.quiz__option[aria-pressed="true"] .quiz__option-key {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.quiz__option-text {
+  font-size: var(--text-md);
+  line-height: 1.35;
+}
+
+.quiz__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.quiz__hint {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+/* The result */
+
+.quiz__type {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  animation: quiz-in var(--dur-slow) var(--ease) both;
+}
+
+.quiz__type-lead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.quiz__type-name {
+  font-size: var(--text-4xl);
+  color: var(--accent-ink);
+  letter-spacing: -0.03em;
+}
+
+.quiz__tagline {
+  max-width: 36ch;
+}
+
+.quiz__interests {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.quiz__interests-label {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.quiz__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  animation: quiz-in var(--dur) var(--ease) both;
+}
+
+/* The sorter line: tiny and out of the way */
+
+.sorter-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  margin-top: var(--space-3);
+  max-width: 20rem;
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.sorter-line__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  animation: sorter-pulse 1.6s ease-in-out infinite;
+}
+
+.sorter-line[data-status="ready"] .sorter-line__dot {
+  background: var(--bundle-teal);
+  animation: none;
+}
+
+.sorter-line[data-status="error"] .sorter-line__dot {
+  background: var(--loose-grey);
+  animation: none;
+}
+
+.sorter-line__track {
+  grid-column: 2;
+  display: block;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background: var(--line);
+  overflow: hidden;
+}
+
+.sorter-line__fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width var(--dur-slow) var(--ease);
+}
+
+.sorter-line[data-status="ready"] .sorter-line__fill {
+  background: var(--bundle-teal);
+}
+
+.sorter-line[data-status="error"] .sorter-line__track {
+  visibility: hidden;
+}
+
+@keyframes quiz-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sorter-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz__question,
+  .quiz__option,
+  .quiz__type,
+  .chip {
+    animation: none;
+  }
+
+  .sorter-line__dot {
+    animation: none;
+  }
+
+  .quiz__option:hover {
+    transform: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .screen.quiz {
+    gap: var(--space-6);
+  }
+
+  .quiz__question {
+    font-size: var(--text-3xl);
+  }
+
+  .quiz__options {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .quiz__option {
+    min-height: 88px;
+    padding: var(--space-5);
+  }
+
+  .quiz__option-text {
+    font-size: var(--text-lg);
+  }
+}

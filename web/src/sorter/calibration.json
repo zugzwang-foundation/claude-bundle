@@ -1,0 +1,8 @@
+{
+  "model": "Xenova/all-MiniLM-L6-v2",
+  "temperature": 0.05,
+  "noneScore": 0.3,
+  "fileCutoff": 0.85,
+  "suggestCutoff": 0.55,
+  "source": "default (uncalibrated)"
+}

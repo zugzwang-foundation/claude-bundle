@@ -1,0 +1,56 @@
+/* Step 1: a single line, centred, with room to breathe. */
+
+/* .screen.welcome outranks .screen in global.css, which loads after this file. */
+.screen.welcome {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-6);
+  max-width: none;
+  min-height: 56dvh;
+  padding-block: var(--space-6);
+}
+
+.welcome__line {
+  max-width: 14ch;
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  animation: welcome-in var(--dur-slow) var(--ease) both;
+}
+
+.welcome__actions {
+  margin-top: 0;
+  justify-content: center;
+  animation: welcome-in var(--dur-slow) var(--ease) 120ms both;
+}
+
+@keyframes welcome-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome__line,
+  .welcome__actions {
+    animation: none;
+  }
+}
+
+@media (min-width: 48rem) {
+  .screen.welcome {
+    min-height: 60dvh;
+  }
+
+  .welcome__line {
+    font-size: clamp(var(--text-4xl), 6vw, 5.25rem);
+  }
+}
