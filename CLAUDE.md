@@ -12,6 +12,36 @@ The first part applies to everyone. The last part applies only to the founder's 
 ## Product rules
 (Added as the product takes shape.)
 
+## Layout and commands
+Layout, decided in BDL-3; each folder lands as its workstream merges:
+- `web/` — Vite + React + TypeScript static site (Node 24.21.0 via `.node-version`); Biome, Vitest, Playwright.
+  - `src/config.ts` — `APP_NAME = "Bundle"` and the footer line: the only place the name lives.
+  - `src/styles/tokens.css` — design tokens, light and dark.
+  - `src/content/library/` — demo library JSON, one file per interest, plus `library.schema.json`; demo content only (D4).
+  - `src/content/assemble.ts` — builds a visitor's nine-month history from the library.
+  - `src/sorter/` — `worker.ts` (Transformers.js in a Web Worker, WebGPU then WASM), `scoring.ts`, `rules.ts`, `calibration.json`, `model-manifest.json`.
+  - `src/screens/` — Welcome, Quiz, History, Chat, MonthsPass, Challenge, Reveal, Continue.
+  - `src/tech/` — tech view: probability bars, model info and latency, SVG architecture diagram, scoreboard, roadmap.
+  - `src/generated/` — precomputed library embeddings (gitignored; built by `web/scripts/precompute-embeddings.mjs`).
+  - `public/fonts/` — self-hosted Bricolage Grotesque and Atkinson Hyperlegible (OFL).
+  - `public/models/` — student model files for the browser (gitignored; the manifest points here when a student ships).
+  - `scripts/` — `precompute-embeddings.mjs`, `validate-library.mjs`.
+  - `e2e/` — Playwright flow at 390×844 and 1440×900.
+- `pipeline/` — uv project, package `bundle_pipeline`: schema, teacher, prompts, generate, validate, split, tasks, baseline, train, calibrate, exam, export, scoreboard; `tests/fixtures/` holds the two-person fixture.
+- `scoreboard/runs/` — one JSON per exam run, labelled "toy scale" today.
+- `scripts/spark/` — commands and configs for the DGX Spark (written later, not run).
+- `docs/` — SPEC.md, ARCHITECTURE.md, DECISIONS.md, research/, release/.
+- `.github/workflows/ci.yml` — a web job and a pipeline job.
+
+Commands (as planned in BDL-3; each set lands with its workstream):
+- web (in `web/`): `npm ci`, `npm run dev`, `npm run typecheck`, `npm run lint`, `npm test`, `npm run e2e`, `npm run build`.
+- pipeline (in `pipeline/`): `uv sync --frozen`, `uv run ruff check .`, `uv run pytest`, `uv run bundle-pipeline <command>`.
+
+House rules:
+1. The project's runtimes are Node 24.21.0 (`.node-version`) and the uv-managed Python in `pipeline/.python-version`, never the system ones.
+2. Generated data and models are gitignored; the only exceptions are test fixtures under 200 KB, the demo library and the scoreboard JSON.
+3. No file over 5 MB is ever committed.
+
 ## For the founder's sessions (BDL-N)
 ### Roles
 - **Hrishikesh**, the founder, gives the product and its look and feel. Nothing is published, posted, bought or sent without him.
