@@ -1,0 +1,53 @@
+[
+  {
+    "id": "p_fixture_01",
+    "persona": "A hospital nurse in her early thirties who works rotating shifts in a mid-sized town. She signed up for her first half marathon on a dare from a colleague, has recently caught the sourdough bug, and is trying to get an old steel bike from a charity shop back on the road so she can cycle to work. She types quickly between tasks and rarely bothers with capital letters.",
+    "interests": ["running", "baking", "bike repair", "night shifts"],
+    "threads": [
+      {"id": "p01-t1", "label": "Half marathon", "description": "Training for a first half marathon in twelve weeks around shift work."},
+      {"id": "p01-t2", "label": "Sourdough", "description": "Keeping a starter alive and baking a loaf that is not a brick."},
+      {"id": "p01-t3", "label": "Old bike", "description": "Fixing up a second-hand steel bike for the commute."}
+    ],
+    "chats": [
+      {"id": "p01-c01", "thread_id": "p01-t1", "day": 0, "text": "I just signed up for a half marathon in 12 weeks and the furthest I've run is 5k. Can you build me a plan that works around 12 hour shifts?", "difficulty": "new_thread"},
+      {"id": "p01-c02", "thread_id": "p01-t2", "day": 2, "text": "my friend gave me a jar of sourdough starter. it smells like nail polish remover. is it dead or is that normal", "difficulty": "new_thread"},
+      {"id": "p01-c03", "thread_id": "p01-t1", "day": 4, "text": "what should i eat the night before a long run and how early in the morning do i need to eat before it", "difficulty": "overlap"},
+      {"id": "p01-c04", "thread_id": null, "day": 6, "text": "How do I split a restaurant bill fairly when two people had cocktails and the rest of us didn't?", "difficulty": "nowhere"},
+      {"id": "p01-c05", "thread_id": "p01-t2", "day": 9, "text": "ok fed it twice a day for a week and it doubles now. walk me through a first loaf, i have a dutch oven but no scales that do grams", "difficulty": "plain"},
+      {"id": "p01-c06", "thread_id": "p01-t3", "day": 11, "text": "Picked up an old steel road bike for 40 quid. Brakes squeal, chain is orange, tyres are cracked. Where do I even start?", "difficulty": "new_thread"},
+      {"id": "p01-c07", "thread_id": "p01-t1", "day": 13, "text": "knee hurts", "difficulty": "very_short"},
+      {"id": "p01-c08", "thread_id": "p01-t3", "day": 15, "text": "whats the differnce between a 700c and a 27 inch tyre?? the shop said mine is 27 and nobody stocks it", "difficulty": "typos"},
+      {"id": "p01-c09", "thread_id": null, "day": 18, "text": "hi", "difficulty": "very_short"},
+      {"id": "p01-c10", "thread_id": "p01-t2", "day": 21, "text": "is this normal", "difficulty": "vague"},
+      {"id": "p01-c11", "thread_id": "p01-t3", "day": 24, "text": "Took the brake pads off and they were rock hard. New pads on, still squealing. Toe-in? What is toe-in?", "difficulty": "plain"},
+      {"id": "p01-c12", "thread_id": null, "day": 30, "text": "My sister wants a book for her birthday, she liked the last two things I gave her which were both about lighthouses. Ideas?", "difficulty": "nowhere"},
+      {"id": "p01-c13", "thread_id": "p01-t1", "day": 71, "text": "It's been ages, I lost six weeks to a chest infection. The race is in two weeks. Do I run it slow, defer, or pull out?", "difficulty": "long_gap"}
+    ],
+    "teacher": {"model": "fixture", "seed": 0, "prompt_version": "fixture-1"}
+  },
+  {
+    "id": "p_fixture_02",
+    "persona": "A retired primary school teacher in his mid sixties who lives alone with a greedy tabby cat on the edge of a market town. He has taken over a neglected allotment, is learning Spanish before a long-promised trip to Andalusia with his brother, and is slowly fixing the small things in his house that he put off for decades. He types carefully and in full sentences, except when he is cross with the tap.",
+    "interests": ["gardening", "languages", "home repair", "crosswords", "cats"],
+    "threads": [
+      {"id": "p02-t1", "label": "Allotment", "description": "Bringing a weedy allotment plot back to vegetables, season by season."},
+      {"id": "p02-t2", "label": "Spanish for Andalusia", "description": "Learning enough Spanish for a two-week trip with his brother."},
+      {"id": "p02-t3", "label": "Kitchen tap", "description": "A dripping mixer tap and the plumbing jobs that grew out of it."}
+    ],
+    "chats": [
+      {"id": "p02-c01", "thread_id": "p02-t1", "day": 0, "text": "I have just taken on an allotment that is knee deep in couch grass and bindweed. What is the sensible order of jobs for the first month?", "difficulty": "new_thread"},
+      {"id": "p02-c02", "thread_id": "p02-t2", "day": 3, "text": "My brother and I are going to Andalusia in the autumn. I did French at school fifty years ago and no Spanish. Where should a complete beginner start?", "difficulty": "new_thread"},
+      {"id": "p02-c03", "thread_id": "p02-t1", "day": 7, "text": "Half the plot is cleared. Which vegetables can still go in this late in spring, and which should I give up on until next year?", "difficulty": "plain"},
+      {"id": "p02-c04", "thread_id": null, "day": 9, "text": "Crossword clue: 'Composer takes a short rest in the garden (7)'. I have _ R _ O _ R.", "difficulty": "nowhere"},
+      {"id": "p02-c05", "thread_id": "p02-t2", "day": 12, "text": "Could you explain when to use ser and when to use estar? Every example I find seems to contradict the last one.", "difficulty": "plain"},
+      {"id": "p02-c06", "thread_id": "p02-t3", "day": 14, "text": "The kitchen mixer tap drips about once a second even when fully off. Is this a washer, a cartridge, or a plumber?", "difficulty": "new_thread"},
+      {"id": "p02-c07", "thread_id": "p02-t3", "day": 15, "text": "right the cartridge is out but theres a brass colar thing stuck on the spout and i cant shift it. wd40? hammer? help", "difficulty": "typos"},
+      {"id": "p02-c08", "thread_id": null, "day": 17, "text": "How do I take a screenshot of just one window on this laptop? My grandson showed me once.", "difficulty": "nowhere"},
+      {"id": "p02-c09", "thread_id": "p02-t1", "day": 20, "text": "yellow leaves", "difficulty": "very_short"},
+      {"id": "p02-c10", "thread_id": "p02-t2", "day": 23, "text": "what do people usually eat for lunch over there and is it rude to ask for the bill at the table", "difficulty": "overlap"},
+      {"id": "p02-c11", "thread_id": "p02-t2", "day": 26, "text": "Does that rule change in the past tense?", "difficulty": "vague"},
+      {"id": "p02-c12", "thread_id": "p02-t1", "day": 85, "text": "Back after a long summer away. The courgettes have become marrows and the brassicas are lace. What can I rescue for the autumn?", "difficulty": "long_gap"}
+    ],
+    "teacher": {"model": "fixture", "seed": 0, "prompt_version": "fixture-1"}
+  }
+]
