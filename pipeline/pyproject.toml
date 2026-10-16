@@ -1,0 +1,49 @@
+[project]
+name = "bundle-pipeline"
+version = "0.1.0"
+description = "Bundle's learning loop at toy scale: teacher generation, validation, splits, decision tasks, baseline, student, calibration, exam, export and scoreboard."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.14,<3.15"
+# Exact pins. Every version was checked on PyPI on 2026-10-16 and was released
+# at least 14 days earlier; the table in README.md records the dates.
+dependencies = [
+    "pydantic==2.13.5",
+    "httpx==0.28.1",
+    "numpy==2.5.3",
+    "torch==2.14.1",
+    "sentence-transformers==6.1.0",
+    "scikit-learn==1.9.1",
+    "onnx==1.23.1",
+    "onnxruntime==1.30.0",
+    "transformers==5.18.0",
+    "tokenizers==0.23.2",
+]
+
+[project.scripts]
+bundle-pipeline = "bundle_pipeline.cli:main"
+
+[dependency-groups]
+dev = [
+    "ruff==0.16.10",
+    "pytest==9.1.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
