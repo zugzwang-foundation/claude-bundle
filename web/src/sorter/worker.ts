@@ -17,6 +17,11 @@ interface WorkerScope {
   addEventListener(type: "message", listener: (event: MessageEvent<WorkerRequest>) => void): void;
 }
 
+/** The one WebGPU call we make; the DOM lib does not type navigator.gpu. */
+interface GpuNavigator {
+  gpu?: { requestAdapter(): Promise<object | null> };
+}
+
 type Extractor = (
   texts: string[],
   options: { pooling: "mean"; normalize: boolean },
@@ -25,9 +30,15 @@ type Extractor = (
 const scope = self as unknown as WorkerScope;
 const base = import.meta.env.BASE_URL;
 
-// The ONNX runtime's wasm files are served from this origin, never from a CDN
-// (scripts/copy-ort.mjs puts them in public/ort/).
-if (env.backends.onnx.wasm) env.backends.onnx.wasm.wasmPaths = `${base}ort/`;
+// The ONNX runtime's wasm files are served from this origin, never from a CDN:
+// scripts/copy-ort.mjs puts them in public/ort/ for the build. The dev server
+// refuses a dynamic import out of public/, so there they come straight from
+// node_modules, which Vite serves and transforms like any other module.
+if (env.backends.onnx.wasm) {
+  env.backends.onnx.wasm.wasmPaths = import.meta.env.DEV
+    ? `${base}node_modules/onnxruntime-web/dist/`
+    : `${base}ort/`;
+}
 
 if (manifest.source === "local") {
   env.allowLocalModels = true;
@@ -40,9 +51,29 @@ if (manifest.source === "local") {
 
 let extractor: Extractor | null = null;
 let loading: Promise<void> | null = null;
+let attempted: Device | null = null;
 
 function post(message: WorkerResponse, transfer?: Transferable[]): void {
   scope.postMessage(message, transfer);
+}
+
+/**
+ * WebGPU only when the browser actually hands out an adapter. Headless and some
+ * mobile browsers expose navigator.gpu with none, and a WebGPU session that
+ * fails poisons every later session in this worker: Transformers.js chains
+ * session creation on one promise that never recovers from a rejection. So the
+ * choice is made up front, and a failure is retried by the client in a fresh
+ * worker with `device: "wasm"` rather than here.
+ */
+async function pickDevice(forced?: Device): Promise<Device> {
+  if (forced) return forced;
+  const gpu = (navigator as unknown as GpuNavigator).gpu;
+  if (!gpu) return "wasm";
+  try {
+    return (await gpu.requestAdapter()) ? "webgpu" : "wasm";
+  } catch {
+    return "wasm";
+  }
 }
 
 async function createExtractor(device: Device, onProgress: (p: ProgressEvent) => void) {
@@ -54,7 +85,7 @@ async function createExtractor(device: Device, onProgress: (p: ProgressEvent) =>
   return result as unknown as Extractor;
 }
 
-async function load(): Promise<void> {
+async function load(forced?: Device): Promise<void> {
   const t0 = performance.now();
   const files = new Map<string, number>();
   const onProgress = (p: ProgressEvent) => {
@@ -63,22 +94,33 @@ async function load(): Promise<void> {
       post({ type: "progress", loaded: p.loaded ?? 0, total: p.total, file: p.file });
     }
   };
-  let device: Device = "gpu" in navigator ? "webgpu" : "wasm";
-  try {
-    extractor = await createExtractor(device, onProgress);
-  } catch (error) {
-    if (device !== "webgpu") throw error;
-    device = "wasm";
-    extractor = await createExtractor(device, onProgress);
-  }
+  const device = await pickDevice(forced);
+  attempted = device;
+  extractor = await createExtractor(device, onProgress);
   let sizeBytes = 0;
   for (const total of files.values()) sizeBytes += total;
   post({ type: "ready", device, model: manifest.id, sizeBytes, loadMs: performance.now() - t0 });
 }
 
+/** Start the load, or join the one under way. A failed load is forgotten, so the next request tries again. */
+function startLoad(forced?: Device): Promise<void> {
+  if (!loading) {
+    loading = load(forced).catch((error: unknown) => {
+      loading = null;
+      post({
+        type: "error",
+        message: error instanceof Error ? error.message : String(error),
+        device: attempted ?? undefined,
+      });
+      throw error;
+    });
+    loading.catch(() => undefined);
+  }
+  return loading;
+}
+
 async function embed(id: number, texts: string[]): Promise<void> {
-  if (!loading) loading = load();
-  await loading;
+  await startLoad();
   if (!extractor) throw new Error("Model not loaded");
   const t0 = performance.now();
   const output = await extractor(texts, { pooling: "mean", normalize: true });
@@ -94,10 +136,8 @@ async function embed(id: number, texts: string[]): Promise<void> {
 scope.addEventListener("message", (event) => {
   const message = event.data;
   if (message.type === "load") {
-    if (!loading) loading = load();
-    loading.catch((error: unknown) => {
-      post({ type: "error", message: error instanceof Error ? error.message : String(error) });
-    });
+    // A failure is reported by startLoad itself.
+    startLoad(message.device).catch(() => undefined);
     return;
   }
   if (message.type === "embed") {

@@ -81,6 +81,16 @@ export function ModelInfo() {
       statusText = `Failed: ${sorter.error ?? "unknown error"}`;
   }
 
+  // Read out to assistive technology: the four coarse states only, never the per-file progress.
+  const announce =
+    sorter.status === "idle"
+      ? "Sorter waiting."
+      : sorter.status === "loading"
+        ? "Sorter downloading."
+        : sorter.status === "ready"
+          ? "Sorter ready."
+          : "Sorter failed.";
+
   const summary =
     sorter.status === "ready" && sorter.ready
       ? `${DEVICE_LABEL[sorter.ready.device]} · ${formatMb(sorter.ready.sizeBytes)}`
@@ -102,7 +112,10 @@ export function ModelInfo() {
         </dd>
 
         <dt>Status</dt>
-        <dd aria-live="polite">
+        <dd>
+          <span className="visually-hidden" role="status">
+            {announce}
+          </span>
           {statusText}
           {sorter.status === "loading" && (
             <progress

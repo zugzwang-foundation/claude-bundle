@@ -48,3 +48,21 @@
 .dots__dot:disabled {
   cursor: default;
 }
+
+/* Phones and touch screens: a 44px target per step; the row only shrinks when it must. */
+@media (width < 48rem), (pointer: coarse) {
+  .dots__list {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .dots__item {
+    flex: 0 1 44px;
+    min-width: 24px;
+  }
+
+  .dots__dot {
+    width: 100%;
+    height: 44px;
+  }
+}

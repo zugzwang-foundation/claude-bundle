@@ -1,8 +1,8 @@
 {
   "model": "Xenova/all-MiniLM-L6-v2",
-  "temperature": 0.05,
-  "noneScore": 0.3,
-  "fileCutoff": 0.85,
-  "suggestCutoff": 0.55,
-  "source": "default (uncalibrated)"
+  "temperature": 0.06309573444801933,
+  "noneScore": 0.26,
+  "fileCutoff": 0.8695661777207113,
+  "suggestCutoff": 0.40158743613890713,
+  "source": "B1 (base encoder, untrained) calibrated on the toy practice split, 117 examples, run 2026-10-16-toy-v0; toy scale: cut-offs have wide bootstrap intervals (see scoreboard/runs)"
 }

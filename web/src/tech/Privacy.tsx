@@ -8,7 +8,7 @@ export function Privacy() {
     <Panel id="tech-privacy" title="Privacy" defaultOpen={false}>
       <p>
         There is no server behind this page. Everything you see is computed on your device, in a Web
-        Worker, and forgotten when you close the tab.
+        Worker. Your answers, chats and the sort are forgotten when you close the tab.
       </p>
       <ul className="tech__list">
         <li>
@@ -16,6 +16,11 @@ export function Privacy() {
           tab. No request ever carries them.
         </li>
         <li>No cookies, no analytics, no fingerprinting, no localStorage or sessionStorage.</li>
+        <li>
+          The model files are kept in this browser's cache storage (the same place a browser keeps
+          images), so a return visit skips the download. They are identical for every visitor and
+          hold nothing about you; clearing this site's data removes them.
+        </li>
         <li>
           {local
             ? "The model files come from this site's own /models/ folder; nothing is fetched from a third party."

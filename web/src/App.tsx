@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Challenge } from "./screens/Challenge";
@@ -47,6 +47,19 @@ function Screen({ step }: { step: Step }) {
 function Shell() {
   const { state } = useFlow();
   const sorterState = useSorter();
+  const lastStep = useRef(state.step);
+
+  // Each new step hands focus to its heading, so keyboard and screen-reader users land on the
+  // new content instead of on <body>; the page scrolls back to the top at the same time.
+  useEffect(() => {
+    if (lastStep.current === state.step) return;
+    lastStep.current = state.step;
+    window.scrollTo({ top: 0 });
+    const heading = document.querySelector<HTMLHeadingElement>("#main h1");
+    if (!heading) return;
+    if (!heading.hasAttribute("tabindex")) heading.setAttribute("tabindex", "-1");
+    heading.focus({ preventScroll: true });
+  }, [state.step]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = state.theme;

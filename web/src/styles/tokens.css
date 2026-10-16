@@ -54,6 +54,8 @@
   --ink: #172033;
   --muted: #566074;
   --line: #d8dde6;
+  /* For a control whose border is what identifies it, e.g. a text input: 3.4:1 on paper, 3.7:1 on surface. */
+  --line-strong: #7b8597;
 
   /* Accent */
   --accent: #5b4bdb;
@@ -112,6 +114,7 @@
   --ink: #e6eaf1;
   --muted: #a1abbc;
   --line: #2a3242;
+  --line-strong: #66718a;
   --accent: #9e94ff;
   --accent-ink: #c8c2ff;
   --accent-soft: #252050;
@@ -133,6 +136,7 @@
     --ink: #e6eaf1;
     --muted: #a1abbc;
     --line: #2a3242;
+    --line-strong: #66718a;
     --accent: #9e94ff;
     --accent-ink: #c8c2ff;
     --accent-soft: #252050;
@@ -160,7 +164,9 @@
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    /* 0s, not 0.01ms: with transition-property defaulting to all, a 0.01ms duration turns every
+       property change on every element into a micro-transition, and a theme flip then lags ~200ms. */
+    transition-duration: 0s !important;
     scroll-behavior: auto !important;
   }
   /* biome-ignore-end lint/complexity/noImportantStyles: reduced motion must beat every component's own duration */

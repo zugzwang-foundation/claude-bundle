@@ -67,3 +67,14 @@
   color: var(--accent-ink);
   border-color: var(--accent);
 }
+
+@media (width < 48rem), (pointer: coarse) {
+  .switch {
+    min-height: 44px;
+  }
+
+  /* A definite width for the dots row, so each step can take its 44px flex basis. */
+  .header .dots {
+    justify-self: stretch;
+  }
+}

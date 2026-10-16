@@ -521,3 +521,9 @@
     column-gap: var(--space-5);
   }
 }
+
+@media (width < 48rem), (pointer: coarse) {
+  .tech__more {
+    min-height: 44px;
+  }
+}

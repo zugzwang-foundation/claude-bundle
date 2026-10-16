@@ -40,4 +40,46 @@ describe("flowReducer", () => {
     expect(state.challenge).toEqual({ targetId: null, beforeMs: 42000, afterMs: 3000 });
     expect(state.personality?.interests).toHaveLength(3);
   });
+
+  it("clears the story after a retaken quiz but keeps the answers, the look and the seed", () => {
+    const chat = {
+      id: "c1",
+      libraryId: "c1",
+      title: "t",
+      question: "q",
+      reply: "r",
+      paraphrase: "p",
+      interest: "alpha",
+      threadId: null,
+      date: "2026-02-03T10:00:00.000Z",
+      mine: false,
+    };
+    let state = flowReducer(initialState({ seed: 9, theme: "dark" }), {
+      type: "answer",
+      questionId: "q1",
+      optionId: "a",
+    });
+    state = flowReducer(state, { type: "setHistory", chats: [chat] });
+    state = flowReducer(state, { type: "addMyChat", chat: { ...chat, id: "mine", mine: true } });
+    state = flowReducer(state, { type: "setNow", now: "2026-10-16T12:00:00.000Z" });
+    state = flowReducer(state, { type: "setChallengeTarget", targetId: "mine" });
+    state = flowReducer(state, { type: "setChallengeTime", which: "before", ms: 5000 });
+    state = flowReducer(state, {
+      type: "setBundling",
+      result: { bundles: [], loose: [], placements: {}, steps: [], embedMs: 0, decisionMs: 0 },
+    });
+    state = flowReducer(state, { type: "go", step: "quiz" });
+    const cleared = flowReducer(state, { type: "clearStory" });
+    expect(cleared).toMatchObject({
+      step: "quiz",
+      quizAnswers: { q1: "a" },
+      history: [],
+      myChats: [],
+      challenge: { targetId: null, beforeMs: null, afterMs: null },
+      bundling: null,
+      theme: "dark",
+      seed: 9,
+    });
+    expect(cleared.now).toBeUndefined();
+  });
 });

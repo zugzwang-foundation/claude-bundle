@@ -70,6 +70,7 @@ export type FlowAction =
   | { type: "setTechView"; on: boolean }
   | { type: "toggleTechView" }
   | { type: "reset" }
+  | { type: "clearStory" }
   | { type: "setNow"; now: string }
   | { type: "setChallengeGaveUp"; gaveUp: boolean };
 
@@ -133,6 +134,16 @@ export function flowReducer(state: FlowState, action: FlowAction): FlowState {
       return { ...state, techView: !state.techView };
     case "reset":
       return initialState({ theme: state.theme, techView: state.techView, seed: state.seed + 1 });
+    case "clearStory":
+      // The quiz changed: drop the history and all built on it; keep the answers and the look.
+      return {
+        ...state,
+        history: [],
+        myChats: [],
+        challenge: { targetId: null, beforeMs: null, afterMs: null },
+        bundling: null,
+        now: undefined,
+      };
     case "setChallengeGaveUp":
       return { ...state, challenge: { ...state.challenge, gaveUp: action.gaveUp } };
     case "setNow":

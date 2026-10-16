@@ -196,6 +196,8 @@ export function Reveal() {
   );
   const [wrongId, setWrongId] = useState<string | null>(null);
   const [elapsedMs, setElapsedMs] = useState(0);
+  /** True once the switch has been on for a while with no result: the visitor may carry on without bundles. */
+  const [slow, setSlow] = useState(false);
 
   const kRef = useRef(k);
   const findStart = useRef<number | null>(null);
@@ -339,6 +341,17 @@ export function Reveal() {
     if (phase === "done") scoreHeading.current?.focus();
   }, [phase]);
 
+  // A stalled download or a very slow device must not strand the visitor: after a while, offer a way on.
+  const busy = phase === "loading" || phase === "sorting";
+  useEffect(() => {
+    if (!busy) return;
+    const timer = window.setTimeout(() => setSlow(true), SKIP_AFTER_MS);
+    return () => {
+      window.clearTimeout(timer);
+      setSlow(false);
+    };
+  }, [busy]);
+
   useEffect(() => {
     if (!wrongId) return;
     const timer = window.setTimeout(() => setWrongId(null), 900);
@@ -417,6 +430,9 @@ export function Reveal() {
     phase === "off" || phase === "loading" || phase === "sorting" || phase === "error";
   const progress = sorterState.progress;
   const canSkip = finding && elapsedMs >= SKIP_AFTER_MS;
+  useEffect(() => {
+    if (canSkip) setStatus("Still looking? You can skip the hunt.");
+  }, [canSkip]);
 
   if (chats.length === 0) {
     return (
@@ -489,6 +505,13 @@ export function Reveal() {
             {k} of {total} sorted
           </p>
         )}
+        {busy && slow && (
+          <div className="screen__actions reveal__slow">
+            <Button variant="ghost" onClick={() => dispatch({ type: "next" })}>
+              Carry on without bundling
+            </Button>
+          </div>
+        )}
       </div>
 
       {phase === "error" && (
@@ -496,8 +519,11 @@ export function Reveal() {
           <h2>The sorter could not run</h2>
           <p className="reveal__error-text">{error}</p>
           <p className="reveal__hint">
-            The model is fetched once from huggingface.co; nothing you typed or picked is sent
-            anywhere. Try again, or carry on without the bundles.
+            {manifest.source === "local"
+              ? "The model is served from this site; "
+              : "The model is fetched once from huggingface.co; "}
+            nothing you typed or picked is sent anywhere. Try again, or carry on without the
+            bundles.
           </p>
           <div className="screen__actions">
             <Button onClick={() => void run()}>Try again</Button>
@@ -510,7 +536,8 @@ export function Reveal() {
 
       <div className={`reveal__board${showList ? "" : " reveal__board--wide"}`}>
         {showList && (
-          <section className="reveal__list card" aria-labelledby="reveal-list-title">
+          // biome-ignore lint/a11y/noNoninteractiveTabindex: the long list scrolls, so it must be reachable from the keyboard
+          <section className="reveal__list card" aria-labelledby="reveal-list-title" tabIndex={0}>
             <h2 id="reveal-list-title" className="reveal__list-title">
               <span>The long list</span>
               <span className="reveal__count">{view.unsorted.length}</span>
@@ -547,7 +574,9 @@ export function Reveal() {
                 The chat where you asked about <strong>{target.paraphrase}</strong>. Open a bundle
                 and tap the chat.
               </p>
-              <p className="reveal__timer">{formatDuration(elapsedMs)}</p>
+              <p className="reveal__timer" role="timer" aria-label="Time spent looking">
+                {formatDuration(elapsedMs)}
+              </p>
               {canSkip && (
                 <div className="screen__actions">
                   <Button variant="ghost" onClick={() => dispatch({ type: "next" })}>
@@ -567,8 +596,10 @@ export function Reveal() {
                 Before:{" "}
                 <em>
                   {state.challenge.beforeMs === null
-                    ? "gave up"
-                    : formatDuration(state.challenge.beforeMs)}
+                    ? "not timed"
+                    : state.challenge.gaveUp
+                      ? `gave up after ${formatDuration(state.challenge.beforeMs)}`
+                      : formatDuration(state.challenge.beforeMs)}
                 </em>
                 . After:{" "}
                 <em>

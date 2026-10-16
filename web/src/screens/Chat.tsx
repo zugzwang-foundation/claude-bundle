@@ -231,7 +231,14 @@ export function Chat() {
           </p>
         </div>
 
-        <ol ref={listRef} className="chat__messages" aria-live="polite" aria-label="Conversation">
+        <ol
+          ref={listRef}
+          className="chat__messages"
+          aria-live="polite"
+          aria-label="Conversation"
+          // The transcript scrolls once it has messages, so it is then reachable from the keyboard.
+          tabIndex={messages.length > 0 ? 0 : undefined}
+        >
           {messages.map((message) => (
             <li key={message.id} className={cx("msg", `msg--${message.role}`)}>
               <span className="msg__who">{message.role === "you" ? "You" : "Assistant"}</span>

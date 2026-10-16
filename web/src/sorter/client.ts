@@ -47,6 +47,8 @@ export class SorterClient {
   private readonly files = new Map<string, { loaded: number; total: number }>();
   private readonly listeners = new Set<() => void>();
   private snapshot: SorterSnapshot = INITIAL;
+  /** True once a failed WebGPU load has been retried on WASM in a fresh worker. */
+  private retriedOnWasm = false;
   private readonly createWorker: () => Worker;
 
   constructor(createWorker?: () => Worker) {
@@ -68,6 +70,7 @@ export class SorterClient {
   load(): Promise<ReadyInfo> {
     if (this.loadPromise && this.snapshot.status !== "error") return this.loadPromise;
     this.files.clear();
+    this.retriedOnWasm = false;
     this.loadPromise = new Promise<ReadyInfo>((resolve, reject) => {
       this.loadResolvers = { resolve, reject };
     });
@@ -157,12 +160,26 @@ export class SorterClient {
           const pending = this.pending.get(message.id);
           this.pending.delete(message.id);
           pending?.reject(new Error(message.message));
+        } else if (message.device === "webgpu" && !this.retriedOnWasm) {
+          // A WebGPU session that fails poisons its worker (see worker.ts): start afresh on WASM.
+          this.retriedOnWasm = true;
+          this.restartWorker();
+          this.send({ type: "load", device: "wasm" });
         } else {
           this.fail(message.message);
         }
         break;
       }
     }
+  }
+
+  private restartWorker(): void {
+    this.worker?.terminate();
+    this.worker = null;
+    this.files.clear();
+    for (const p of this.pending.values()) p.reject(new Error("Sorter restarted"));
+    this.pending.clear();
+    this.update({ progress: { loaded: 0, total: 0, fraction: 0, file: null } });
   }
 
   private fail(message: string): void {

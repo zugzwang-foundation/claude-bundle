@@ -238,6 +238,11 @@ function QuizResult({ headingRef, onRetake, onBack }: QuizResultProps) {
   const { type, interests } = result;
 
   function buildHistory() {
+    // A retaken quiz with different interests starts the story again; the same answers keep it.
+    const previous = state.personality?.interests ?? [];
+    const changed =
+      previous.length !== interests.length || previous.some((id, i) => id !== interests[i]);
+    if (changed && state.history.length > 0) dispatch({ type: "clearStory" });
     dispatch({
       type: "setPersonality",
       personality: { type: type.name, interests: [...interests] },

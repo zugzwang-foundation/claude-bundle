@@ -16,6 +16,8 @@ const MODEL_TIMEOUT_MS = 120_000;
 interface NetworkWatch {
   /** Hosts outside this origin and the model hosts; every request to them was aborted. */
   otherHosts: Set<string>;
+  /** The model hosts actually contacted (huggingface.co and its download CDN). */
+  modelHosts: Set<string>;
   /** Bytes of 200 responses from the model hosts, from their Content-Length headers. */
   modelBytes: number;
   modelResponses: number;
@@ -42,6 +44,7 @@ interface BundleStats {
 async function watchNetwork(page: Page): Promise<NetworkWatch> {
   const watch: NetworkWatch = {
     otherHosts: new Set(),
+    modelHosts: new Set(),
     modelBytes: 0,
     modelResponses: 0,
     modelFiles: [],
@@ -56,7 +59,9 @@ async function watchNetwork(page: Page): Promise<NetworkWatch> {
   });
   page.on("response", (response) => {
     const url = new URL(response.url());
-    if (!MODEL_HOSTS.test(url.hostname) || response.status() !== 200) return;
+    if (!MODEL_HOSTS.test(url.hostname)) return;
+    watch.modelHosts.add(url.hostname);
+    if (response.status() !== 200) return;
     const length = Number(response.headers()["content-length"] ?? 0);
     if (length > 0) {
       watch.modelBytes += length;
@@ -222,33 +227,15 @@ for (const theme of ["light", "dark"] as const) {
     await shot(page, project, theme, 7, "reveal-found");
     const stats = await page.evaluate(() => window.__bundleStats ?? null);
     expect(stats).not.toBeNull();
-    await reveal.getByRole("button", { name: "Carry on" }).click();
+    const foundCard = reveal.locator(".bundle-card.is-found");
+    await expect(foundCard).toHaveCount(1);
+    const targetBundled = (await foundCard.getAttribute("data-colour")) !== "loose";
+    testInfo.annotations.push({
+      type: "target",
+      description: targetBundled ? "bundled" : "left loose by the sorter",
+    });
 
-    // 8. Continue: the found chat inside its bundle; the reply names bundle chats.
-    const cont = page.locator('[data-step="continue"]');
-    await expect(cont).toBeVisible();
-    await expect(cont.locator(".bundle-card")).toHaveCount(1);
-    await cont.locator(".continue__question").click();
-    const reply = cont.getByTestId("continue-reply");
-    await expect(reply).toBeVisible();
-    expect(await reply.locator("mark").count()).toBeGreaterThanOrEqual(1);
-    await expectFooter();
-    await shot(page, project, theme, 8, "continue");
-
-    // The tech view, with the sort's measurements, for the record.
-    const tech = page.getByRole("button", { name: "Tech view" });
-    await tech.click();
-    await expect(tech).toHaveAttribute("aria-pressed", "true");
-    const panel = page.getByRole("complementary", { name: "Tech view" });
-    await expect(panel).toBeVisible();
-    const perDecision = await panel
-      .getByText(/median .*ms, mean .*ms, max .*ms/)
-      .first()
-      .innerText()
-      .catch(() => "");
-    await shot(page, project, theme, 9, "tech-view");
-
-    // Record the measured budgets for README.md.
+    // Record the measured budgets for README.md before the last step's assertions.
     mkdirSync(BUDGETS_DIR, { recursive: true });
     writeFileSync(
       `${BUDGETS_DIR}/${project}-${theme}.json`,
@@ -259,18 +246,48 @@ for (const theme of ["light", "dark"] as const) {
           historyCount,
           targetTitle,
           paraphrase,
+          targetBundled,
           modelBytes: watch.modelBytes,
           modelMB: Number((watch.modelBytes / 1_048_576).toFixed(2)),
           modelResponses: watch.modelResponses,
           modelFiles: watch.modelFiles,
+          modelHosts: [...watch.modelHosts],
           stats: stats as BundleStats | null,
-          perDecision,
           otherHosts: [...watch.otherHosts],
         },
         null,
         2,
       )}\n`,
     );
+    await reveal.getByRole("button", { name: "Carry on" }).click();
+
+    // 8. Continue: the found chat inside its bundle; the reply names chats from that bundle.
+    // With the untrained baseline and the default calibration the sorter often leaves the
+    // target loose; then the screen must say so and the reply must carry no empty slot.
+    const cont = page.locator('[data-step="continue"]');
+    await expect(cont).toBeVisible();
+    await expect(cont.locator(".bundle-card")).toHaveCount(1);
+    await cont.locator(".continue__question").click();
+    const reply = cont.getByTestId("continue-reply");
+    await expect(reply).toBeVisible();
+    await expect(reply).not.toContainText("{{");
+    if (targetBundled) {
+      expect(await reply.locator("mark").count()).toBeGreaterThanOrEqual(1);
+    } else {
+      await expect(cont.locator(".bundle-card--loose")).toHaveCount(1);
+      await expect(cont.locator(".continue__note")).toContainText("left this chat alone");
+    }
+    await expectFooter();
+    await shot(page, project, theme, 8, "continue");
+
+    // The tech view, with the sort's measurements, for the record.
+    const tech = page.getByRole("button", { name: "Tech view" });
+    await tech.click();
+    await expect(tech).toHaveAttribute("aria-pressed", "true");
+    const panel = page.getByRole("complementary", { name: "Tech view" });
+    await expect(panel).toBeVisible();
+    await expect(panel.getByText(/median .*ms, mean .*ms, max .*ms/).first()).toBeVisible();
+    await shot(page, project, theme, 9, "tech-view");
 
     // Privacy: nothing left the origin except the model download.
     expect([...watch.otherHosts]).toEqual([]);
