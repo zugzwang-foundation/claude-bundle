@@ -72,7 +72,7 @@ describe("scoreVectors and probabilities", () => {
     const scores = scoreVectors(l2Normalize([1, 1, 0]), candidates, calibration.noneScore);
     expect(close(scores.b1 ?? 0, Math.SQRT1_2)).toBe(true);
     expect(close(scores.c7 ?? 0, Math.SQRT1_2)).toBe(true);
-    expect(scores[NONE_ID]).toBe(0.3);
+    expect(scores[NONE_ID]).toBe(calibration.noneScore);
   });
 
   it("sends a perfect match above the file cutoff at the default temperature", () => {

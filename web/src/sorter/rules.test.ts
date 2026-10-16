@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
-import calibration from "./calibration.json";
 import { decide, topCandidate } from "./rules";
+
+// Fixed cut-offs: the rules are threshold logic and must not move when calibration.json is recalibrated.
+const calibration = { fileCutoff: 0.85, suggestCutoff: 0.55 };
 
 describe("decide", () => {
   it("files at or above the file cutoff", () => {
