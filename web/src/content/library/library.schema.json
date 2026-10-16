@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Bundle demo library: one interest",
+  "title": "Demo library: one interest",
   "description": "Demo content only (decision D4): never used as lessons or exam data. One file per interest. Each chat has a casually typed opening question, a reply of at most 60 words, a short title for the sidebar, and a paraphrase of the question for the find-your-chat challenge. Each thread has a continuation reply of at most 80 words with {{chat:N}} slots that the demo fills with the titles of the thread's earlier chats actually present in the bundle.",
   "type": "object",
   "additionalProperties": false,

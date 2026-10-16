@@ -1,0 +1,7 @@
+{
+  "id": "Xenova/all-MiniLM-L6-v2",
+  "source": "hub",
+  "dtype": "q8",
+  "name": "all-MiniLM-L6-v2 (base, untrained)",
+  "sizeMB": null
+}

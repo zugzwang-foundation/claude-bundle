@@ -1,0 +1,80 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.header__brand {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-lg);
+  letter-spacing: -0.02em;
+}
+
+.header__mark {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--bundle-teal));
+}
+
+.header__switches {
+  display: flex;
+  gap: var(--space-2);
+  justify-self: end;
+}
+
+.header .dots {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+@media (min-width: 48rem) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .header .dots {
+    grid-column: auto;
+  }
+}
+
+.switch {
+  min-height: 36px;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.switch[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+@media (width < 48rem), (pointer: coarse) {
+  .switch {
+    min-height: 44px;
+  }
+
+  /* A definite width for the dots row, so each step can take its 44px flex basis. */
+  .header .dots {
+    justify-self: stretch;
+  }
+}

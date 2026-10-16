@@ -1,0 +1,33 @@
+.continuation-reply {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.6;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+
+/* A filled slot: the title of a chat that really is in this bundle. */
+.continuation-reply__title {
+  display: inline;
+  padding: 0.05em 0.4em;
+  border-radius: var(--radius-s);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 700;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation: continuation-mark-in var(--dur-slow) var(--ease) both;
+  animation-delay: calc(var(--i, 0) * var(--dur));
+}
+
+@keyframes continuation-mark-in {
+  from {
+    background-color: transparent;
+    color: var(--ink);
+  }
+
+  to {
+    background-color: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+}
