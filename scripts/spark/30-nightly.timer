@@ -1,0 +1,20 @@
+# 30-nightly.timer — start 30-nightly.service at 01:00 local time every night.
+#
+# WRITTEN IN BDL-3, NEVER RUN YET; VERIFY ON THE SPARK IN BDL-4. NOT ENABLED BY DEFAULT.
+#
+# Install: see the top of 30-nightly.service (the timer is what gets enabled).
+# "Local" is the Spark's zone: check with `timedatectl` (00-check.sh prints it).
+# Check what is scheduled: systemctl --user list-timers --all
+
+[Unit]
+Description=Bundle nightly loop at 01:00 local time
+
+[Timer]
+OnCalendar=*-*-* 01:00:00
+# If the Spark was off at 01:00, or rebooted itself in the night (R6), run as soon as
+# the user manager is back instead of waiting for the next night.
+Persistent=true
+Unit=30-nightly.service
+
+[Install]
+WantedBy=timers.target
