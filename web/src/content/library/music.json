@@ -1,0 +1,248 @@
+{
+  "interest": "music",
+  "label": "Music",
+  "threads": [
+    {
+      "id": "music-t1",
+      "topic": "Learning guitar from scratch as an adult",
+      "chats": [
+        {
+          "id": "music-t1-c1",
+          "title": "Acoustic or electric to start",
+          "question": "ok so im 34 and want to finally learn guitar. acoustic or electric for a total beginner? i dont want to annoy my flatmates",
+          "reply": "Pick the one you'll actually want to pick up. Electric is quieter through headphones and gentler on the fingers, which matters with flatmates. Acoustic needs nothing else and sounds lovely on a sofa. If you're torn, try both in a shop for ten minutes: your hands will tell you. Either way, buy second hand and get it set up properly.",
+          "paraphrase": "which sort of six-string a late beginner should buy first without upsetting the flat"
+        },
+        {
+          "id": "music-t1-c2",
+          "title": "Sore fingertips after practice",
+          "question": "my fingertips are killing me after 3 days of practice, is this normal or am i pressing too hard",
+          "reply": "Completely normal, and it passes. The skin on your fingertips thickens within two or three weeks. Keep sessions short: ten minutes a few times a day beats an hour of pain. Press just hard enough for a clean note, no harder. If a fingertip blisters, rest it for a day. Soon you'll barely notice.",
+          "paraphrase": "when my hands hurt from the strings in week one"
+        },
+        {
+          "id": "music-t1-c3",
+          "title": "First three chords to learn",
+          "question": "which chords should i learn first so i can actually play something that sounds like a song and not a cat falling down stairs",
+          "reply": "Start with E minor, A minor and D major. They sit close together, use few fingers and show up in a huge number of songs. Once they ring clean, add G and C. With those five you can play along to half of everything on the radio, from folk to pop punk. The cat noise fades fast.",
+          "paraphrase": "asking what shapes to start with to make real music quickly"
+        },
+        {
+          "id": "music-t1-c4",
+          "title": "Switching chords without stopping",
+          "question": "i can play the chords fine now but changing between them takes like 3 seconds and the song just dies. help",
+          "reply": "Everyone hits this wall. Practise the change, not the chord: go back and forth between two shapes slowly, lifting all fingers together, for two minutes. Then do it along to a metronome so slow it feels silly. Look for anchor fingers that can stay put between shapes. A week of this and the gap shrinks.",
+          "paraphrase": "the gap problem when moving my hand from one shape to the next"
+        },
+        {
+          "id": "music-t1-c5",
+          "title": "Strumming patterns that sound right",
+          "question": "my strumming sounds like a robot doing laundry. how do people make it sound like actual music",
+          "reply": "Robot laundry is a classic phase. Keep your arm moving down and up constantly, like a pendulum, and only let the pick touch the strings on some swings. Start with down, down-up, up-down-up. Count out loud and tap your foot. Loosen your wrist. Rhythm lives in the swing of the elbow, not in a tight grip.",
+          "paraphrase": "my picking hand rhythm being stiff and mechanical"
+        },
+        {
+          "id": "music-t1-c6",
+          "title": "Barre chords are impossible",
+          "question": "barre chords. why. my hand cramps and every string buzzes. is there a trick or do i just suffer",
+          "reply": "You mostly just suffer, briefly. Roll your index finger slightly onto its bony side, place it right behind the fret, and let your thumb push from behind the neck. Start higher up the neck where the strings are easier. Hold the shape for thirty seconds at a time, then shake it out. Buzzing fades over weeks, not days.",
+          "paraphrase": "the shape where one finger presses the whole neck and buzzes"
+        },
+        {
+          "id": "music-t1-c7",
+          "title": "Playing in front of people",
+          "question": "friends want me to play at a bbq next month. i freeze up when anyone watches. how do i not bomb",
+          "reply": "Pick two songs you can play badly in your sleep, not your hardest ones. Practise them standing up with the TV on, to simulate distraction. On the day, start with the easier one and look at your hand, not the crowd. Mistakes at a barbecue are invisible. People hear a friend playing, not a performance.",
+          "paraphrase": "nerves about performing for mates at a garden party"
+        },
+        {
+          "id": "music-t1-c8",
+          "title": "What to learn after the basics",
+          "question": "six months in, i can play maybe 10 songs badly. what should i work on next so i dont plateau",
+          "reply": "Plateaus usually mean you're practising what you can already do. Pick one thing you avoid, maybe fingerpicking, a new strumming style or simple scales, and give it ten minutes a day. Learn a song in a style you never play. Record yourself monthly: the progress you cannot feel shows up clearly on tape.",
+          "paraphrase": "feeling stuck at the six-month mark and wanting a next step"
+        }
+      ],
+      "continuation": {
+        "question": "its been nearly a year now. should i get lessons or keep teaching myself?",
+        "reply": "Honestly, you've done the hard part alone. Since we talked about {{chat:6}} and {{chat:8}}, a teacher could fix the small habits you cannot hear yourself. Try a few lessons with a clear goal, like clean barre shapes or playing with a singer. Keep the self-taught joy though: those messy evening sessions are the reason {{chat:7}} stopped being scary."
+      }
+    },
+    {
+      "id": "music-t2",
+      "topic": "Asked to DJ a friend's wedding with no experience",
+      "chats": [
+        {
+          "id": "music-t2-c1",
+          "title": "Saying yes to DJ a wedding",
+          "question": "my best mate asked me to dj his wedding this autumn. ive never dj'd anything. am i insane to say yes?",
+          "reply": "Not insane, lovely actually. Wedding DJing is mostly playlist curation plus staying calm. You know the couple, which beats any pro. Say yes with conditions: you'll need their must-play and never-play lists early, a look at the venue's sound setup, and permission to be a guest too during the speeches. Then start listening with intent.",
+          "paraphrase": "whether to agree to run the music at a close friend's big day"
+        },
+        {
+          "id": "music-t2-c2",
+          "title": "Minimum gear for a party set",
+          "question": "what do i actually need gear wise? controller? speakers? laptop? the venue says it has 'a sound system' which could mean anything",
+          "reply": "Treat 'a sound system' as a rumour until you've seen it. Visit or call the venue and ask what you can plug into. Then you need a laptop with your music downloaded, a basic two-channel controller, headphones and the right cables, plus spares. Hire the controller rather than buying. Test the whole chain at home first.",
+          "paraphrase": "what kit I'd have to bring versus what the hall might already own"
+        },
+        {
+          "id": "music-t2-c3",
+          "title": "Building a wedding playlist",
+          "question": "how do i build a playlist for 120 people aged 4 to 84 without it being cheesy",
+          "reply": "Think in waves, not one long list. Arrival gets gentle acoustic and soul. Dinner stays mellow. Early dancing goes to crowd-pleasers everyone sings along to, old and new. Late night turns up the tempo. Ask guests to submit three songs each: you'll spot the overlaps, and that overlap is your dance floor.",
+          "paraphrase": "picking songs that work for toddlers and grandparents in the same room"
+        },
+        {
+          "id": "music-t2-c4",
+          "title": "Dinner music that isn't boring",
+          "question": "what should play during dinner? something people can talk over but doesnt feel like a dentist waiting room",
+          "reply": "Aim for warm and a bit swinging: classic soul, bossa nova, mellow funk, laid-back jazz vocals. Keep the volume where people lean in slightly to talk. Avoid anything with a chorus people will want to sing, and skip very slow ballads, which make rooms go quiet. Ninety minutes of it, no repeats.",
+          "paraphrase": "background sound for the meal part of the evening"
+        },
+        {
+          "id": "music-t2-c5",
+          "title": "Blending one song into the next",
+          "question": "how do i go from one song to the next without that awkward silence or a horrible clash",
+          "reply": "Three cheap tricks. Match tempos roughly, within a few beats per minute. Start the next track quietly as the current one hits its final chorus, then swap over a few bars. If two songs clash, let the first finish fully and start the next on the beat. Nobody notices a clean gap; they notice a mess.",
+          "paraphrase": "making transitions smooth instead of jarring"
+        },
+        {
+          "id": "music-t2-c6",
+          "title": "Handling song requests nicely",
+          "question": "what do i do when drunk uncle demands a song that will clear the floor",
+          "reply": "Smile, nod, and say 'I'll fit it in' while meaning 'maybe never'. Have the couple's never-play list to hide behind: the bride vetoed that one, sorry. If a request is actually decent, play it later when the floor is full. Keep a few sure-fire floor fillers ready to repair any damage.",
+          "paraphrase": "turning down a tipsy relative's terrible pick without a scene"
+        },
+        {
+          "id": "music-t2-c7",
+          "title": "Plan for the wedding day itself",
+          "question": "its this saturday. what do i need to check when i arrive and what will go wrong",
+          "reply": "Arrive two hours early. Plug in, play a song through the venue system, and walk the room. Find the power sockets and the person who knows the building. Charge everything. Eat before dinner is served. Expect the schedule to slip by an hour, keep a quiet playlist ready for gaps, and know where the speeches microphone lives.",
+          "paraphrase": "my checklist for arriving at the venue and surviving the night"
+        },
+        {
+          "id": "music-t2-c8",
+          "title": "They want me to do it again",
+          "question": "it went great!! now two other couples asked me to dj theirs. do i charge? am i a dj now??",
+          "reply": "Congratulations, you're a DJ now, at least on weekends. Charging is fair once you're bringing gear, time and skill. Cover your costs at minimum and remember your free time has value too. Agree the fee before the date, in writing. Keep the first couple's thank-you message; it's your first review.",
+          "paraphrase": "being asked back after the first gig and whether to take money for it"
+        }
+      ],
+      "continuation": {
+        "question": "ok i said yes to the second wedding. what should i do differently this time?",
+        "reply": "Mostly repeat what worked. The planning you did for {{chat:3}} and {{chat:7}} is your template now. Two changes: chase the couple for their never-play list much earlier, so {{chat:6}} is easier on the night, and record your set so you can hear which blends landed. Bring a spare cable for everything, and eat."
+      }
+    },
+    {
+      "id": "music-t3",
+      "topic": "Going to a first multi-day camping festival",
+      "chats": [
+        {
+          "id": "music-t3-c1",
+          "title": "Deciding on a first festival",
+          "question": "friends are going to a 3 day camping festival this summer and i have never camped OR festivaled. talk me into or out of it",
+          "reply": "Into it. A first festival with friends who've done it before is the easiest version there is. The camping is the price of admission; the payoff is three days where music is the only plan. Borrow a tent you've practised pitching, go with low expectations for sleep, and treat it as a trip rather than a concert.",
+          "paraphrase": "whether a weekend of tents and stages suits someone who has done neither"
+        },
+        {
+          "id": "music-t3-c2",
+          "title": "Festival packing list essentials",
+          "question": "what do i actually need to pack? i have a tent and a sense of dread",
+          "reply": "Beyond the tent: a sleeping mat, warm layers for night, a waterproof, boots you've already broken in, a head torch, a refillable bottle, sunscreen, wet wipes, a tiny first-aid kit, earplugs, a portable charger, some cash, and bin bags for wet clothes. Pack less than you think. Half of it never leaves the bag.",
+          "paraphrase": "what to stuff in the bag besides the tent"
+        },
+        {
+          "id": "music-t3-c3",
+          "title": "Earplugs and protecting hearing",
+          "question": "do people really wear earplugs at gigs? wont it ruin the sound? my ears rang for 2 days after the last one",
+          "reply": "Yes, and the ringing is your ears asking for them. Musician-style earplugs lower the volume evenly, so the music stays clear, just quieter. You'll hear your friends better too. A day or two of ringing usually settles; if it ever lingers or keeps coming back, a doctor can check your hearing. Protecting it now is cheap.",
+          "paraphrase": "whether blocking my ears at loud shows is worth it"
+        },
+        {
+          "id": "music-t3-c4",
+          "title": "Choosing which stage to see",
+          "question": "theres like 6 stages and 200 acts. how do i decide without having a breakdown",
+          "reply": "Circle your five must-sees first and lock those in. For everything else, follow the people you're with and the stage nearest the food. Clashes resolve themselves: see the act you'll never catch otherwise, skip the one who tours constantly. Leave gaps. The best sets are often small tents you wandered into by accident.",
+          "paraphrase": "picking between overlapping sets on a huge lineup"
+        },
+        {
+          "id": "music-t3-c5",
+          "title": "Meeting up when signal dies",
+          "question": "how do people find each other at festivals when theres no signal and everyone looks the same in the dark",
+          "reply": "Old-school works best. Agree a meeting point and time before you split, somewhere tall and fixed like a flag or a lighting tower, not the bar. Send a text rather than calling; texts get through when signal is thin. Make your camp easy to spot with a ribbon or flag. Charge phones at the campsite overnight.",
+          "paraphrase": "ways to regroup with mates when phones are useless"
+        },
+        {
+          "id": "music-t3-c6",
+          "title": "Sleeping in a tent near the stage",
+          "question": "we pitched the tent and the bass is shaking the ground. how do i sleep. do i sleep",
+          "reply": "You will sleep, just later than usual. Earplugs plus an eye mask make the biggest difference. Go to bed properly tired rather than fighting it at eleven. Keep the tent ventilated so it isn't a greenhouse by dawn. If it's really bad, tomorrow is a fine day to move the tent to the quiet field.",
+          "paraphrase": "getting any rest with bass thumping all night"
+        },
+        {
+          "id": "music-t3-c7",
+          "title": "Surviving the Sunday slump",
+          "question": "day 3. everything hurts. feet, voice, soul. how do i rally for the headliner tonight",
+          "reply": "Day three is a known condition. Sit down for a proper meal, drink plenty of water, and nap in the shade; even twenty minutes helps. Then shower if you can and put on your last clean socks. Walk to the headliner with your friends; shared tiredness beats alone tiredness every time.",
+          "paraphrase": "rallying on the last day when I'm wrecked"
+        },
+        {
+          "id": "music-t3-c8",
+          "title": "Post-festival blues at home",
+          "question": "back home, showered, sad. why do i feel so flat after the best weekend ever",
+          "reply": "That flatness is real: three days of loud joy, little sleep and constant company, then silence. People joke about the comedown but it's a genuine dip. Give yourself a slow week. Sleep, eat vegetables, see those friends again soon, and make a playlist of what you heard. Planning the next one helps more than it should.",
+          "paraphrase": "feeling empty after getting back from the weekend"
+        }
+      ],
+      "continuation": {
+        "question": "booking next years tickets. anything i should do differently?",
+        "reply": "Yes, a few things. Pack lighter than {{chat:2}} suggested, you never wore half of it. Pitch further from the stage this time, remembering {{chat:6}}, and keep the earplug habit from {{chat:3}}. Most of all, plan less: the sets you wandered into by accident were the ones you still talk about."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "music-o1",
+      "title": "Why songs get stuck in my head",
+      "question": "why has the same 10 seconds of a song been playing in my head since tuesday. make it stop",
+      "reply": "That's an earworm, and your brain does it because the fragment feels unfinished. The loop usually sits in the chorus, right where the melody wants to resolve. Try playing the whole song once through to the end, chew gum for a few minutes, or do a word puzzle. Giving the brain something else to chew on usually breaks the loop.",
+      "paraphrase": "that ten-second loop in my brain that won't quit"
+    },
+    {
+      "id": "music-o2",
+      "title": "Why minor keys sound sad",
+      "question": "why does a minor chord sound sad? is it learned or built in? asking because my cat seems unbothered",
+      "reply": "Partly built in, mostly learned. Minor intervals carry slightly more tension physically, but the link to sadness is cultural: we grew up hearing minor keys under sad scenes. Some musical traditions use minor modes for weddings and celebrations. The cat may simply be unbothered because nobody taught her otherwise.",
+      "paraphrase": "whether gloomy chords are nature or habit"
+    },
+    {
+      "id": "music-o3",
+      "title": "Why my recorded voice sounds odd",
+      "question": "why does my singing voice sound so different (and worse) on a recording than in my head?? who is that person",
+      "reply": "You hear yourself two ways at once: through the air and through the bones of your skull, which add warmth and depth. A recording only gets the air version, so it sounds thinner and higher than you expect. Everyone hates their first recordings. The microphone is more honest than the shower, not crueller. Keep listening and it stops being strange.",
+      "paraphrase": "that stranger I hear when I play back a clip of myself singing"
+    },
+    {
+      "id": "music-o4",
+      "title": "Remembering lyrics for decades",
+      "question": "how do i still know every word of a song from when i was 12 but forget my own door code",
+      "reply": "Melody and rhythm give words a structure to hang on, and you heard them hundreds of times at an age when your brain was soaking everything up. Emotion stamps memories harder too. Your door code has no tune. If you sang it to a chorus a few times you'd probably never lose it either.",
+      "paraphrase": "why old song words stick while everyday numbers slip"
+    },
+    {
+      "id": "music-o5",
+      "title": "Can adults learn perfect pitch",
+      "question": "is perfect pitch a real thing and can i get it at 29 or is that ship gone",
+      "reply": "True perfect pitch, naming a note cold with no reference, seems to develop in early childhood, so that ship has mostly sailed. The good news is relative pitch, hearing intervals and finding notes from a reference, is learnable at any age and is what most working musicians rely on. A few minutes daily at a piano goes a long way.",
+      "paraphrase": "naming notes by ear and whether it's too late to train"
+    },
+    {
+      "id": "music-o6",
+      "title": "Goosebumps from a chorus",
+      "question": "why do i get actual goosebumps when a song hits the big chorus? is that normal or am i broken",
+      "reply": "Normal, and a sign of a brain that listens closely. The shivers, sometimes called frisson, come when a song builds expectation and then pays it off, often with a jump in volume, a key change or a voice cracking. Your body reacts a little like it does to a surprise. Not everyone gets it; enjoy being one who does.",
+      "paraphrase": "the shivers I get at the loud part of certain songs"
+    }
+  ]
+}

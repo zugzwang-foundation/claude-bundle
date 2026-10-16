@@ -1,0 +1,248 @@
+{
+  "interest": "work",
+  "label": "Work",
+  "threads": [
+    {
+      "id": "work-t1",
+      "topic": "Finding my feet in a new job",
+      "chats": [
+        {
+          "id": "work-t1-c1",
+          "title": "Negotiating a later start date",
+          "question": "got the offer!! but they want me to start in two weeks and i was hoping for a break between jobs. is it ok to ask for a month?",
+          "reply": "Congratulations! Asking is completely normal and rarely costs anything. Thank them warmly, say you're excited, then explain you'd like to finish well at your current job and start fresh, and propose a specific date. Most teams would rather wait two extra weeks for someone rested than rush someone frazzled. Put it in writing once agreed.",
+          "paraphrase": "the one where i wanted a break before beginning the new role"
+        },
+        {
+          "id": "work-t1-c2",
+          "title": "What to do in the first week",
+          "question": "first day monday. what should i actually be doing in week one so i dont look lost",
+          "reply": "Week one is for listening, not impressing. Say yes to every coffee, write down names and who owns what, read whatever onboarding docs exist, and ask your manager what a good first month looks like. Nobody expects output yet. Ending the week with a short note of what you learned and what you'd like to tackle next looks sharp.",
+          "paraphrase": "my plan for the opening days so i didn't seem clueless"
+        },
+        {
+          "id": "work-t1-c3",
+          "title": "Remembering thirty new names",
+          "question": "ok there are like 30 people on this floor and ive already called someone by the wrong name twice. help",
+          "reply": "Everyone forgets, and owning it with a laugh beats pretending. Keep a private note with name, team and one detail about each person, and reread it before standups. Use names out loud when you greet people; saying them cements them. Within a few weeks the note becomes unnecessary, and the two mix-ups will be long forgotten.",
+          "paraphrase": "struggling to keep track of who's who on my floor"
+        },
+        {
+          "id": "work-t1-c4",
+          "title": "Getting more from time with my manager",
+          "question": "my new manager set up weekly 1:1s. what do i even talk about? i dont want it to be a status update",
+          "reply": "Treat it as your meeting, not theirs. Bring one thing you're stuck on, one thing you learned, and one question about how the team or company really works. Ask what they're worried about this quarter. Save status for written updates. Over time you'll know their priorities and they'll know yours, which is what the meeting is for.",
+          "paraphrase": "figuring out what to bring to the weekly chat with my boss"
+        },
+        {
+          "id": "work-t1-c5",
+          "title": "Feeling like a fraud at work",
+          "question": "month two and everyone seems to know what they're doing except me. did they hire the wrong person lol",
+          "reply": "That feeling is almost universal at month two and says nothing about your ability. You're comparing your insides to everyone else's outsides. Keep a small list of things you've figured out since day one; it's longer than you think. Ask one question you've been scared to ask. Nobody who hired you is counting your mistakes the way you are.",
+          "paraphrase": "worrying the company picked the wrong candidate when they chose me"
+        },
+        {
+          "id": "work-t1-c6",
+          "title": "Owning my first real mistake",
+          "question": "i sent a report with a wrong number to a client and my manager was cc'd. stomach is in knots. how do i handle this",
+          "reply": "Deep breath. Fix the number first, then tell your manager directly before they hear it elsewhere: what happened, what you've corrected, and what you'll change so it doesn't recur. A short, calm correction to the client works too. People remember how you handled it far more than the slip itself. One mistake is a data point, not a verdict.",
+          "paraphrase": "the time i sent a wrong figure to a customer and panicked"
+        },
+        {
+          "id": "work-t1-c7",
+          "title": "Preparing for the ninety-day review",
+          "question": "90 day review is next week. how do i prep so it goes well and i dont just nod along",
+          "reply": "Write a one-page summary before the meeting: what you've delivered, what you've learned, where you want to grow. Bring two or three specific questions, such as what would make the next quarter a success. If there's feedback you've already acted on, say so. Reviews go best when you've shaped the agenda rather than waiting to be graded.",
+          "paraphrase": "getting ready for the three-month check-in on my performance"
+        },
+        {
+          "id": "work-t1-c8",
+          "title": "Asking to take on more",
+          "question": "settled in now and honestly a bit bored. how do i ask for bigger projects without sounding ungrateful",
+          "reply": "Boredom four months in is a good sign; it means you've learned the basics. Frame it as readiness, not complaint: name a problem you've noticed, say you'd like to own it, and ask what would make your manager comfortable handing it over. Managers love people who volunteer for the messy stuff. Pick something slightly scary.",
+          "paraphrase": "ready for a meatier assignment and wanting to raise it tactfully"
+        }
+      ],
+      "continuation": {
+        "question": "its been six months now. looking back, what should i focus on next?",
+        "reply": "Six months in, you've moved well past {{chat:2}} and {{chat:5}}. The way you handled {{chat:6}} showed people they can trust you under pressure. Next, pick one problem the team quietly complains about and become the person who fixes it. Keep the weekly notes going, and start thinking about where you'd like to be in a year so your manager can help you get there."
+      }
+    },
+    {
+      "id": "work-t2",
+      "topic": "Becoming a manager for the first time",
+      "chats": [
+        {
+          "id": "work-t2-c1",
+          "title": "Promoted to lead my old teammates",
+          "question": "just got made team lead and i now manage 4 people i used to have lunch with. this is going to be weird right?",
+          "reply": "A bit weird, yes, and that's fine. Name it in your first team meeting: you know things changed, you'll be fair, and you'd rather hear concerns early. Keep the lunches. What changes is that you now carry decisions alone sometimes, and you'll hear less gossip. Earn trust by being consistent, not by pretending nothing happened.",
+          "paraphrase": "the awkwardness of suddenly being the boss of my lunch friends"
+        },
+        {
+          "id": "work-t2-c2",
+          "title": "Running my first one-on-ones",
+          "question": "how do i run a 1:1 as the manager?? i've only ever been on the other side",
+          "reply": "Let them talk first. Open with how things are going, then listen for what they don't say. Ask what's blocking them, what they want to learn, and how you can help. Keep notes you both can see so promises don't vanish. Resist solving everything on the spot. A good one-on-one leaves them feeling heard, not managed.",
+          "paraphrase": "learning to hold the weekly check-ins from the other chair"
+        },
+        {
+          "id": "work-t2-c3",
+          "title": "Letting go of doing it myself",
+          "question": "i keep redoing my team's work because its faster. i know thats bad. how do i actually delegate",
+          "reply": "Redoing their work teaches them that effort is pointless. Start by handing over whole outcomes, not tasks, and agree what good looks like up front. Accept eighty percent of your version; the extra twenty is theirs to grow into. Set a check-in halfway rather than at the end. Your job now is their output, not yours.",
+          "paraphrase": "breaking the habit of fixing everyone's tasks on my own"
+        },
+        {
+          "id": "work-t2-c4",
+          "title": "Giving feedback that lands",
+          "question": "one of my team keeps missing deadlines and i've been hinting. how do i say it straight without crushing them",
+          "reply": "Hints don't register; clarity is kinder. Pick a private moment, describe what you observed, say why it matters, and ask what's going on. Then agree one concrete change and a date to revisit. Keep your voice warm and the words direct. Most people prefer knowing exactly where they stand to guessing from your tone.",
+          "paraphrase": "telling someone plainly their lateness is a problem"
+        },
+        {
+          "id": "work-t2-c5",
+          "title": "Supporting a struggling team member",
+          "question": "same person, still slipping even after our chat. they seem overwhelmed not lazy. what now",
+          "reply": "Overwhelmed and lazy look similar from the outside and need opposite responses. Sit down together and list everything on their plate; it may be more than you realised. Take something off it, pair them with a steadier colleague, and shorten the feedback loop to weekly. Write down what you've agreed. If things still don't shift, involve whoever handles people matters.",
+          "paraphrase": "helping a colleague who is drowning rather than slacking"
+        },
+        {
+          "id": "work-t2-c6",
+          "title": "Making team meetings worth attending",
+          "question": "our weekly team meeting is a snoozefest and i'm the one running it. fix it?",
+          "reply": "Cut it in half and give it a job. Share status in writing beforehand; use the room for decisions, blockers and one topic worth debating. Rotate who runs it so it isn't your show. End with who does what by when. If a meeting has no decision to make, cancel it; people will thank you more than you'd expect.",
+          "paraphrase": "rescuing the dull weekly gathering i'm in charge of"
+        },
+        {
+          "id": "work-t2-c7",
+          "title": "Hiring my first team member",
+          "question": "i get to hire someone!! never interviewed anyone before. how do i not mess this up",
+          "reply": "Decide what the role must deliver in six months, then write questions that test for exactly that. Ask candidates to walk through real past work rather than hypotheticals, and listen for how they talk about teammates. Have a colleague interview too and compare notes separately before discussing. Hire for how they learn; skills you can teach.",
+          "paraphrase": "sitting on the interviewer's side of the table for a change"
+        },
+        {
+          "id": "work-t2-c8",
+          "title": "Six months of managing, honestly",
+          "question": "half a year as a manager. i miss actually making things. is that normal or a sign i should go back",
+          "reply": "Completely normal, and worth sitting with rather than acting on immediately. Managing gives slower, quieter rewards: someone you coached succeeding, a team that runs without you. Ask yourself whether you miss building or just miss feeling competent. If it's the first, keep a small project of your own. If it's the second, give it another six months.",
+          "paraphrase": "wondering whether i should step back from leading people"
+        }
+      ],
+      "continuation": {
+        "question": "my team is growing to seven. what changes when it gets bigger?",
+        "reply": "With seven, your calendar is the first thing to break. The habits from {{chat:2}} and {{chat:3}} matter more, not less: you cannot be in every detail. What you learned from {{chat:7}} becomes a repeatable process, since you'll hire again. Expect to spend more time on how people work together than on the work itself. That's not drifting from the job; it is the job."
+      }
+    },
+    {
+      "id": "work-t3",
+      "topic": "Giving my first big presentation at work",
+      "chats": [
+        {
+          "id": "work-t3-c1",
+          "title": "Asked to present at the all-hands",
+          "question": "my director asked me to present our project at the company all-hands in 3 months. 300 people. i said yes and now i'm terrified. where do i start",
+          "reply": "Saying yes was the hard part; the rest is craft. Start by writing one sentence: what should 300 people believe or do after your talk? Everything else serves that line. Then jot down the three points that get them there. Don't open a slide tool yet. Three months is plenty of time, which is why you shouldn't rush the thinking.",
+          "paraphrase": "agreed to speak in front of the whole company and immediately panicked"
+        },
+        {
+          "id": "work-t3-c2",
+          "title": "Shaping the story of the talk",
+          "question": "i have the one sentence. now how do i turn a years worth of project work into something that isnt just a timeline",
+          "reply": "Timelines are what happened; stories are why it mattered. Try this shape: the problem as people felt it, the moment things turned, what's different now, and what it means for them. Pick one real example for each. Cut anything that's only interesting to your team. If a colleague can retell it after hearing it once, the story works.",
+          "paraphrase": "turning twelve months of work into a narrative rather than a list of events"
+        },
+        {
+          "id": "work-t3-c3",
+          "title": "Slides that don't put people to sleep",
+          "question": "slides. how many, how much text, i've seen so many bad ones and don't want to add to the pile",
+          "reply": "One idea per slide, and fewer slides than you think you need. If a slide has more than fifteen words, it's a document, not a slide. Use a big number, a single picture or one short line, and say the rest out loud. Large type, consistent fonts. Your slides should support you, not compete with you.",
+          "paraphrase": "designing the visuals so the audience isn't bored stiff"
+        },
+        {
+          "id": "work-t3-c4",
+          "title": "Showing numbers without losing the room",
+          "question": "i have to show results data. how do i present numbers so people actually get it instead of glazing over",
+          "reply": "Show one number at a time and say what it means before anyone has to read it. Round hard; nobody remembers decimals. Compare to something they know, like before and after, rather than showing a dense table. If a chart needs explaining, redraw it. You want the back row nodding, not proof that you did the maths.",
+          "paraphrase": "making the stats part of my speech land with a general audience"
+        },
+        {
+          "id": "work-t3-c5",
+          "title": "Rehearsing without going stale",
+          "question": "how much should i practise? i'm scared of sounding robotic but also of forgetting everything",
+          "reply": "Practise the structure, not the script. Run it out loud five or six times from memory of the shape rather than exact words; the phrasing will settle on its own. Record one run and watch it. Do a rehearsal in front of two kind colleagues and ask what they remembered. Then stop a few days out; over-practising is real.",
+          "paraphrase": "finding the balance between sounding natural and blanking on stage"
+        },
+        {
+          "id": "work-t3-c6",
+          "title": "Calming nerves before going on",
+          "question": "its tomorrow. heart is racing just thinking about it. any tricks for the ten minutes before",
+          "reply": "Nerves and excitement feel identical in the body, so call it excitement. Arrive early and stand where you'll speak so the room feels familiar. Breathe out longer than you breathe in. Have your first two sentences memorised cold; once they're out, momentum takes over. Remember the audience wants you to do well. Nobody shows up hoping for a disaster.",
+          "paraphrase": "last-minute tricks for the shaky minutes before walking up to speak"
+        },
+        {
+          "id": "work-t3-c7",
+          "title": "Handling questions after the talk",
+          "question": "went ok!! but the q&a was rough, someone asked something i couldnt answer and i rambled. how do i handle that better",
+          "reply": "First, well done; the talk is the hard bit. For questions you can't answer, the honest version wins every time: repeat the question so everyone hears it, say you don't know but will find out, and name when you'll follow up. Then actually follow up. Rambling comes from fearing silence. A two-second pause reads as thoughtful, not stuck.",
+          "paraphrase": "coping with a tough audience query i had no answer for"
+        },
+        {
+          "id": "work-t3-c8",
+          "title": "Asked to speak at a conference",
+          "question": "my director liked it so much she wants me to give a version at an industry conference. different audience tho, external people. what changes?",
+          "reply": "Lovely problem to have. External audiences don't know your company, your acronyms or why the problem mattered, so spend longer on the setup and cut internal references entirely. Lead with the lesson other teams could use, not your results. Keep the story shape that worked; it travels. Same number of slides, more generous context, and double-check nothing confidential sneaks in.",
+          "paraphrase": "adapting my internal presentation for an outside industry event"
+        }
+      ],
+      "continuation": {
+        "question": "the conference talk is in a month. what should i do differently this time?",
+        "reply": "You've done the hard part once, so trust it. The work from {{chat:2}} and {{chat:4}} carries over almost untouched; only the framing changes for outsiders. Give yourself the same runway for {{chat:5}}, since a new audience brings new nerves. Prepare three likely questions in advance this time. And enjoy it a little; a year ago you'd never have imagined this."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "work-o1",
+      "title": "Declining a meeting politely",
+      "question": "got invited to a 2 hour meeting i have no reason to be in. how do i say no without being that person",
+      "reply": "A short, friendly line does it: thank them, say you don't think you'd add much, and offer to read the notes or join for the one part that involves you. Most organisers invite widely out of politeness and are relieved when someone opts out. If you're unsure whether you're needed, just ask what they'd like from you.",
+      "paraphrase": "backing out of a long invite i didn't need to attend"
+    },
+    {
+      "id": "work-o2",
+      "title": "Decoding office jargon",
+      "question": "what does 'lets take this offline' actually mean. and 'circle back'. my office speaks a different language sometimes",
+      "reply": "Taking it offline means we're not resolving this now, talk later in a smaller group, often code for please stop. Circling back means I'll return to this, with no promise of when. Most jargon is a soft way of saying no, not yet, or not here. Translate it in your head and reply in plain words; people quietly appreciate it.",
+      "paraphrase": "translating the strange phrases my coworkers use in meetings"
+    },
+    {
+      "id": "work-o3",
+      "title": "A less boring out-of-office",
+      "question": "writing my out of office for two weeks away. can i make it slightly fun or is that unprofessional",
+      "reply": "A little warmth is fine and memorable. Keep the essentials clear first: dates you're away, who to contact, and that you won't be checking messages. Then one light line, like promising to return with a tan and a full inbox. Avoid inside jokes and anything a stranger might misread. Short, kind, useful, with a touch of personality.",
+      "paraphrase": "adding a bit of personality to my holiday auto-reply"
+    },
+    {
+      "id": "work-o4",
+      "title": "How to end a work email",
+      "question": "i overthink email sign offs every single time. 'best' feels cold, 'cheers' feels fake. what do people actually use",
+      "reply": "Nobody remembers your sign-off unless it's odd, so pick one and stop deciding. Thanks works for almost everything, with best or kind regards for more formal threads. Match the other person's register when replying. If you're on a long thread with someone, drop the sign-off entirely after the second message. Save your energy for the first line instead.",
+      "paraphrase": "overanalysing the closing line of every message i send"
+    },
+    {
+      "id": "work-o5",
+      "title": "Surviving kitchen small talk",
+      "question": "i freeze every time im making coffee next to someone from another team. what do normal people even say",
+      "reply": "Almost everyone finds those ninety seconds awkward, which is your advantage: any warmth counts double. Ask what they are working on this week, comment on the weather or the biscuit tin, or admit you still cannot work the coffee machine. Questions beat statements. You only need two exchanges before the kettle rescues you both.",
+      "paraphrase": "what to say when stuck at the coffee machine beside a stranger from another department"
+    },
+    {
+      "id": "work-o6",
+      "title": "Gift for a leaving colleague",
+      "question": "colleague is leaving after 8 years and we've done a whip round. i've been nominated to pick the gift. ideas?",
+      "reply": "After eight years, something that marks the time beats something expensive. A card signed by everyone with one specific memory each is often the thing they keep. Pair it with an experience they've mentioned wanting, a nice version of something they use daily, or a framed photo of the team. Ask their closest colleague what they'd genuinely love.",
+      "paraphrase": "picking a farewell present for a long-serving teammate"
+    }
+  ]
+}

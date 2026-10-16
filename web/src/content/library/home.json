@@ -1,0 +1,248 @@
+{
+  "interest": "home",
+  "label": "Home and DIY",
+  "threads": [
+    {
+      "id": "home-t1",
+      "topic": "Painting the bedroom for the first time",
+      "chats": [
+        {
+          "id": "home-t1-c1",
+          "title": "First time painting a room",
+          "question": "thinking of painting my bedroom myself, never done it. is it actually hard or am i being dramatic",
+          "reply": "Not dramatic at all, and honestly a bedroom is the ideal first room: few fiddly bits, and you can shut the door on mistakes. Most of the effort is prep and patience rather than skill. Give yourself a full weekend, not an evening, and accept that the first wall will be your practice wall.",
+          "paraphrase": "the one where I asked if I could handle decorating the bedroom with zero experience"
+        },
+        {
+          "id": "home-t1-c2",
+          "title": "Choosing a wall colour",
+          "question": "ok how do people pick a wall colour without regretting it. the sample pots all look the same to me",
+          "reply": "Paint two big patches of each tester on different walls, not tiny squares, and live with them for three days. Check them at breakfast, at dusk and under the lamp, because north light and warm bulbs change everything. The one you stop noticing is usually the winner, not the one that excited you in the shop.",
+          "paraphrase": "when I worried the tester pots all looked identical and asked how to settle on a shade"
+        },
+        {
+          "id": "home-t1-c3",
+          "title": "Minimum kit for one room",
+          "question": "what do i actually need to buy, like the bare minimum kit for painting one room? dont want a garage full of stuff",
+          "reply": "For one room: a roller frame with two sleeves, a tray, a decent two-inch angled brush, masking tape, a tub of filler and a small scraper, fine sandpaper, a dust sheet and a damp cloth. Skip the gadgets. Borrow a stepladder if you can. Buy slightly more paint than the tin suggests so the second coat is not a scramble.",
+          "paraphrase": "my shopping list question, the bare essentials for decorating without filling the garage"
+        },
+        {
+          "id": "home-t1-c4",
+          "title": "Filling holes and prepping walls",
+          "question": "there's like 20 picture nail holes and a weird greasy patch near the bed. do i have to fix all that first or can paint just cover it",
+          "reply": "Yes, sadly, and it is the part that makes the finish look professional. Fill the nail holes, let the filler dry, then sand flush using your fingertip as the judge. Wash the greasy patch with warm soapy water, as paint will not grip fat. The whole room gets a wipe down anyway. An afternoon, and you are ready.",
+          "paraphrase": "the chat about the twenty nail marks and the greasy spot I wanted to skip"
+        },
+        {
+          "id": "home-t1-c5",
+          "title": "Getting straight edges at the ceiling",
+          "question": "my edges along the ceiling look like a toddler did them, how do people get straight lines",
+          "reply": "Nobody gets them freehand at first. Load the angled brush lightly, start a finger's width below the ceiling, then push the bristles up to the line in one slow stroke. Keep a damp cloth handy for slips. Honestly, nobody looks up, so aim for tidy rather than perfect, and let the second coat soften the first.",
+          "paraphrase": "where I complained my lines looked like a child had done them"
+        },
+        {
+          "id": "home-t1-c6",
+          "title": "Roller stripes after second coat",
+          "question": "second coat is on and i can see roller stripes in certain light. is it ruined or am i just staring too hard",
+          "reply": "Not ruined, this is normal. Stripes appear when a sleeve is too dry or you re-roll paint that has started to set. Wait until fully dry, then do one light extra coat with a well-loaded roller, working in a W shape and finishing each section with gentle top-to-bottom passes. Check in daylight before deciding.",
+          "paraphrase": "the panic about visible streaks showing up in evening light"
+        },
+        {
+          "id": "home-t1-c7",
+          "title": "Tape peeled paint off",
+          "question": "pulled the masking tape off and it took some paint with it. also drips on the skirting. help",
+          "reply": "Both are fixable. Next time, score along the tape line with a sharp blade before pulling, and remove it while the paint is still slightly soft. For the torn edge, a light sand and a touch-up with a small brush will disappear. Drips on wood: let them dry hard, slice them off flat with the blade, then dab over.",
+          "paraphrase": "when removing the masking strip wrecked an edge and I had splashes on the woodwork"
+        },
+        {
+          "id": "home-t1-c8",
+          "title": "Storing leftover paint and rollers",
+          "question": "it's done!! how do i store the leftover paint and clean the rollers properly so i can do the hallway next",
+          "reply": "Well done! Wipe the rim of the tin, press the lid tight and store it upside down somewhere cool, which seals the paint and stops a skin forming. Label it with the room name. Rinse rollers and brushes in warm water until it runs clear, squeeze, and dry them hanging. Keep a note of the colour code for touch-ups.",
+          "paraphrase": "the celebratory one about keeping the extra tins usable for the next room"
+        }
+      ],
+      "continuation": {
+        "question": "ok the hallway's next. anything i should do differently this time?",
+        "reply": "Yes, a few things you learned the hard way. Spend longer on {{chat:4}}, because hallway walls take more knocks and show every bump. Pull the tape while the paint is still slightly damp, so you avoid a repeat of {{chat:7}}. Buy an extra roller sleeve up front, remembering {{chat:6}}. And since a hallway gets little daylight, test your colour in the evening too."
+      }
+    },
+    {
+      "id": "home-t2",
+      "topic": "A damp bathroom and a mould patch",
+      "chats": [
+        {
+          "id": "home-t2-c1",
+          "title": "Black speckles on bathroom ceiling",
+          "question": "there's black speckles in the corner of the bathroom ceiling. is that mould and should i panic",
+          "reply": "Those are usually mould spores feeding on condensation in the coldest corner, and they are very common in bathrooms. No need to panic. Note the size today, perhaps with a photo, and watch it for a fortnight. If it spreads fast or the plaster feels damp to the touch, a surveyor can check whether water is coming from somewhere else.",
+          "paraphrase": "the first worried message about dark dots appearing above the shower"
+        },
+        {
+          "id": "home-t2-c2",
+          "title": "Window drips every morning",
+          "question": "why does my bathroom window drip every single morning even with it cracked open overnight",
+          "reply": "Because warm steamy air hits the coldest surface in the room, and the glass is it. Cracking the window helps less than you would hope if the door is also open, since the steam just drifts into the flat. Try shutting the door, running the fan during and twenty minutes after showers, and wiping the glass dry.",
+          "paraphrase": "asking why the glass was always wet at breakfast time despite leaving it ajar"
+        },
+        {
+          "id": "home-t2-c3",
+          "title": "Is the extractor fan working",
+          "question": "the extractor fan makes noise but im not convinced it does anything. how do i test it",
+          "reply": "Hold a single sheet of toilet paper up to the grille with the fan running. If it sticks, the fan pulls air. If it flutters and drops, it is mostly making noise. Dust clogs the blades over time, so switching off at the wall and wiping them often brings a tired fan back to life.",
+          "paraphrase": "the tissue-paper trick to check whether the noisy vent actually pulled air"
+        },
+        {
+          "id": "home-t2-c4",
+          "title": "Cleaning mould off safely",
+          "question": "whats the safest way to clean the mould off without wrecking the paint or breathing it in",
+          "reply": "Open the window first, wear gloves and a mask, and avoid dry brushing since that spreads spores. Dab the patch with a cloth dipped in warm soapy water or a mild household cleaner, let it dry, then repeat. Bin the cloth afterwards. If anyone at home has breathing trouble, a doctor can advise before you start.",
+          "paraphrase": "when I asked how to scrub the black patch without ruining the ceiling or my lungs"
+        },
+        {
+          "id": "home-t2-c5",
+          "title": "Anti-mould paint and priming",
+          "question": "is anti-mould paint a real thing or just marketing. and do i need to prime first",
+          "reply": "It is real, though the name oversells it. These paints contain a mild fungicide and a tougher, moisture-resistant finish, so they resist new growth rather than curing old damp. Clean and dry the ceiling fully first. A stain-blocking primer stops any grey shadow bleeding through. Then two coats, with the fan running while it dries.",
+          "paraphrase": "the one where I doubted the special bathroom emulsion was more than a gimmick"
+        },
+        {
+          "id": "home-t2-c6",
+          "title": "Crumbly grey grout",
+          "question": "the grout between the tiles has gone grey and crumbly in places. regrout the whole lot or just the bad bits",
+          "reply": "Patch it. Rake out the loose sections with a grout remover until you hit solid material, brush out the dust, and press fresh grout in with a flexible spreader. Wipe with a damp sponge before it hardens. Colours vary a little, so do the worst wall if you can. Save the whole-room job for when the tiles come off.",
+          "paraphrase": "my question about whether to redo all the tile joints or only the worst ones"
+        },
+        {
+          "id": "home-t2-c7",
+          "title": "Redoing the bath seal",
+          "question": "the seal along the bath has gone orange and is peeling away. how hard is it to redo myself",
+          "reply": "An evening's job. Slice the old silicone out with a blade and a plastic scraper, clean the gap with surgical spirit until bone dry, and tape both edges for a crisp line. Fill the bath with water first so the joint is sealed under load. Run the new bead, smooth it with a wet finger, remove the tape.",
+          "paraphrase": "where I asked about the peeling orange strip where the tub meets the tiles"
+        },
+        {
+          "id": "home-t2-c8",
+          "title": "Keeping the bathroom mould free",
+          "question": "its been a month and no new specks! what habits keep it that way",
+          "reply": "Lovely news. The habit that matters most is moving wet air out: fan on before the shower, door shut, fan running twenty minutes after. Squeegee the tiles and wipe the window sill, hang towels outside the room, and leave the shower screen open to dry. Every few months, dust the fan and glance at that corner.",
+          "paraphrase": "the follow-up asking how to make a month of clear ceiling last"
+        }
+      ],
+      "continuation": {
+        "question": "ugh the specks are back, slightly different spot this time. did i miss something?",
+        "reply": "Probably a cause rather than a cleaning problem. Go back to {{chat:2}} and {{chat:3}}: if the glass still streams and the fan barely lifts a tissue, moisture has nowhere to go and will find a new corner. Treat the patch the way we covered in {{chat:4}}, then watch it for two weeks. If it comes back a third time, a surveyor or plumber can rule out a slow leak behind the wall."
+      }
+    },
+    {
+      "id": "home-t3",
+      "topic": "Building a desk into an alcove",
+      "chats": [
+        {
+          "id": "home-t3-c1",
+          "title": "Desk in the alcove",
+          "question": "i have an awkward alcove next to the chimney breast. could i build a desk into it myself? total beginner with tools",
+          "reply": "Absolutely, and an alcove is the friendliest place to start because the walls do the hard work. Two timber battens screwed to the sides, a third along the back, and a cut top resting on them is the whole idea. No legs, no joinery. Measure twice, go slowly, and you will have a desk in a weekend.",
+          "paraphrase": "my first message about turning the nook beside the chimney into somewhere to work"
+        },
+        {
+          "id": "home-t3-c2",
+          "title": "Is my cheap drill enough",
+          "question": "do i need a proper drill or will the cheap cordless one i already have do for screwing into brick",
+          "reply": "For brick you want a drill with a hammer setting; without it you will burn through bits and patience. Check your cordless one for a little hammer icon on the mode ring. If it has one and the battery holds up, it will do. If not, borrowing a corded hammer drill for a day beats buying new.",
+          "paraphrase": "asking whether the budget cordless tool could cope with masonry"
+        },
+        {
+          "id": "home-t3-c3",
+          "title": "Checking for wires before drilling",
+          "question": "how do i know if theres wires or pipes in the wall before i drill. this is the bit that scares me tbh",
+          "reply": "Good instinct. Cables usually run straight up or down from sockets and switches, and pipes track to radiators and taps, so avoid those vertical and horizontal lines. A cheap detector helps but is not gospel. Drill slowly in short bursts, and if the bit suddenly goes soft or hits metal, stop and move along.",
+          "paraphrase": "the nervous one about pipes and cables hiding behind the plaster"
+        },
+        {
+          "id": "home-t3-c4",
+          "title": "Fixings for old brick walls",
+          "question": "the wall is crumbly old brick under soft plaster. which fixings will hold a shelf with actual books on it",
+          "reply": "Old brick with soft plaster needs long fixings that reach well past the plaster into the brick itself. Use heavy-duty frame plugs or sleeve anchors rather than the little plastic plugs that come free in a pack, and drill into the brick, not the mortar joints. Test one by hanging off it before trusting the shelf.",
+          "paraphrase": "when I asked what anchors would stop a heavy bookshelf pulling out of soft masonry"
+        },
+        {
+          "id": "home-t3-c5",
+          "title": "Cutting a top for a wonky alcove",
+          "question": "measured the alcove and its not square, 2cm wider at the back. how do i cut the desk top to fit",
+          "reply": "Make a template first. Tape sheets of cardboard together, push them into the alcove and trim until they touch the walls everywhere, then trace that shape onto the top. Cut just outside the line with a fine blade and sand to fit. A thin bead of filler or a slim trim strip hides any last gap.",
+          "paraphrase": "the two-centimetre problem where the recess refused to be square"
+        },
+        {
+          "id": "home-t3-c6",
+          "title": "Battens not quite level",
+          "question": "battens are up but my spirit level says one side is a bit off. redo it or shim it?",
+          "reply": "Shim it if the gap is small, a few millimetres, using slices of hardboard or plastic packers behind the low end, then recheck across both battens with a long straight edge. If it is more than that, unscrew and redo, since a sloping desk will bother you every single day. Fifteen minutes now saves months.",
+          "paraphrase": "where the supports were slightly off and I asked whether to start again or pack them out"
+        },
+        {
+          "id": "home-t3-c7",
+          "title": "Oil or varnish for plywood",
+          "question": "desk top is plywood. sand and oil, or varnish? i want it to survive a lot of coffee",
+          "reply": "Both survive coffee if applied properly. Oil gives a soft, warm, matt feel and is easy to patch, but wants a fresh coat once or twice a year. Varnish is harder and more wipeable, but scratches show and are harder to spot-fix. For a desk you lean on daily, two coats of hard-wax oil is a lovely middle.",
+          "paraphrase": "the coffee-proof finish question for the work surface"
+        },
+        {
+          "id": "home-t3-c8",
+          "title": "Hiding cables and adding shelves",
+          "question": "it's in and i love it. cables are a mess though, and i want 2 shelves above. how do i hide the wires",
+          "reply": "Congratulations! Fix a slim cable tray, or a length of guttering turned upside down, under the back of the desktop, and run everything along it to one extension lead. For shelves, repeat the batten trick or use concealed brackets drilled into the sides. Keep the first shelf high enough to clear your screen, and stagger the second.",
+          "paraphrase": "the happy ending about tidying the wires and going up the wall with storage"
+        }
+      ],
+      "continuation": {
+        "question": "my sister wants one in her flat now lol. what would you have me do differently?",
+        "reply": "Mostly the boring bits. Do {{chat:3}} before you even buy wood, since her walls may be plasterboard, which changes everything from {{chat:4}}. Measure the alcove in three places, because {{chat:5}} taught you nothing is square. Fix the battens dead level the first time so {{chat:6}} does not repeat. And ask how she takes her coffee before choosing a finish."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "home-o1",
+      "title": "Slow kitchen sink drain",
+      "question": "kitchen sink drains really slowly but isnt fully blocked. is there a way to fix it without those nasty chemicals",
+      "reply": "Start with a kettle of hot water down the plughole, then half a cup of baking soda followed by a cup of white vinegar. Let it fizz for ten minutes, then flush with more hot water. If it is still slow, unscrew the U-bend with a bucket underneath, as the gunk usually lives there.",
+      "paraphrase": "the gentle fix I asked about when the washing-up water took forever to go down"
+    },
+    {
+      "id": "home-o2",
+      "title": "Squeaky floorboard fix",
+      "question": "one floorboard in the hall squeaks every single time i step on it and its driving me mad. quick fix?",
+      "reply": "Try talcum powder or powdered graphite worked into the joints around the noisy board, which quiets rubbing edges. If it still sings, find the joist by tapping, then drive a long screw at an angle through the board into it, just below the surface. Fill the head and nobody will ever know.",
+      "paraphrase": "the creaking plank in the hallway that was slowly driving me mad"
+    },
+    {
+      "id": "home-o3",
+      "title": "Fridge smells after cleaning",
+      "question": "fridge smells weird even after i threw out everything suspicious and wiped the shelves. where is it coming from",
+      "reply": "Check the drip tray at the back near the compressor, which collects defrost water and gets slimy, and the little drain hole at the bottom of the inside back wall. Wipe the door seals too, as crumbs hide in the folds. A small bowl of baking soda or coffee grounds left inside absorbs what remains.",
+      "paraphrase": "the mystery odour that stayed after I had binned all the suspects"
+    },
+    {
+      "id": "home-o4",
+      "title": "Folding a fitted sheet",
+      "question": "genuinely how does anyone fold a fitted sheet. mine ends up a ball every time",
+      "reply": "Put your hands inside two corners along the long side, then flip one corner over the other so they nest. Do the same with the other two, then nest those over the first pair. Lay it flat and fold into a rectangle. It will never be perfect, and that is fine; nobody checks the linen cupboard.",
+      "paraphrase": "the bedding question where I admitted everything ends up a crumpled lump"
+    },
+    {
+      "id": "home-o5",
+      "title": "Door sticks in humid weather",
+      "question": "spare room door sticks when its humid and swings fine in winter. do i need to plane it or just live with it",
+      "reply": "Classic summer swelling, as wood takes on moisture and grows a touch. Rub a candle or a bar of soap along the sticking edge first, as that often buys you the season. If it still jams, mark where it rubs, take the door off and plane or sand only that spot, then seal the bare edge.",
+      "paraphrase": "asking whether to shave the edge of the one that only jams in summer and swings freely in winter"
+    },
+    {
+      "id": "home-o6",
+      "title": "Radiator cold at the top",
+      "question": "radiator is hot at the bottom and cold at the top. is that a bleed thing or a call-someone thing",
+      "reply": "Almost certainly a bleed thing. Trapped air rises and stops hot water filling the radiator. With the heating off, turn the small square valve at the top corner with a radiator key until it hisses, then close it when water appears. Keep a cloth under it. If it goes cold again quickly, call someone.",
+      "paraphrase": "the one where I asked if trapped air explained the lukewarm heater"
+    }
+  ]
+}

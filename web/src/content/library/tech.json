@@ -1,0 +1,248 @@
+{
+  "interest": "tech",
+  "label": "Tech",
+  "threads": [
+    {
+      "id": "tech-t1",
+      "topic": "Building a personal website from scratch",
+      "chats": [
+        {
+          "id": "tech-t1-c1",
+          "title": "Where to start a personal site",
+          "question": "ok i want my own personal website but i have literally never made one. where do i even start",
+          "reply": "Start smaller than you think. One page with your name, a line about what you do, and a way to reach you. Write it in plain HTML in a text editor and open the file in a browser. Once that feels good, add style, then a second page. Everything else can wait.",
+          "paraphrase": "the first chat, when I had no idea how to begin building my own web page"
+        },
+        {
+          "id": "tech-t1-c2",
+          "title": "Choosing a domain name",
+          "question": "how do i pick a domain name that isnt taken and isnt cringe lol",
+          "reply": "Try your name first, then name plus what you do, then a short made-up word you can say out loud without spelling it. Avoid hyphens and numbers, they get lost in conversation. Say your three favourites to a friend and see which one they type correctly. That is your winner.",
+          "paraphrase": "the one where I needed a web address that wasn't already owned or embarrassing"
+        },
+        {
+          "id": "tech-t1-c3",
+          "title": "Static site or not",
+          "question": "everyone keeps saying make it a static site. what does that even mean and do i want that",
+          "reply": "A static site is just finished files sitting on a server, no database, nothing running. It loads fast, is cheap to host and hard to hack because there is nothing to hack. For a personal page or a blog you mostly write yourself, yes, you want that. Add moving parts only when you actually miss them.",
+          "paraphrase": "when I asked whether I needed a database behind my pages or just plain files"
+        },
+        {
+          "id": "tech-t1-c4",
+          "title": "Fixing cramped page spacing",
+          "question": "my text is touching the edge of the page and it looks awful. how do i give it room to breathe",
+          "reply": "Wrap the content in a container and give it a maximum width around sixty characters of text, with margin set to auto so it centres. Then add padding on the sides so it never kisses the edge on a phone. Those two rules fix most of the awful. Line height around 1.5 helps too.",
+          "paraphrase": "the one about my words hugging the browser edge and needing margins"
+        },
+        {
+          "id": "tech-t1-c5",
+          "title": "Web fonts without the lag",
+          "question": "i want a nicer font on the site but i heard custom fonts make pages slow. whats the trick",
+          "reply": "Load one family, two weights at most, and only the character set you need. Tell the browser to show a fallback font immediately while the real one arrives, so nothing goes invisible. Keep the file on your own server rather than pulling from elsewhere. One good typeface used well beats four used nervously.",
+          "paraphrase": "when I wanted prettier typography but worried it would make loading crawl"
+        },
+        {
+          "id": "tech-t1-c6",
+          "title": "Dark mode for the site",
+          "question": "can my site just go dark automatically when someones phone is in dark mode? how hard is that",
+          "reply": "Not hard at all. Define your colours as variables at the top of the stylesheet, then add a media query for the dark preference that swaps those variables. Use soft off-white text on dark grey rather than pure white on black, it is kinder on the eyes. Test both and you are done.",
+          "paraphrase": "the one asking how to match the reader's night-time colour setting"
+        },
+        {
+          "id": "tech-t1-c7",
+          "title": "Putting the site online",
+          "question": "ok its finished on my laptop. how do i get it onto the actual internet so other people can see it",
+          "reply": "Pick a static hosting service, there are plenty aimed at small personal sites. Upload your folder, or connect it to a code repository so every change publishes itself. Then point your domain at it in your registrar's settings and wait a bit for the change to spread. Open it on your phone and enjoy the moment.",
+          "paraphrase": "when I had a working folder on my machine and needed it live for the world"
+        },
+        {
+          "id": "tech-t1-c8",
+          "title": "What to add after launch",
+          "question": "site is live!!! ok what now, should i add a blog or is that a trap",
+          "reply": "Congratulations, that is the hard part. A blog is only a trap if you promise a schedule. Add a page called notes, write when you have something to say, and never apologise for gaps. Also add a small 'now' page about what you are up to. People love those and they are easy to update.",
+          "paraphrase": "the celebratory one once it went live, asking whether to start writing posts"
+        }
+      ],
+      "continuation": {
+        "question": "havent touched the site in months and feel guilty. how do i get back into it without rebuilding everything?",
+        "reply": "No guilt needed, a quiet site is still a working site. Open the notes idea from {{chat:8}} and write one short post about what you have been doing instead. Then check that {{chat:6}} still looks right on your phone, since that is where people will read it. If the font setup from {{chat:5}} ever bothered you, now is a fine time to simplify it. Small steps, one evening."
+      }
+    },
+    {
+      "id": "tech-t2",
+      "topic": "Turning an old laptop into a home server",
+      "chats": [
+        {
+          "id": "tech-t2-c1",
+          "title": "Reviving an old laptop",
+          "question": "i have an old laptop in a drawer, cracked screen but it still turns on. is it useful for anything or is it e-waste",
+          "reply": "Far from e-waste. A laptop has a built-in battery backup, a quiet fan and sips power, which makes it a lovely little home server. It could hold your files, serve your photos to the TV, or run a backup for every other device in the house. The cracked screen barely matters if it sits in a cupboard.",
+          "paraphrase": "the first one about whether a forgotten machine with a broken display could do a job"
+        },
+        {
+          "id": "tech-t2-c2",
+          "title": "Lightweight system for a server",
+          "question": "what should i install on it? its painfully slow with the system it came with",
+          "reply": "Put a lightweight, open-source server operating system on it, the kind with no desktop at all. Without a graphical interface the old hardware suddenly feels quick. Make a bootable USB stick, install, and set a strong password for the one account. You will drive it from another computer through a terminal, which sounds scarier than it is.",
+          "paraphrase": "when I asked what software to wipe the sluggish machine with so it ran lean"
+        },
+        {
+          "id": "tech-t2-c3",
+          "title": "Running headless with lid closed",
+          "question": "how do i keep it running with the lid shut and no screen plugged in? it keeps going to sleep",
+          "reply": "Two settings. First, tell the system that closing the lid should do nothing rather than suspend. Second, turn off any automatic sleep timer. Then log in from your main computer over the network using a secure shell. From then on the laptop is just a warm box in a cupboard that answers when called.",
+          "paraphrase": "the one where it kept dozing off every time I shut it and I wanted it awake"
+        },
+        {
+          "id": "tech-t2-c4",
+          "title": "Sharing files over the network",
+          "question": "ok its running. how do i get at my files on it from my other computer and my phone at home",
+          "reply": "Set up a network file share on the laptop and give it a fixed address on your router so it never moves. Your other computer can then mount it like an extra drive, and your phone can open it with a files app that speaks the same protocol. One folder per person plus a shared one keeps the peace.",
+          "paraphrase": "when I wanted the drawer computer's folders to show up on every device in the house"
+        },
+        {
+          "id": "tech-t2-c5",
+          "title": "Home media library streaming",
+          "question": "can it stream my own music and home videos to the tv in the living room? like my own little streaming thing",
+          "reply": "Yes, and it is one of the most satisfying uses. Install a media server program on the laptop, point it at your music and video folders, and it will tidy them into a browsable library. Your TV or a streaming box then plays from it over the home network. Rename files sensibly first and the covers sort themselves out.",
+          "paraphrase": "the one about playing my own film and song collection on the big screen"
+        },
+        {
+          "id": "tech-t2-c6",
+          "title": "Backing up the server",
+          "question": "im now scared. everything is on that one old drive. if it dies im done. how do i back it up properly",
+          "reply": "Good fear, act on it. Plug in an external drive and schedule a nightly copy with a sync tool that only moves what changed. Then keep a second copy somewhere else, a drive at a relative's house or an encrypted online backup. The rule is three copies, two kinds of storage, one away from home. Test a restore once.",
+          "paraphrase": "when I panicked about a single disk holding everything and wanted copies"
+        },
+        {
+          "id": "tech-t2-c7",
+          "title": "Power draw of an always-on laptop",
+          "question": "its on 24/7 now. is this quietly eating my electricity bill",
+          "reply": "Probably less than you fear. An idle laptop draws a small fraction of what a desktop does, roughly a dim bulb's worth. Trim it further by turning the screen off, letting the disk spin down, and removing anything you are not using. A cheap plug-in power meter will give you the real number for your home.",
+          "paraphrase": "the worried one about the machine running day and night and my energy costs"
+        },
+        {
+          "id": "tech-t2-c8",
+          "title": "Remote access from outside",
+          "question": "can i reach it when im away from home? safely i mean, i dont want to open my whole house to the internet",
+          "reply": "Yes, but never by forwarding ports straight to it. Set up a small private network tunnel, a VPN, between your phone or laptop and the home server. Then from a café it feels like you are sitting at home, and nothing is exposed to strangers. Keep the system updated and that cupboard laptop is reachable from wherever you are.",
+          "paraphrase": "the one about getting to my files from a café without exposing the house"
+        }
+      ],
+      "continuation": {
+        "question": "the drive is almost full now. what are my options without starting over?",
+        "reply": "Add a bigger external drive and move the heavy folders onto it, mostly the media from {{chat:5}}. Update the share paths you set in {{chat:4}} so nothing breaks for the family. Before copying anything, run the backup from {{chat:6}} one more time, full drives are when disks like to fail. A second drive adds a little to the figure from {{chat:7}}, but not much."
+      }
+    },
+    {
+      "id": "tech-t3",
+      "topic": "A digital security spring clean",
+      "chats": [
+        {
+          "id": "tech-t3-c1",
+          "title": "Reusing one password everywhere",
+          "question": "ok honest question. i use the same password for basically everything. how bad is this really",
+          "reply": "Quite bad, but very fixable. The risk is not someone guessing it, it is one small site leaking it and then the same key opening your email, bank and everything else. Start by changing just your email password to something long and unique, since email resets all the rest. Then work outward from there, one account a day.",
+          "paraphrase": "the confession about a single login unlocking every account I own"
+        },
+        {
+          "id": "tech-t3-c2",
+          "title": "How password managers work",
+          "question": "how does a password manager actually work? isnt that just putting all my eggs in one basket",
+          "reply": "It is one basket, but a very strong one guarded by a single long phrase only you know. The manager invents a different random password for every site and fills it in for you, so a leak at one place stops there. Your job shrinks to remembering one good sentence and protecting the account that holds it.",
+          "paraphrase": "the one where I doubted whether a vault app was safer than my memory"
+        },
+        {
+          "id": "tech-t3-c3",
+          "title": "Two-factor on which accounts",
+          "question": "whats two factor and do i really need it on everything? the codes are annoying",
+          "reply": "Two-factor means a password alone is not enough, you also prove you hold your phone. Not everything needs it. Put it on your email, bank, password manager and anything with a card attached, those are the doors that matter. Use an authenticator app over text messages where you can. A minute of annoyance buys a lot of calm.",
+          "paraphrase": "when I asked which logins deserved the extra code step and which could skip it"
+        },
+        {
+          "id": "tech-t3-c4",
+          "title": "Spotting a phishing email",
+          "question": "got an email saying my parcel is held and i need to pay a small fee. the link looked weird. how do i tell if its a scam",
+          "reply": "The fee for a parcel you are not sure you ordered is the tell. Real senders rarely ask for money by link. Hover or long-press the link and look at the actual address, not the text. Check the sender's domain letter by letter. If in doubt, go to the courier's site yourself rather than through the email.",
+          "paraphrase": "the suspicious delivery message with a strange link and a small payment request"
+        },
+        {
+          "id": "tech-t3-c5",
+          "title": "Deleting old unused accounts",
+          "question": "i must have like 200 accounts from years ago on sites i forgot exist. should i bother deleting them",
+          "reply": "Yes, in bursts. Every forgotten account is a copy of your email and an old password sitting on someone else's server. Search your inbox for 'welcome' and 'verify your email' to find them, then delete the ones you will never use. Where deletion is hidden, change the password to something random and remove any saved card.",
+          "paraphrase": "when I asked whether to bother closing the forgotten sign-ups from ages ago"
+        },
+        {
+          "id": "tech-t3-c6",
+          "title": "What passkeys actually are",
+          "question": "my bank keeps nagging me to set up a passkey. what even is that and is it better than a password",
+          "reply": "A passkey is a cryptographic key pair stored on your device and unlocked with your fingerprint, face or PIN. The site never sees a secret that can be stolen or phished, which is why banks like it. It is better than a password for the sites that support it. Set it up, keep your old password as a fallback.",
+          "paraphrase": "the one about the new fingerprint login my bank kept pushing on me"
+        },
+        {
+          "id": "tech-t3-c7",
+          "title": "Encrypting the laptop disk",
+          "question": "should i encrypt my laptop? what does that even protect against, i dont have state secrets",
+          "reply": "It protects against the most ordinary thing: losing the laptop. Without encryption, anyone who picks it up can pull the drive and read every file, logged in or not. With it, the laptop is just a brick to them. Most systems have it built in and it costs almost nothing in speed. Write the recovery key down somewhere safe.",
+          "paraphrase": "when I wondered whether scrambling my hard drive was overkill for an ordinary person"
+        },
+        {
+          "id": "tech-t3-c8",
+          "title": "If the phone gets stolen",
+          "question": "if my phone got stolen tomorrow what would i wish i had set up today",
+          "reply": "A strong screen lock rather than a four-digit code. Remote locate, lock and wipe switched on so you can act from another device. Automatic backups so nothing on it is the only copy. Your SIM protected with a PIN so nobody can receive your codes. And one trusted person who knows how to help you log in from their device.",
+          "paraphrase": "the thought experiment about a pickpocket taking my mobile and what I'd regret"
+        }
+      ],
+      "continuation": {
+        "question": "a friend just got hacked and asked me what to do first. what do i tell her?",
+        "reply": "Tell her to start with email, exactly as in {{chat:1}}: change that password first, from a device she trusts, because email resets everything else. Then revisit {{chat:3}} and switch it on for the bank and anything with a card. If the attacker got in through a dodgy link, the signs from {{chat:4}} will help her work out what else was touched. Once calm returns, walk her through {{chat:2}}."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "tech-o1",
+      "title": "Wifi and the microwave",
+      "question": "why does my wifi get worse when the microwave is running. is it haunted",
+      "reply": "Not haunted, just crowded. Microwaves heat food with radio waves in roughly the same band your older wifi uses, and a little leaks out of even a good oven. Your router hears that as noise and slows down. If your router offers a second, higher band, connect to that one and the popcorn stops interfering.",
+      "paraphrase": "the one about my internet dropping every time I heated up leftovers"
+    },
+    {
+      "id": "tech-o2",
+      "title": "What clearing cache does",
+      "question": "every help page says 'clear your cache'. what does that actually do and why does it fix things",
+      "reply": "Your browser keeps copies of images, scripts and pages so the next visit is faster. Sometimes a copy goes stale or gets corrupted and the page misbehaves. Clearing the cache throws the copies away so everything is fetched fresh. It is harmless, you lose nothing but a little speed on your next visit, and it fixes a surprising amount.",
+      "paraphrase": "when I asked why support people always tell you to wipe the browser's stored files"
+    },
+    {
+      "id": "tech-o3",
+      "title": "RAM versus storage",
+      "question": "my phone says memory full and also storage full. are those the same thing or am i being charged twice",
+      "reply": "Different things. Storage is the shelf where your photos and apps live permanently. RAM is the desk where the phone spreads out whatever it is working on right now, and it empties when you restart. Storage full means delete or offload files. Memory full usually just means close some apps or reboot. No double charge.",
+      "paraphrase": "the one about two different kinds of 'full' on my mobile"
+    },
+    {
+      "id": "tech-o4",
+      "title": "How QR codes work",
+      "question": "how does a qr code work, like how does a square of dots know a web address",
+      "reply": "The dots are just ones and zeros, black and white, arranged in a grid. The three big corner squares tell your camera which way is up, and the rest spells out text, often a web address, with extra dots that let it recover if part is smudged. The square does not know anything; your phone does the reading.",
+      "paraphrase": "when I wondered how a scribble of pixels turns into a link"
+    },
+    {
+      "id": "tech-o5",
+      "title": "Upload slower than download",
+      "question": "why does uploading a video take forever but downloading the same size is quick. feels like a scam",
+      "reply": "Most home connections are built lopsided on purpose. People mostly pull things down, so providers give download far more capacity than upload. Your video is squeezing through the narrow pipe. If you upload a lot, look for a plan that advertises symmetric speeds, or do big uploads overnight when nobody minds.",
+      "paraphrase": "the one about sending files being painfully slow compared to receiving them"
+    },
+    {
+      "id": "tech-o6",
+      "title": "What the cloud actually is",
+      "question": "what is 'the cloud' actually. is it just someone elses computer or is that a meme",
+      "reply": "The meme is basically right. The cloud is rows of computers in large buildings that companies rent out by the minute, with software that makes them feel like one endless machine. Your photos live on a few of them in different places. It is wonderfully convenient; just remember someone else holds the keys to the building.",
+      "paraphrase": "when I asked whether the big fluffy storage thing was really just rented servers"
+    }
+  ]
+}
