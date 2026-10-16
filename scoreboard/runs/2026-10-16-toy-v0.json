@@ -1,0 +1,647 @@
+{
+  "run_id": "2026-10-16-toy-v0",
+  "label": "toy scale",
+  "date": "2026-10-16",
+  "exam_hash": "7c3024b85b8392ec54e35adefcf745e438eb9e6a637a84c274e159d8afe05607",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "sorters": [
+    {
+      "id": "B0",
+      "name": "always leave",
+      "accuracy": 0.254386,
+      "macro_f1": 0.135198,
+      "none_precision": 0.254386,
+      "none_recall": 1.0,
+      "ece": 0.745614,
+      "brier": 0.745614,
+      "file_precision": 0.0,
+      "file_coverage": 0.0,
+      "suggest_precision": 0.0,
+      "suggest_coverage": 0.0,
+      "latency_ms_per_decision": 0.001333,
+      "size_mb": 0.0
+    },
+    {
+      "id": "B1",
+      "name": "base encoder, untrained",
+      "accuracy": 0.631579,
+      "macro_f1": 0.605742,
+      "none_precision": 0.692308,
+      "none_recall": 0.62069,
+      "ece": 0.09597,
+      "brier": 0.197039,
+      "file_precision": 0.837838,
+      "file_coverage": 0.324561,
+      "suggest_precision": 0.632184,
+      "suggest_coverage": 0.763158,
+      "latency_ms_per_decision": 4.724146,
+      "size_mb": 91.578415
+    },
+    {
+      "id": "B2",
+      "name": "student v0",
+      "accuracy": 0.657895,
+      "macro_f1": 0.627023,
+      "none_precision": 0.692308,
+      "none_recall": 0.62069,
+      "ece": 0.115466,
+      "brier": 0.200773,
+      "file_precision": 0.861111,
+      "file_coverage": 0.315789,
+      "suggest_precision": 0.659091,
+      "suggest_coverage": 0.77193,
+      "latency_ms_per_decision": 4.625791,
+      "size_mb": 91.578837
+    }
+  ],
+  "notes": [
+    "B1 calibrated from data/models/calibration-b1.json",
+    "B1 params: temperature 0.0631, none_score 0.260, file_cutoff 0.8696, suggest_cutoff 0.4016 (model sentence-transformers/all-MiniLM-L6-v2)",
+    "B2 params: temperature 0.0562, none_score 0.280, file_cutoff 0.9092, suggest_cutoff 0.3762 (model pipeline/data/models/student-v0)",
+    "toy scale: 23 people written by the teacher (24 asked, 1 failed on a ReadTimeout), 1334 chats after validation (1380 generated; 44 exact and 2 near duplicates dropped); split by person-id hash: lessons 19 people / 1103 decisions, practice 2 / 117, exam 2 / 114; exam answers bundle 76 / loose 9 / none 29",
+    "teacher: Qwen3-4B-Instruct-2507 Q4_K_M GGUF (unsloth mirror) under llama-server 0.5.0 on this Mac, licence Apache-2.0, prompts v0.2 (strict JSON schemas), seed 42; 54.8 min, 25.2 chats/min",
+    "student v0: all-MiniLM-L6-v2 fine-tuned on 860 (chat, positive) pairs from lessons, MultipleNegativesRankingLoss, batch 32, 2 epochs (56 steps), lr 2e-5, 9 s on MPS, loss 3.815 -> 1.633",
+    "B1 calibrated on practice like B2 (calibration-b1.json), so both sorters got the same temperature and none-score fit; the uncalibrated B1 scored 0.649 accuracy / 0.629 macro-F1 on the exam (runs/baseline-exam.json)",
+    "export: data/models/student-v0-onnx, torch.onnx.export opset 14 + quantize_dynamic int8 per-channel; PyTorch vs onnxruntime min cosine on 32 fixture texts fp32 0.99999994, int8 0.9915 (mean 0.9975), below the 0.999 target; int8 file 22,977,287 bytes",
+    "B2 leads B1 by 3 of 114 exam decisions; at this size the difference is within noise (see the paired bootstrap in runs/exam-2026-10-16-toy-v0-buckets.json); latency is wall-clock on MPS on a shared Mac",
+    "calibration bootstrap, toy scale (200 resamples of the 117 practice decisions, 90% intervals): B2 precision at its file cut-off 0.960 [0.9091, 1.0], coverage 0.427 [0.3504, 0.5043]; at its suggest cut-off 0.805 [0.7322, 0.866], coverage 0.744 [0.6752, 0.8034]; re-chosen file cut-off [0.6875, 0.9366], suggest cut-off [0.2089, 0.5827], temperature [0.0501, 0.0631]",
+    "accuracy by history length (<5 / 5-15 / >15 earlier chats; n 10/22/82): B1 0.800/0.636/0.610, B2 0.800/0.591/0.658",
+    "paired bootstrap (1000 resamples) of B2 minus B1 on the exam: accuracy +0.0263, 90% [-0.0175, 0.0702], positive in 82% of resamples; macro-F1 +0.0213, 90% [-0.0136, 0.0627]; McNemar B2-only-right 5 vs B1-only-right 2: the lead is within noise at this size",
+    "int8 exam effect (research item 4): the int8 ONNX student via onnxruntime makes the same prediction as the PyTorch student on 100% of exam decisions; accuracy 0.658 -> 0.658, macro-F1 0.627 -> 0.627, ECE 0.116 -> 0.134, file precision 0.861 -> 0.842; 0.9 ms per decision on CPU, 23.0 MB",
+    "unusual: the exam and practice splits hold two people each (114 and 117 decisions); all people come from one 4B teacher and one prompt version, so the exam is not an out-of-distribution check; one requested person failed (p42-018, ReadTimeout)",
+    "B2 beats B1 (accuracy 0.658 vs 0.632); wire B2 into the site through the manifest"
+  ],
+  "people": {
+    "generated": 23,
+    "validated": 23,
+    "lessons": 19,
+    "practice": 2,
+    "exam": 2
+  },
+  "chats": {
+    "generated": 1380,
+    "validated": 1334,
+    "dropped_exact_duplicates": 44,
+    "dropped_near_duplicates": 2,
+    "lessons": 1103,
+    "practice": 117,
+    "exam": 114
+  },
+  "examples": {
+    "lessons": {
+      "total": 1103,
+      "bundle": 768,
+      "loose": 92,
+      "none": 243
+    },
+    "practice": {
+      "total": 117,
+      "bundle": 82,
+      "loose": 9,
+      "none": 26
+    },
+    "exam": {
+      "total": 114,
+      "bundle": 76,
+      "loose": 9,
+      "none": 29
+    }
+  },
+  "calibration": {
+    "method": "temperature and none score by coordinate descent on the practice NLL, then the smallest observed p_top with >= 0.95 (file) / 0.80 (suggest) precision and support >= 5; toy scale: see the bootstrap intervals",
+    "B2": {
+      "temperature": 0.05623413251903491,
+      "none_score": 0.28,
+      "file_cutoff": 0.9091981005159271,
+      "suggest_cutoff": 0.3762285504622478,
+      "practice_size": 117,
+      "source": "practice split, 117 examples; coordinate search over temperature x none_score, NLL 0.708 -> 0.695; file cut-off reached (0.95 precision, support 50); suggest cut-off reached (0.80 precision, support 87); 2026-10-16; tasks practice.jsonl; toy scale",
+      "model": "pipeline/data/models/student-v0",
+      "bootstrap": {
+        "resamples": 200,
+        "interval": "90% (5th to 95th percentile of the bootstrap distribution)",
+        "point_on_practice": {
+          "file_precision": 0.96,
+          "file_coverage": 0.42735042735042733,
+          "suggest_precision": 0.8045977011494253,
+          "suggest_coverage": 0.7435897435897436
+        },
+        "intervals": {
+          "temperature": [
+            0.0501,
+            0.0631
+          ],
+          "none_score": [
+            0.26,
+            0.32
+          ],
+          "file_cutoff": [
+            0.6875,
+            0.9366
+          ],
+          "suggest_cutoff": [
+            0.2089,
+            0.5827
+          ],
+          "file_precision": [
+            0.9091,
+            1.0
+          ],
+          "file_coverage": [
+            0.3504,
+            0.5043
+          ],
+          "suggest_precision": [
+            0.7322,
+            0.866
+          ],
+          "suggest_coverage": [
+            0.6752,
+            0.8034
+          ]
+        },
+        "target_reached_share": {
+          "file": 1.0,
+          "suggest": 1.0
+        }
+      }
+    },
+    "B1": {
+      "temperature": 0.06309573444801933,
+      "none_score": 0.26,
+      "file_cutoff": 0.8695661777207113,
+      "suggest_cutoff": 0.40158743613890713,
+      "practice_size": 117,
+      "source": "practice split, 117 examples; coordinate search over temperature x none_score, NLL 0.860 -> 0.787; file cut-off reached (0.95 precision, support 49); suggest cut-off reached (0.80 precision, support 83); 2026-10-16; tasks practice.jsonl; toy scale",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "bootstrap": {
+        "resamples": 200,
+        "interval": "90% (5th to 95th percentile of the bootstrap distribution)",
+        "point_on_practice": {
+          "file_precision": 0.9591836734693877,
+          "file_coverage": 0.4188034188034188,
+          "suggest_precision": 0.8072289156626506,
+          "suggest_coverage": 0.7094017094017094
+        },
+        "intervals": {
+          "temperature": [
+            0.0562,
+            0.0794
+          ],
+          "none_score": [
+            0.22,
+            0.3
+          ],
+          "file_cutoff": [
+            0.7112,
+            0.9305
+          ],
+          "suggest_cutoff": [
+            0.2324,
+            0.6127
+          ],
+          "file_precision": [
+            0.909,
+            1.0
+          ],
+          "file_coverage": [
+            0.3419,
+            0.4876
+          ],
+          "suggest_precision": [
+            0.7282,
+            0.8675
+          ],
+          "suggest_coverage": [
+            0.641,
+            0.7778
+          ]
+        },
+        "target_reached_share": {
+          "file": 1.0,
+          "suggest": 1.0
+        }
+      }
+    }
+  },
+  "teacher": {
+    "model": "Qwen3-4B-Instruct-2507",
+    "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+    "server": "llama-server (Metal) on this Mac, OpenAI-compatible API",
+    "licence": "Apache-2.0 (model-card tag and LICENSE file of Qwen/Qwen3-4B-Instruct-2507, read 2026-10-16; docs/toy-teacher.md)",
+    "prompt_version": "v0.2",
+    "seed": "42",
+    "people_asked": "24",
+    "chats_per_person_target": "60",
+    "workers": "4",
+    "totals": {
+      "written": 23,
+      "skipped": 0,
+      "failed": 1,
+      "not_started": 0,
+      "chats": 1380,
+      "elapsed_s": 3285.3,
+      "completion_tokens": 55339,
+      "prompt_tokens": 80992
+    },
+    "end": "generate: done in 54.8 min: 23 written, 0 skipped, 1 failed, 0 not started; 1380 chats, 25.2 chats/min overall, 55339 completion tokens, 4.5 tok/s while busy"
+  },
+  "student": {
+    "student": "student-v0",
+    "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "pairs": 860,
+    "examples": 1103,
+    "batches_per_epoch": 28,
+    "epochs": 2,
+    "batch_size": 32,
+    "lr": 2e-05,
+    "warmup_steps": 5,
+    "seed": 3,
+    "device": "mps",
+    "max_seq_length": 128,
+    "loss": "MultipleNegativesRankingLoss(scale=20, cos_sim), in-batch negatives",
+    "loss_first": 3.8153042793273926,
+    "loss_last": 1.6330262422561646,
+    "loss_mean": 2.030737122622403,
+    "seconds": 8.9,
+    "date": "2026-10-16T13:39:57Z",
+    "torch": "2.14.1"
+  },
+  "export": {
+    "dir": "pipeline/data/models/student-v0-onnx",
+    "layout": "Transformers.js: config.json, tokenizer*.json, special_tokens_map.json, onnx/model.onnx (fp32), onnx/model_quantized.onnx (int8), manifest.json",
+    "exporter": "torch.onnx.export(dynamo=False)",
+    "quantization": "onnxruntime quantize_dynamic QInt8 per_channel=True",
+    "files": {
+      "onnx/model.onnx": 90382557,
+      "onnx/model_quantized.onnx": 22977287
+    },
+    "parity_texts": 32,
+    "parity": {
+      "fp32": {
+        "n": 32,
+        "min_cos": 0.9999999403953552,
+        "mean_cos": 1.0,
+        "worst_index": 6
+      },
+      "int8": {
+        "n": 32,
+        "min_cos": 0.9915304183959961,
+        "mean_cos": 0.9975231885910034,
+        "worst_index": 8
+      }
+    },
+    "target_min_cos": 0.999,
+    "int8_meets_target": false,
+    "versions": {
+      "torch": "2.14.1",
+      "onnx": "1.23.1",
+      "onnxruntime": "1.30.0"
+    }
+  },
+  "accuracy_by_history": {
+    "definition": "validated chats of the same person before this one (file order of tasks/exam.jsonl)",
+    "bucket_sizes": {
+      "<5": 10,
+      "5-15": 22,
+      ">15": 82
+    },
+    "by_sorter": {
+      "B0": {
+        "<5": {
+          "n": 10,
+          "accuracy": 0.3
+        },
+        "5-15": {
+          "n": 22,
+          "accuracy": 0.3636
+        },
+        ">15": {
+          "n": 82,
+          "accuracy": 0.2195
+        }
+      },
+      "B1": {
+        "<5": {
+          "n": 10,
+          "accuracy": 0.8
+        },
+        "5-15": {
+          "n": 22,
+          "accuracy": 0.6364
+        },
+        ">15": {
+          "n": 82,
+          "accuracy": 0.6098
+        }
+      },
+      "B2": {
+        "<5": {
+          "n": 10,
+          "accuracy": 0.8
+        },
+        "5-15": {
+          "n": 22,
+          "accuracy": 0.5909
+        },
+        ">15": {
+          "n": 82,
+          "accuracy": 0.6585
+        }
+      },
+      "B2q": {
+        "<5": {
+          "n": 10,
+          "accuracy": 0.8
+        },
+        "5-15": {
+          "n": 22,
+          "accuracy": 0.5909
+        },
+        ">15": {
+          "n": 82,
+          "accuracy": 0.6585
+        }
+      }
+    }
+  },
+  "accuracy_by_answer_type": {
+    "B0": {
+      "none": {
+        "n": 29,
+        "accuracy": 1.0
+      },
+      "loose": {
+        "n": 9,
+        "accuracy": 0.0
+      },
+      "bundle": {
+        "n": 76,
+        "accuracy": 0.0
+      }
+    },
+    "B1": {
+      "none": {
+        "n": 29,
+        "accuracy": 0.6207
+      },
+      "loose": {
+        "n": 9,
+        "accuracy": 0.5556
+      },
+      "bundle": {
+        "n": 76,
+        "accuracy": 0.6447
+      }
+    },
+    "B2": {
+      "none": {
+        "n": 29,
+        "accuracy": 0.6207
+      },
+      "loose": {
+        "n": 9,
+        "accuracy": 0.5556
+      },
+      "bundle": {
+        "n": 76,
+        "accuracy": 0.6842
+      }
+    },
+    "B2q": {
+      "none": {
+        "n": 29,
+        "accuracy": 0.6207
+      },
+      "loose": {
+        "n": 9,
+        "accuracy": 0.5556
+      },
+      "bundle": {
+        "n": 76,
+        "accuracy": 0.6842
+      }
+    }
+  },
+  "accuracy_by_difficulty": {
+    "B0": {
+      "new_thread": {
+        "n": 9,
+        "accuracy": 1.0
+      },
+      "overlap": {
+        "n": 11,
+        "accuracy": 0.0
+      },
+      "nowhere": {
+        "n": 20,
+        "accuracy": 1.0
+      },
+      "vague": {
+        "n": 13,
+        "accuracy": 0.0
+      },
+      "very_short": {
+        "n": 9,
+        "accuracy": 0.0
+      },
+      "plain": {
+        "n": 26,
+        "accuracy": 0.0
+      },
+      "typos": {
+        "n": 17,
+        "accuracy": 0.0
+      },
+      "long_gap": {
+        "n": 9,
+        "accuracy": 0.0
+      }
+    },
+    "B1": {
+      "new_thread": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "overlap": {
+        "n": 11,
+        "accuracy": 0.5455
+      },
+      "nowhere": {
+        "n": 20,
+        "accuracy": 0.75
+      },
+      "vague": {
+        "n": 13,
+        "accuracy": 0.2308
+      },
+      "very_short": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "plain": {
+        "n": 26,
+        "accuracy": 0.8462
+      },
+      "typos": {
+        "n": 17,
+        "accuracy": 0.8824
+      },
+      "long_gap": {
+        "n": 9,
+        "accuracy": 0.5556
+      }
+    },
+    "B2": {
+      "new_thread": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "overlap": {
+        "n": 11,
+        "accuracy": 0.5455
+      },
+      "nowhere": {
+        "n": 20,
+        "accuracy": 0.75
+      },
+      "vague": {
+        "n": 13,
+        "accuracy": 0.3077
+      },
+      "very_short": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "plain": {
+        "n": 26,
+        "accuracy": 0.8462
+      },
+      "typos": {
+        "n": 17,
+        "accuracy": 0.8824
+      },
+      "long_gap": {
+        "n": 9,
+        "accuracy": 0.7778
+      }
+    },
+    "B2q": {
+      "new_thread": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "overlap": {
+        "n": 11,
+        "accuracy": 0.5455
+      },
+      "nowhere": {
+        "n": 20,
+        "accuracy": 0.75
+      },
+      "vague": {
+        "n": 13,
+        "accuracy": 0.3077
+      },
+      "very_short": {
+        "n": 9,
+        "accuracy": 0.3333
+      },
+      "plain": {
+        "n": 26,
+        "accuracy": 0.8462
+      },
+      "typos": {
+        "n": 17,
+        "accuracy": 0.8824
+      },
+      "long_gap": {
+        "n": 9,
+        "accuracy": 0.7778
+      }
+    }
+  },
+  "b2_minus_b1": {
+    "resamples": 1000,
+    "seed": 3,
+    "accuracy_diff": {
+      "point": 0.0263,
+      "interval_90": [
+        -0.0175,
+        0.0702
+      ],
+      "share_positive": 0.822
+    },
+    "macro_f1_diff": {
+      "point": 0.0213,
+      "interval_90": [
+        -0.0136,
+        0.0627
+      ],
+      "share_positive": 0.826
+    },
+    "mcnemar": {
+      "b_right_a_wrong": 5,
+      "a_right_b_wrong": 2,
+      "both_right": 70,
+      "both_wrong": 37
+    }
+  },
+  "int8_exam_effect": {
+    "metrics": {
+      "accuracy": {
+        "B2": 0.6579,
+        "B2q": 0.6579,
+        "diff": 0.0
+      },
+      "macro_f1": {
+        "B2": 0.627,
+        "B2q": 0.627,
+        "diff": 0.0
+      },
+      "none_precision": {
+        "B2": 0.6923,
+        "B2q": 0.6923,
+        "diff": 0.0
+      },
+      "none_recall": {
+        "B2": 0.6207,
+        "B2q": 0.6207,
+        "diff": 0.0
+      },
+      "ece": {
+        "B2": 0.1155,
+        "B2q": 0.1341,
+        "diff": 0.0187
+      },
+      "brier": {
+        "B2": 0.2008,
+        "B2q": 0.2004,
+        "diff": -0.0003
+      },
+      "file_precision": {
+        "B2": 0.8611,
+        "B2q": 0.8421,
+        "diff": -0.019
+      },
+      "file_coverage": {
+        "B2": 0.3158,
+        "B2q": 0.3333,
+        "diff": 0.0175
+      },
+      "suggest_precision": {
+        "B2": 0.6591,
+        "B2q": 0.6591,
+        "diff": 0.0
+      },
+      "suggest_coverage": {
+        "B2": 0.7719,
+        "B2q": 0.7719,
+        "diff": 0.0
+      }
+    },
+    "prediction_agreement": 1.0,
+    "latency_ms_per_decision_cpu_onnxruntime": 0.8880826644599438,
+    "size_mb_int8": 22.977287
+  }
+}
