@@ -1,0 +1,248 @@
+{
+  "interest": "pets",
+  "label": "Pets",
+  "threads": [
+    {
+      "id": "pets-t1",
+      "topic": "Adopting and settling in a rescue dog",
+      "chats": [
+        {
+          "id": "pets-t1-c1",
+          "title": "Choosing a rescue dog for a flat",
+          "question": "ok so i live in a smallish flat and want to adopt a rescue dog. what should i actually be looking for at the shelter?",
+          "reply": "Look past the breed label and watch the dog itself. A calm adult who settles after the first excitement usually suits a flat better than a bouncy puppy. Ask staff which dogs are quiet in their kennel, walk a few, and notice who checks in with you. Energy level matters far more than size.",
+          "paraphrase": "which kind of pup would suit an apartment"
+        },
+        {
+          "id": "pets-t1-c2",
+          "title": "Dog-proofing before pickup day",
+          "question": "bringing her home saturday!! what do i need to sort out in the flat before then",
+          "reply": "Pick one quiet corner for her bed and keep it hers. Tuck away cables, shoes and anything chewable at nose height, and move bins behind a door. Have a lead, collar with tag, bowls, a few plain toys and the same food the shelter used. Less stuff and more calm is the goal.",
+          "paraphrase": "getting the place ready ahead of collecting the new pup"
+        },
+        {
+          "id": "pets-t1-c3",
+          "title": "First night with a nervous dog",
+          "question": "she's home but just hiding under the table and wont eat. is that normal for night one??",
+          "reply": "Completely normal. Everything smells new and she doesn't know you're safe yet. Leave food and water near her hiding spot, keep voices low, and skip visitors for now. Sit nearby reading rather than reaching for her. Most rescues come out when the flat goes quiet. Expect a few days of hiding and a few weeks of settling.",
+          "paraphrase": "the evening she arrived and hid under the table refusing dinner"
+        },
+        {
+          "id": "pets-t1-c4",
+          "title": "House training an adult rescue",
+          "question": "two pees on the rug this week. she's 3 so i assumed she was house trained? how do i fix this without being mean",
+          "reply": "A new home resets the rules, so treat her like a puppy for a fortnight. Take her out after waking, eating, playing and every couple of hours, and praise warmly the second she goes outside. Clean indoor spots with an enzyme cleaner so the smell doesn't invite repeats. Never scold after the fact; she won't connect it.",
+          "paraphrase": "the rug accidents and stopping indoor peeing kindly"
+        },
+        {
+          "id": "pets-t1-c5",
+          "title": "Leaving a dog alone without howling",
+          "question": "neighbour said she cried the whole time i was at the shops. how do i build up to leaving her for a work day?",
+          "reply": "Start tiny: step outside for a minute, come back before she worries, and repeat with longer gaps over a couple of weeks. Leave a chew that lasts, keep departures boring with no big goodbye, and tire her out with a walk first. If a full day is coming soon, a dog walker or neighbour drop-in bridges the gap.",
+          "paraphrase": "the neighbour hearing her cry while I was out"
+        },
+        {
+          "id": "pets-t1-c6",
+          "title": "Stopping lead pulling on walks",
+          "question": "walks are a nightmare, she drags me towards every tree and my shoulder is dying. tips?",
+          "reply": "Pulling works for her, so make it stop working. The moment the lead goes tight, stop walking; when it slackens, go again. It feels slow but she learns within days. A front-clip harness takes the strain off your shoulder, and short treats at your hip teach her that walking beside you pays better than the trees.",
+          "paraphrase": "her dragging me down the street and wrecking my shoulder"
+        },
+        {
+          "id": "pets-t1-c7",
+          "title": "Introducing her to other dogs",
+          "question": "she's great with people but stiffens up when other dogs come near. how do i introduce her properly without a fight",
+          "reply": "Keep first meetings loose and short. Walk parallel with the other dog a few metres apart, both on lead, and let them drift closer only while both stay relaxed. Avoid head-on greetings at narrow gates. End on a good note after a sniff or two. A calm, older dog as her first friend sets the tone.",
+          "paraphrase": "going stiff around unfamiliar canines and arranging a safe first meet"
+        },
+        {
+          "id": "pets-t1-c8",
+          "title": "Six months in, what next",
+          "question": "six months with her today!! she's a different dog. what should we work on next, agility? tricks? just vibes?",
+          "reply": "Congratulations, that's the hard part done. Follow what she already loves: if she sniffs everything, try scent games hiding treats around the flat; if she bounces, a beginner agility class is brilliant for bonding. Even ten minutes of new tricks a day keeps her brain busy. And honestly, vibes count too.",
+          "paraphrase": "the half-year anniversary and which hobby to try with her now"
+        }
+      ],
+      "continuation": {
+        "question": "she's started barking at the door whenever someone passes in the hallway. is this the same shy dog?",
+        "reply": "It's the opposite problem, and a good sign: she now thinks the flat is hers to guard. Remember how we handled {{chat:3}} and {{chat:5}}? Same idea, go slow and reward calm. When footsteps pass, say her name, toss a treat on her bed, and praise quiet. The patience you built during {{chat:6}} will carry you here too."
+      }
+    },
+    {
+      "id": "pets-t2",
+      "topic": "Looking after a cat as she gets older",
+      "chats": [
+        {
+          "id": "pets-t2-c1",
+          "title": "Is my cat getting old",
+          "question": "my cat is 13 and has started sleeping like 20 hours a day. is she just old now or should i worry",
+          "reply": "Cats slow down gradually in their teens, and more napping on its own is common. What matters is the pattern: is she still eating, grooming, using the tray and greeting you? If yes, enjoy the cuddles. If anything else has shifted alongside the sleep, a vet check is worth it just to be sure.",
+          "paraphrase": "a teenage cat sleeping most of the day, normal ageing or a worry"
+        },
+        {
+          "id": "pets-t2-c2",
+          "title": "Senior cat stopped jumping up",
+          "question": "she used to leap onto the windowsill no problem, now she just stares at it and meows at me. stiff joints?",
+          "reply": "Stiffness is common in older cats and they hide it well, so the meowing is her asking for a lift. A small step or sturdy box halfway up gives her the view back. Mention it at her next vet visit, since there are gentle ways to keep older joints comfortable. Meanwhile, be the lift.",
+          "paraphrase": "her failing to make the windowsill and yelling for help"
+        },
+        {
+          "id": "pets-t2-c3",
+          "title": "Switching an older cat's food",
+          "question": "the shop has 'senior' cat food, is that a gimmick or does she actually need different food now?",
+          "reply": "Not a gimmick, but not urgent either. Older cats often do well with softer, easier-to-digest food and plenty of water, so a wet option can help. Any switch should take a week, mixing a little more new into the old each day, or you'll get a protest. A vet can suggest what suits her weight and teeth.",
+          "paraphrase": "whether the mature-pet diet on the shelf is marketing or useful"
+        },
+        {
+          "id": "pets-t2-c4",
+          "title": "Cat grooming less than before",
+          "question": "noticed some tangles on her back near her tail. she used to be so fussy about her fur. do i brush her?",
+          "reply": "Yes, gently and daily if she lets you. Older cats often can't twist round to reach their lower back anymore. A soft brush for a minute or two keeps mats from forming, and most cats enjoy it once they trust you. If a mat is already tight, leave it to a vet or groomer rather than scissors.",
+          "paraphrase": "tangles near her tail because she can't reach to clean herself"
+        },
+        {
+          "id": "pets-t2-c5",
+          "title": "Litter tray misses from an older cat",
+          "question": "she's started weeing just next to the tray not in it. shes never done this in 13 years. why now",
+          "reply": "Sudden changes like this are often about comfort: high tray sides are harder to climb, or the tray feels too far away. Try a low-sided tray near where she sleeps, and keep it very clean. Because new toileting habits can also signal something medical, it's worth a vet checking her over soon.",
+          "paraphrase": "weeing beside the box after years of perfect aim"
+        },
+        {
+          "id": "pets-t2-c6",
+          "title": "Keeping an old cat warm and cosy",
+          "question": "winter's coming and she seeks out every warm spot. how do i keep her comfy without roasting the flat",
+          "reply": "Older cats love warmth because thin frames lose heat fast. A fleece-lined bed raised off the floor, placed in a sunny window or near a radiator, works wonders. Self-warming mats that reflect her body heat are a safe option. Draft-proof her favourite corner and she'll be set for the season.",
+          "paraphrase": "winter coming and her hunting for heat in the flat"
+        },
+        {
+          "id": "pets-t2-c7",
+          "title": "Giving a cat a tablet",
+          "question": "vet gave her tablets. she spits them out every single time and now hides when she sees me coming. help",
+          "reply": "You're not alone, cats are experts at this. Ask the vet whether the tablet can be crushed or comes as a liquid or paste. If not, hide it in a soft treat and offer a plain one first so she doesn't suspect. Stay calm, keep it quick, and follow with something she loves so you stay the good guy.",
+          "paraphrase": "her spitting out her medicine and running when she sees me"
+        },
+        {
+          "id": "pets-t2-c8",
+          "title": "Knowing when an old cat is happy",
+          "question": "she's slow and sleepy but still purrs and head-butts me. how do i know she's still enjoying life and not just hanging on?",
+          "reply": "You're already watching the right things. Purring, seeking you out, eating with interest and enjoying her warm spot all say life is good. Keep a simple note each week of her good days and harder days; the pattern tells you more than any single moment. Your vet can help you read it when you're unsure.",
+          "paraphrase": "telling whether she still enjoys her days or just gets by"
+        }
+      ],
+      "continuation": {
+        "question": "she's lost a bit of weight even though she's eating. what should i watch for?",
+        "reply": "Weight loss while eating is one of those changes worth a vet visit soon rather than later. Before you go, jot down what has changed since we first talked about {{chat:1}}, how {{chat:3}} went, and whether {{chat:5}} have stopped. That little history helps the vet enormously. Meanwhile, keep her warm and fed, and trust what you've learned about {{chat:8}}."
+      }
+    },
+    {
+      "id": "pets-t3",
+      "topic": "Setting up and keeping a first fish tank",
+      "chats": [
+        {
+          "id": "pets-t3-c1",
+          "title": "What size tank for a beginner",
+          "question": "want to get into fishkeeping. everyone says start small but is a tiny tank actually easier?",
+          "reply": "Counterintuitively, no. A bigger tank holds more water, so mistakes dilute and conditions stay steadier. Something you can comfortably fit and fill, a mid-sized tank rather than a bowl, is the sweet spot. Pick a spot out of direct sun and away from radiators, on something that can take the weight once it's full.",
+          "paraphrase": "whether a little aquarium is simpler to start out with than a big one"
+        },
+        {
+          "id": "pets-t3-c2",
+          "title": "Cycling a tank before adding fish",
+          "question": "the shop guy said i have to 'cycle' the tank for weeks before fish?? what does that even mean, its just water",
+          "reply": "He's right, and it's the most skipped step. Cycling grows friendly bacteria in the filter that turn fish waste into less harmful stuff. You add a little ammonia source, run the filter, and test the water until the readings settle. It takes patience but it's the difference between a thriving tank and sad fish.",
+          "paraphrase": "why I apparently have to wait weeks with an empty aquarium"
+        },
+        {
+          "id": "pets-t3-c3",
+          "title": "Choosing peaceful first fish",
+          "question": "tank is cycled!! which fish are good for a total newbie and wont murder each other",
+          "reply": "Go for small, calm, hardy community species that like the same water temperature, and add them a few at a time over several weeks. Shoaling fish are happier in groups of six or more, so fewer species in bigger groups beats one of everything. Ask the shop what gets along, and skip anything they call 'semi-aggressive'.",
+          "paraphrase": "which species are forgiving for a newbie and won't fight"
+        },
+        {
+          "id": "pets-t3-c4",
+          "title": "Cloudy water in a new tank",
+          "question": "water's gone milky white after a few days with fish. did i do something wrong",
+          "reply": "Almost certainly a bacterial bloom, which happens in most new tanks and clears on its own in a week or so. Don't do big water changes or scrub everything, that resets the bacteria you've grown. Feed lightly, keep the filter running, and test the water. If fish seem stressed, a small partial change is fine.",
+          "paraphrase": "the milky haze that appeared days after adding the fish"
+        },
+        {
+          "id": "pets-t3-c5",
+          "title": "How much to feed fish",
+          "question": "they go crazy every time i walk past, are they starving? how much should i actually feed them",
+          "reply": "They're not starving, they've just learned you're the food. Fish will beg all day. Feed once or twice daily only what they finish in a couple of minutes, and skip a day each week. Overfeeding is the most common beginner problem because leftover food fouls the water. Flat bellies are fine; swollen ones aren't.",
+          "paraphrase": "them begging every time I pass and whether they're actually hungry"
+        },
+        {
+          "id": "pets-t3-c6",
+          "title": "Green algae taking over the glass",
+          "question": "the glass is going green and theres fuzzy stuff on the plants. is my tank dying",
+          "reply": "It's not dying, it's just getting too much light or food. Cut the lights to around eight hours a day, keep the tank out of direct sun, and feed a little less. Scrape the glass with a magnetic cleaner during your weekly water change. A few algae-eating snails or shrimp make cheerful little helpers too.",
+          "paraphrase": "fuzzy growth spreading across everything and whether my aquarium is in trouble"
+        },
+        {
+          "id": "pets-t3-c7",
+          "title": "One fish hiding and not eating",
+          "question": "one of my little guys is hiding behind the filter and ignoring food for two days. the others are fine. what do i do",
+          "reply": "First test the water, since most fish troubles trace back to it. Look closely for spots, frayed fins or clamped fins, and watch whether others pick on him. A gentle partial water change helps whatever the cause. If he's being bullied, more plants and hiding spots calm things down. If he worsens, a fish shop can advise.",
+          "paraphrase": "a single little guy lurking behind the filter and refusing dinner"
+        },
+        {
+          "id": "pets-t3-c8",
+          "title": "Adding live plants to the tank",
+          "question": "tank's been stable for months now. thinking of going full jungle with live plants, where do i start",
+          "reply": "Great next step, plants make everything easier. Start with easy, low-light types that root into gravel or tie onto wood and stones. Plant densely from the start, keep the lighting to a steady daily schedule, and give them a few weeks to settle before judging. Trim as they grow and swap the cuttings with other hobbyists.",
+          "paraphrase": "turning the stable aquarium into a full jungle with greenery"
+        }
+      ],
+      "continuation": {
+        "question": "a friend wants to give me her two fish because she's moving. can i just pop them in?",
+        "reply": "Not quite pop them in, but yes with care. Check they suit your water and the gang you chose in {{chat:3}}, then quarantine them in a tub for a couple of weeks so nothing travels across. When you add them, dim the lights and drip in your tank water slowly. Everything you learned from {{chat:4}} and {{chat:7}} applies here, so watch the water and watch the newcomers."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "pets-o1",
+      "title": "Guinea pig squealing at the fridge",
+      "question": "my guinea pig screams the second she hears the fridge open. how does she even know",
+      "reply": "She's learned the sound means salad. Guinea pigs have sharp hearing and quickly link a noise, like the fridge seal or a rustling bag, with food. That squeal is a 'wheek', her way of saying hurry up. It's a good sign she feels at home. Don't let her train you into extra treats every time.",
+      "paraphrase": "my piggy shrieking the moment I go for a snack"
+    },
+    {
+      "id": "pets-o2",
+      "title": "Why cats knead with their paws",
+      "question": "why does my cat do the little biscuit-making thing on my stomach every night",
+      "reply": "Making biscuits is a kitten habit that never left. Kittens knead their mother to get milk flowing, so adult cats do it when they feel safe and content. You're basically being told you're family. If the claws hurt, pop a folded blanket on your lap and she'll happily knead that instead.",
+      "paraphrase": "the nightly biscuit-making routine on my stomach"
+    },
+    {
+      "id": "pets-o3",
+      "title": "Hamster running all night",
+      "question": "my hamster sleeps all day and then goes nuts on the wheel at 3am. is this normal or is he broken",
+      "reply": "Perfectly normal, he's nocturnal and that wheel is his nightly marathon. Hamsters cover surprisingly long distances in the wild, so the running is good for him. If the noise is the problem, a larger, solid-surface wheel is much quieter than a small plastic one, and moving the cage out of your bedroom saves everyone's sleep.",
+      "paraphrase": "him snoozing through the day then hitting the wheel at 3am"
+    },
+    {
+      "id": "pets-o4",
+      "title": "Do rabbits need a companion",
+      "question": "thinking of getting one bunny. do they get lonely or is that a myth",
+      "reply": "Not a myth. Rabbits are deeply social and a single bunny often grows withdrawn or bored, however much you fuss over her. A neutered pair who've been bonded properly groom and snuggle and keep each other company while you're out. Rescues usually have already-bonded pairs, which saves you the delicate matchmaking.",
+      "paraphrase": "whether one bunny on its own gets lonely"
+    },
+    {
+      "id": "pets-o5",
+      "title": "Dog paws smell like corn chips",
+      "question": "why do my dogs feet smell exactly like corn chips. not complaining just curious",
+      "reply": "You've stumbled on one of dogkind's funniest mysteries, and it's harmless. Dogs sweat a little through their paws, and the natural bacteria and yeast living there give off that toasty, salty smell. It's just part of being a dog. If the paws get red, itchy or much smellier than usual, a vet can check.",
+      "paraphrase": "my pup's feet having that salty snack aroma"
+    },
+    {
+      "id": "pets-o6",
+      "title": "Do pet birds get bored",
+      "question": "my budgie just sits there most of the day. do birds actually get bored or am i projecting",
+      "reply": "Birds absolutely get bored, and budgies are clever little things. Rotate a few toys so there's always something new, hang shreddable paper or soft wood to chew, and talk or whistle to him through the day. Letting him out for supervised flights, if the room is safe, is the best fun of all. Company matters too.",
+      "paraphrase": "my budgie perching around all day and whether he's under-stimulated"
+    }
+  ]
+}

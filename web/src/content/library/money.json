@@ -1,0 +1,248 @@
+{
+  "interest": "money",
+  "label": "Money",
+  "threads": [
+    {
+      "id": "money-t1",
+      "topic": "Clearing a credit card and learning to budget",
+      "chats": [
+        {
+          "id": "money-t1-c1",
+          "title": "Where does my salary go",
+          "question": "ok genuinely where does my money go every month. i get paid, two weeks later im broke and i dont even buy much??",
+          "reply": "Totally common, and the fix is boring but works: pull up the last two months of statements and sort every line into rent, food, going out, subscriptions, transport and other. Most people find a few forgotten subscriptions and a surprisingly big takeaway habit. Once you can see it, you can choose what to change.",
+          "paraphrase": "the one where I couldn't work out why I was always broke by mid-month"
+        },
+        {
+          "id": "money-t1-c2",
+          "title": "Minimum payments on a credit card",
+          "question": "so i owe about 2k on my credit card and ive just been paying the minimum. is that bad or fine",
+          "reply": "Minimums keep you out of trouble but barely dent the balance, because most of the payment goes to interest. Anything you add on top goes straight at the debt. Even a small fixed extra each month shortens things a lot. Check your statement for the interest rate so you know what you're up against.",
+          "paraphrase": "the chat about whether only paying the smallest amount on my plastic was a mistake"
+        },
+        {
+          "id": "money-t1-c3",
+          "title": "First budget that doesn't suck",
+          "question": "every budget ive tried dies in like 10 days. how do i make one i actually stick to",
+          "reply": "Make it loose and honest. Fixed costs first, then a debt payment, then one guilt-free fun pot you're allowed to empty. Three or four categories, not twenty. Check in once a week for five minutes, not daily. A budget you overshoot by a little and keep beats a perfect one you abandon.",
+          "paraphrase": "asking how to make a spending plan I would actually keep to"
+        },
+        {
+          "id": "money-t1-c4",
+          "title": "Cancel subscriptions I forgot about",
+          "question": "found 6 subscriptions on my statement i forgot existed lol. how do i cancel them all and stop this happening again",
+          "reply": "Nice catch. Go through each one and cancel from the account settings, then screenshot the confirmation in case a charge sneaks through. To stop it recurring, set a calendar reminder the day before any free trial ends, and keep a tiny note of everything you sign up for. Six cancellations can free a decent monthly chunk.",
+          "paraphrase": "the time I found a bunch of recurring charges I didn't remember signing up for"
+        },
+        {
+          "id": "money-t1-c5",
+          "title": "Emergency fund or debt first",
+          "question": "should i build an emergency fund first or throw everything at the card? feels dumb to save at tiny interest while paying loads on the card",
+          "reply": "Fair point, and lots of people split the difference: build a small cushion first, a few hundred, so a surprise bill doesn't go back on the card. Then put everything extra at the debt. Once the card is clear, grow the cushion properly. A licensed adviser can tailor it, but that order works for most.",
+          "paraphrase": "whether to pile up a cushion or pay down what I owe before anything else"
+        },
+        {
+          "id": "money-t1-c6",
+          "title": "Negotiating my phone bill down",
+          "question": "my mate says you can just ring your phone company and ask for a cheaper deal?? does that actually work",
+          "reply": "It often does, especially near the end of a contract. Ring, be friendly, say you're thinking of leaving and ask what they can do. Have a competitor's cheaper plan ready to mention. If nothing's offered, ask for the cancellations team, who usually have more room. Worst case you've lost twenty minutes.",
+          "paraphrase": "ringing the mobile provider to haggle for a better monthly rate"
+        },
+        {
+          "id": "money-t1-c7",
+          "title": "Halfway through paying off the card",
+          "question": "update: card is under 1k now!! but im getting bored and tempted to loosen up. how do i stay motivated",
+          "reply": "Huge, well done. Boredom is normal at the halfway point. Draw a little progress bar somewhere you see daily and colour it in with each payment. Give yourself one small planned treat per month so it doesn't feel like punishment. And set a date for the last payment so there's a finish line to run at.",
+          "paraphrase": "the one where I was losing steam midway through clearing my debt"
+        },
+        {
+          "id": "money-t1-c8",
+          "title": "Debt free, what now",
+          "question": "IT'S GONE. paid the last bit today. what should i do with the money i was putting towards it",
+          "reply": "Congratulations, that's a real milestone. Keep the habit: redirect the same monthly amount, this time into savings, so your lifestyle doesn't quietly inflate. Top up the emergency cushion to a few months of essentials, then think about longer goals. And maybe one proper celebration first. You earned it.",
+          "paraphrase": "celebrating the final payment and asking where the freed-up cash should go"
+        }
+      ],
+      "continuation": {
+        "question": "its been a few months since i cleared it. how would i know if im slipping back into old habits?",
+        "reply": "Good instinct to check. Pull up a statement like you did in {{chat:1}} and look for creep: new subscriptions, more takeaways, a card balance that isn't zero at month end. If the plan from {{chat:3}} still fits your life, great; if not, loosen it rather than abandon it. And remember {{chat:7}}: a little planned treat beats a big unplanned one."
+      }
+    },
+    {
+      "id": "money-t2",
+      "topic": "Saving a deposit for a first flat",
+      "chats": [
+        {
+          "id": "money-t2-c1",
+          "title": "How much deposit do I need",
+          "question": "thinking about buying a flat one day. how much deposit do people actually need, roughly",
+          "reply": "It varies by country and lender, but the deposit is usually a percentage of the price, and a bigger one unlocks better rates. Work backwards: pick a realistic price for the area you'd want, take a sensible percentage, and add a buffer for fees. That number is your target, and it's less scary written down.",
+          "paraphrase": "asking what size of lump sum people put down on a first place"
+        },
+        {
+          "id": "money-t2-c2",
+          "title": "Saving goal feels impossible",
+          "question": "ok i did the maths and the number is huge. like years away. how do people not just give up",
+          "reply": "By breaking it into monthly chunks and ignoring the total. Decide what you can save each payday, automate it the day you're paid, and only check progress every three months. Celebrate small milestones. Years sounds long, but it passes anyway; the question is whether the pot is there at the end.",
+          "paraphrase": "the chat where the target seemed too big to ever reach"
+        },
+        {
+          "id": "money-t2-c3",
+          "title": "Where to keep deposit savings",
+          "question": "where should the deposit money actually live? just my normal savings account or something fancier",
+          "reply": "For money you'll need within a few years, most people keep it somewhere safe and easy to reach, like a savings account, rather than anything that can drop in value. Compare interest rates now and then and move if yours is lazy. Some countries have special accounts for first-time buyers. A licensed adviser can confirm what suits you.",
+          "paraphrase": "which type of account to park my house fund in"
+        },
+        {
+          "id": "money-t2-c4",
+          "title": "Cutting rent to save faster",
+          "question": "would moving back in with my parents for a year be worth it to speed this up? im 27 and the idea makes me cringe",
+          "reply": "If they're up for it and you can keep your sanity, a year of saved rent can be the single biggest boost to a deposit. Treat it as a project: set an end date, pay towards food and bills, and keep a routine so it feels like a strategy, not a retreat. Plenty of people do exactly this.",
+          "paraphrase": "weighing up living at my parents' place again to speed up the fund"
+        },
+        {
+          "id": "money-t2-c5",
+          "title": "Mortgage jargon explained simply",
+          "question": "fixed, variable, LTV, term... can you explain mortgage words like im five",
+          "reply": "Sure. A mortgage is a long loan secured on the home. The term is how many years you repay over. Fixed means the rate stays put for a set period; variable means it can move. LTV is how much you borrow compared to the home's value, so a bigger deposit means a lower LTV. A broker can walk through options.",
+          "paraphrase": "getting the confusing home-loan vocabulary translated into plain words"
+        },
+        {
+          "id": "money-t2-c6",
+          "title": "Hidden costs of buying a home",
+          "question": "besides the deposit what else am i gonna have to pay for when buying? dont want nasty surprises",
+          "reply": "Expect legal fees, surveys, lender fees, possibly a tax on the purchase depending where you live, moving costs, and the first round of furniture and repairs. Set aside a separate buffer for all of this so the deposit stays intact. Ask a local solicitor or conveyancer for a typical list in your area.",
+          "paraphrase": "the extra fees beyond the lump sum that catch people out"
+        },
+        {
+          "id": "money-t2-c7",
+          "title": "Viewing flats checklist",
+          "question": "first viewing this weekend!! what should i actually look at so i dont just stare at the kitchen",
+          "reply": "Exciting. Check phone signal in every room, open and close each window, run the taps, look for damp in corners and under sinks, and ask about service charges and the length of the lease. Visit the street at night too. Take photos and notes; after three viewings they all blur together.",
+          "paraphrase": "what to inspect when I go to see a place for the first time"
+        },
+        {
+          "id": "money-t2-c8",
+          "title": "Making an offer below asking",
+          "question": "found one i love. is it rude to offer under the asking price? how low is too low",
+          "reply": "Not rude at all; it's expected. Look at what similar flats nearby sold for, note anything that needs work, and offer a bit under with a reason attached. If they say no, you can go up. Keep a top number in your head beforehand so excitement doesn't decide for you.",
+          "paraphrase": "haggling on the price of the home I fell for"
+        }
+      ],
+      "continuation": {
+        "question": "offer accepted!! what do i need to line up now before i get the keys",
+        "reply": "Brilliant news. Now the buffer from {{chat:6}} earns its keep: instruct a solicitor, book a survey, and get the mortgage application moving using what you learned in {{chat:5}}. Move the deposit out of the account from {{chat:3}} only when the solicitor asks for it. Keep saving as normal until the keys are in your hand; a quiet month is a gift."
+      }
+    },
+    {
+      "id": "money-t3",
+      "topic": "Sorting out money as a new freelancer",
+      "chats": [
+        {
+          "id": "money-t3-c1",
+          "title": "Going freelance money checklist",
+          "question": "handing in my notice next month to go freelance. what money stuff do i need to sort before i jump",
+          "reply": "Exciting. Before the leap, build a cushion of a few months' living costs, since early invoices arrive slowly. Open a separate account for work income, find out how self-employed people register and pay tax where you live, and line up at least one client. Write down your monthly minimum so you know what's enough.",
+          "paraphrase": "the one about preparing my finances before quitting to work for myself"
+        },
+        {
+          "id": "money-t3-c2",
+          "title": "Setting my day rate",
+          "question": "how do i work out what to charge?? i have no idea what a reasonable day rate is for someone like me",
+          "reply": "Start from the salary you'd want, add roughly a third for the tax, pension, holidays and sick days an employer used to cover, then divide by the days you'll realistically bill, which is fewer than you think. Round up. You can always discount for a client you love; raising a low rate later is harder.",
+          "paraphrase": "figuring out what price to put on my time for clients"
+        },
+        {
+          "id": "money-t3-c3",
+          "title": "Writing my first invoice",
+          "question": "first invoice time and i dont want to look like an amateur. what has to be on it",
+          "reply": "Your name or business name, address, the client's details, an invoice number, the date, a clear description of the work, the amount, payment terms such as 'due in 14 days', and your bank details. Keep it clean and send it the day the work finishes. Confident and prompt looks professional.",
+          "paraphrase": "what information goes on the bill I send a client"
+        },
+        {
+          "id": "money-t3-c4",
+          "title": "Putting money aside for tax",
+          "question": "how much should i set aside for tax each time i get paid? dont want a horrible bill later",
+          "reply": "A simple habit: the moment an invoice is paid, move a fixed percentage into a separate pot you never touch. The right percentage depends on your country and income, so an accountant can give you a figure; start generous and adjust once you've seen a year's numbers. Paying yourself from what's left keeps surprises away.",
+          "paraphrase": "the chat about saving a slice of every payment so the government bill doesn't hurt"
+        },
+        {
+          "id": "money-t3-c5",
+          "title": "Client paying late",
+          "question": "client is 3 weeks late paying and ignoring my emails. what do i do without burning the bridge",
+          "reply": "Stay calm and formal. Send a short, polite reminder with the invoice attached and the original due date. If nothing, ring them; people answer phones. Then a firmer note mentioning late-payment terms if you have them. Most late payers are disorganised, not malicious. For next time, ask for a deposit upfront.",
+          "paraphrase": "chasing someone who owes me for finished work and has gone quiet"
+        },
+        {
+          "id": "money-t3-c6",
+          "title": "Surviving a slow month",
+          "question": "nothing has come in for 5 weeks and im panicking a bit. is this normal and what do i do",
+          "reply": "Very normal, and horrible the first time. Lean on the cushion you built; that's its job. Use the quiet to email past clients, update your portfolio and ask for referrals. Cut discretionary spending for the month rather than slashing your rate. Dry spells end, usually with two jobs arriving at once.",
+          "paraphrase": "the one where no work came in for ages and I was freaking out"
+        },
+        {
+          "id": "money-t3-c7",
+          "title": "Pension when self-employed",
+          "question": "nobody is paying into a pension for me anymore. do i need to sort my own and how do people do that",
+          "reply": "Yes, and the earlier the easier. Self-employed people usually open their own pension and pay in a percentage of income, ideally automatically on invoice day like your tax pot. Starting small is far better than waiting for a perfect plan. A licensed adviser can help pick a provider and amount that fit.",
+          "paraphrase": "sorting retirement savings now that there's no employer doing it for me"
+        },
+        {
+          "id": "money-t3-c8",
+          "title": "First year freelancing review",
+          "question": "almost a year in! how do i review how its gone money-wise and plan the next one",
+          "reply": "Lovely milestone. Add up what you invoiced, what you actually kept after tax and costs, and your average monthly income. Look at which clients paid well and on time and which drained you. Decide on a rate rise for the new year, pick a savings target, and book a proper holiday. You've built a business.",
+          "paraphrase": "looking back on twelve months of working for myself and what to change"
+        }
+      ],
+      "continuation": {
+        "question": "year two now. should i raise my rates and how do i tell existing clients without it being awkward",
+        "reply": "Yes, a modest rise each year is normal. Revisit the sums from {{chat:2}}: your costs have grown and your skills have too. Tell existing clients a month ahead, briefly and without apology, and apply it to new work first. What you noticed in {{chat:8}} shows which clients deserve the old rate a little longer. Keep feeding the pots from {{chat:4}} and {{chat:7}} as income grows."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "money-o1",
+      "title": "Why coins have ridged edges",
+      "question": "random but why do some coins have those little ridges around the edge",
+      "reply": "Fun one. Centuries ago coins were made of precious metal, and people would shave tiny slivers off the edges and keep the shavings. Ridges made any shaving obvious, so shopkeepers could spot a clipped coin. The metal is cheap now, but the ridges stayed, partly out of habit and partly to help people tell coins apart by touch.",
+      "paraphrase": "the curiosity about the bumpy rims on loose change"
+    },
+    {
+      "id": "money-o2",
+      "title": "Splitting a group holiday bill",
+      "question": "went away with 5 friends, everyone paid for different stuff, now its a mess. fairest way to settle up?",
+      "reply": "List every shared expense with who paid and who it was for, add up what each person should have paid, and compare it with what they did pay. Whoever is in credit gets paid by whoever is in debit, with the fewest transfers possible. Share the list so nobody feels short-changed. Round to whole numbers and let it go.",
+      "paraphrase": "settling up after a trip where everybody paid for different things"
+    },
+    {
+      "id": "money-o3",
+      "title": "Saying no to lending a friend money",
+      "question": "a close friend asked to borrow quite a bit and i dont want to. how do i say no without wrecking the friendship",
+      "reply": "Be kind, quick and clear: 'I can't lend that, but I'm here for you.' You don't owe a long explanation. If you want to help, offer something smaller or non-financial, like helping them look at options. A good friend will be embarrassed for a day and grateful you were honest.",
+      "paraphrase": "turning down a mate who wanted to borrow cash from me"
+    },
+    {
+      "id": "money-o4",
+      "title": "Why prices end in 99",
+      "question": "why is everything 9.99 instead of 10. do people really fall for that",
+      "reply": "A bit, yes. Our brains read left to right and anchor on the first digit, so 9.99 feels closer to nine than ten even though we know better. It also makes a price look carefully calculated rather than rounded up. Some shops do the opposite and use round numbers to feel premium. Either way, it's deliberate.",
+      "paraphrase": "the one about shops knocking a penny off round numbers"
+    },
+    {
+      "id": "money-o5",
+      "title": "Old foreign banknotes worth anything",
+      "question": "found a pile of old foreign notes in a drawer from trips years ago. are they worth anything or just souvenirs now",
+      "reply": "Depends. If the currency is still in use, a bank or exchange bureau in that country may still swap them, though old series are sometimes withdrawn. If it's a currency that no longer exists, collectors occasionally pay a little for crisp notes, but most are souvenirs. Either way they make a nice framed memory.",
+      "paraphrase": "whether the leftover cash from past trips still has value"
+    },
+    {
+      "id": "money-o6",
+      "title": "How shops profit from gift cards",
+      "question": "how do shops actually make money on gift cards? surely its just the same money arriving a bit later",
+      "reply": "A few ways. Plenty of cards are never fully spent, and that leftover balance quietly stays with the shop. People holding a card tend to spend past its value and pay the difference. And the shop gets your cash months before handing anything over, which is a free loan. Convenient for you, very handy for them.",
+      "paraphrase": "the curiosity about why retailers love selling prepaid vouchers"
+    }
+  ]
+}

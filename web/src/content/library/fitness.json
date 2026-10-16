@@ -1,0 +1,248 @@
+{
+  "interest": "fitness",
+  "label": "Fitness",
+  "threads": [
+    {
+      "id": "fitness-t1",
+      "topic": "Training for a first half marathon",
+      "chats": [
+        {
+          "id": "fitness-t1-c1",
+          "title": "Running shoes for a beginner",
+          "question": "ok so i signed up for a half marathon in like 5 months and i run in old trainers. do i actually need proper running shoes or is that a scam",
+          "reply": "Not a scam, but not magic either. Get fitted at a running shop, jog a bit in each pair and pick the one you forget you're wearing. Comfort beats any label. Swap them when the cushioning feels dead, usually after a few hundred kilometres. Five months is plenty of time, by the way.",
+          "paraphrase": "whether my old trainers are good enough or I have to buy proper footwear"
+        },
+        {
+          "id": "fitness-t1-c2",
+          "title": "A 20-week half marathon plan",
+          "question": "can you give me a rough half marathon plan, i can run about 5k without dying rn, 3 days a week max",
+          "reply": "Three days works. One easy run, one with a few faster bursts, one long run that grows by about a kilometre a week. Keep most of it at a pace where you could chat. Every fourth week, ease off a bit. The long run is the one that matters, so protect it.",
+          "paraphrase": "a training schedule built around just three sessions and a growing long run"
+        },
+        {
+          "id": "fitness-t1-c3",
+          "title": "Knee pain after long runs",
+          "question": "my knee hurts on the outside after my long run, is that normal or am i wrecking it",
+          "reply": "Common, especially when distance jumps quickly. Ease back for a week, keep runs short and flat, and try strengthening your hips and glutes, which often take the load off the knee. If it hurts walking, swells or sticks around after two weeks of rest, a physio or doctor should take a look.",
+          "paraphrase": "soreness on the side of my leg joint that shows up after the weekend distance session"
+        },
+        {
+          "id": "fitness-t1-c4",
+          "title": "Side stitch at six kilometres",
+          "question": "every single run i get a stitch around 6k and have to walk. what am i doing wrong",
+          "reply": "Usually breathing that's too shallow, or eating too close to the run. Try leaving two hours after a meal, start slower than feels necessary, and breathe out hard as the foot on the opposite side lands. If one hits, slow down, press into the spot and exhale long. They fade as fitness grows.",
+          "paraphrase": "that sharp cramp under my ribs that stops me mid run"
+        },
+        {
+          "id": "fitness-t1-c5",
+          "title": "Drinking and gels on long runs",
+          "question": "my long runs are over an hour now, do i need those gel things or is water fine",
+          "reply": "Under an hour, water is plenty. Over about ninety minutes, a little sugar helps: a gel, a few chews or a sweet drink every half hour or so. Practise it on training runs first, because race day is not the time to find out your stomach hates something. Sip, don't gulp.",
+          "paraphrase": "whether I should take sugary sachets or just plain water once my distance passes an hour"
+        },
+        {
+          "id": "fitness-t1-c6",
+          "title": "The taper before race day",
+          "question": "race is in 2 weeks and i feel like i should do one more massive run to be safe. yes?",
+          "reply": "No. The fitness is already in the bank; the last two weeks are for letting your legs absorb it. Keep running, but cut distance by roughly a third, then half, keeping a few short quick bits so you stay sharp. Feeling twitchy and restless now is normal and a good sign.",
+          "paraphrase": "whether to squeeze in one last huge session two weeks out or ease off"
+        },
+        {
+          "id": "fitness-t1-c7",
+          "title": "Race morning plan",
+          "question": "race day tomorrow!! what do i actually do in the morning, im nervous",
+          "reply": "Eat the breakfast you've had before long runs, about two to three hours before. Lay everything out tonight, pin the number, and leave early so queueing for toilets isn't a panic. Start slower than everyone around you; you'll pass them later. Smile at the photographers. You've done the work.",
+          "paraphrase": "nerves the night before and what the first few hours of the big day should look like"
+        },
+        {
+          "id": "fitness-t1-c8",
+          "title": "Recovery after the half",
+          "question": "did it!!! 2h11. legs are destroyed though, stairs are my enemy. how long till i can run again and what next",
+          "reply": "Congratulations, that's brilliant. Walk, eat, sleep and let the stairs be awkward for a few days. Easy jogs after about a week, nothing hard for two. Then pick the next thing: a faster half, a hilly ten kilometre race, or just running for the joy of it. All fine answers.",
+          "paraphrase": "post race soreness and when it's safe to get back out there"
+        }
+      ],
+      "continuation": {
+        "question": "ok im thinking about a full marathon next year, am i mad?",
+        "reply": "Not mad, just early. Since we worked through {{chat:2}} and {{chat:3}}, you know your body needs distance to arrive slowly, so give yourself a solid base of easy running first. What you learned about {{chat:5}} and {{chat:6}} carries straight over, only doubled. Enjoy a few months of running without a plan, then we'll build one together."
+      }
+    },
+    {
+      "id": "fitness-t2",
+      "topic": "Starting strength training at the gym",
+      "chats": [
+        {
+          "id": "fitness-t2-c1",
+          "title": "Nervous about joining a gym",
+          "question": "i want to start lifting but gyms terrify me, everyone looks like they know what theyre doing. how do i not look like an idiot",
+          "reply": "Everyone was new once and nobody's watching, honestly; they're staring at their own reflection. Go at a quiet time, book the free induction most places offer, and start with a couple of machines so you learn the room. Headphones help. In three visits it'll feel like yours.",
+          "paraphrase": "feeling intimidated walking into the weights room for the first time"
+        },
+        {
+          "id": "fitness-t2-c2",
+          "title": "A simple three-day beginner routine",
+          "question": "what should a total beginner actually do in the gym? i dont want 50 exercises, keep it simple pls",
+          "reply": "Three sessions a week, same workout each time: squat, a push, a pull, a hinge and a carry. Think goblet squat, dumbbell press, rows, a deadlift variation and a farmer's walk. Three sets of eight to ten each, adding a little weight whenever all sets feel steady. Boring is the point.",
+          "paraphrase": "a no-nonsense starter workout with just a handful of movements"
+        },
+        {
+          "id": "fitness-t2-c3",
+          "title": "Squat form check",
+          "question": "my squats feel wrong, heels lift and i fold forward. is it my ankles or am i just bad at this",
+          "reply": "Neither, it's just new. Try a wider stance with toes slightly out, push your knees outward, and sit between your legs rather than back. Put small plates under your heels for now and keep the weight light while the pattern settles. Film a set from the side; it's very telling.",
+          "paraphrase": "why my heels come up and I tip forward when I go down into the big leg lift"
+        },
+        {
+          "id": "fitness-t2-c4",
+          "title": "Sore for days after leg day",
+          "question": "did legs on monday, its thursday and i still cant sit on the toilet normally. is this ok",
+          "reply": "That's the famous second-day soreness, and it hits hardest in the first few weeks. Gentle walking, a warm shower and light movement help more than rest does. It gets much milder as your body adapts, so don't skip the next session; just go lighter. Sharp or one-sided pain is different and worth a check.",
+          "paraphrase": "still hobbling around most of the week after my first lower body session"
+        },
+        {
+          "id": "fitness-t2-c5",
+          "title": "Breaking through a stalled bench press",
+          "question": "been stuck on the same bench weight for a month, every time i try more i fail. help",
+          "reply": "Plateaus are normal and a sign to change something small. Drop the weight a touch, do more sets, and add a little every week. Check you're sleeping and eating enough to recover. Try pausing on the chest or using dumbbells for a few weeks. Stalls usually crack when you stop fighting them.",
+          "paraphrase": "the chest exercise where I haven't managed to add weight in weeks"
+        },
+        {
+          "id": "fitness-t2-c6",
+          "title": "Rest days and deload weeks",
+          "question": "do i really need rest days? i feel guilty when i skip the gym and i kind of want to go every day",
+          "reply": "You grow while resting, not while lifting. Three or four sessions a week with real days off is where most beginners thrive. Every six to eight weeks, take a lighter week on purpose: same exercises, roughly half the weight. You'll come back stronger and a lot less creaky. Guilt is not a training plan.",
+          "paraphrase": "whether skipping sessions is actually allowed or I'm just being lazy"
+        },
+        {
+          "id": "fitness-t2-c7",
+          "title": "Moving from dumbbells to the barbell",
+          "question": "ive been doing everything with dumbbells, when do i graduate to the big barbell? feels like a step up",
+          "reply": "Whenever you fancy. Start with the empty bar, which weighs more than it looks, and learn the moves at that weight for a week. Ask staff to show you the rack settings and safety pins. The barbell isn't a reward; it's just a tool that lets you add weight in smaller, steadier steps.",
+          "paraphrase": "when I'm ready to swap the hand weights for the long metal bar"
+        },
+        {
+          "id": "fitness-t2-c8",
+          "title": "First bodyweight deadlift",
+          "question": "just deadlifted my own bodyweight!!! six months ago i couldnt do a squat without falling over. whats a good next goal",
+          "reply": "That's a proper milestone, well done. Pulling your bodyweight puts you well past where most people stop. Next, chase a bodyweight squat, a first pull-up, or simply a year of consistent sessions. Write down today's numbers; in another six months you'll enjoy laughing at them.",
+          "paraphrase": "hitting a lifting milestone equal to what I weigh and what to chase after it"
+        }
+      ],
+      "continuation": {
+        "question": "should i try one of those beginner powerlifting meets or is that way too soon?",
+        "reply": "Not too soon at all; novice meets are full of people in their first year. Between {{chat:3}} and {{chat:7}}, the technical side is already there. Plan a lighter week beforehand, like we discussed in {{chat:6}}, and treat the day as a celebration rather than a test. Pick conservative opening weights and enjoy the cheering."
+      }
+    },
+    {
+      "id": "fitness-t3",
+      "topic": "Learning to swim front crawl as an adult",
+      "chats": [
+        {
+          "id": "fitness-t3-c1",
+          "title": "Learning front crawl in my thirties",
+          "question": "im 32 and can only really do breaststroke with my head up like a dog. is it too late to learn proper front crawl",
+          "reply": "Not even slightly; adult beginners are a big share of every lesson pool. Book a few adult sessions or a one-to-one, because feedback matters more than effort here. Start with floating face down and blowing bubbles until it feels calm. Everything else gets built on that one skill.",
+          "paraphrase": "whether an adult who only manages head-up breaststroke can still pick up the fast stroke"
+        },
+        {
+          "id": "fitness-t3-c2",
+          "title": "Breathing without swallowing the pool",
+          "question": "every time i turn my head to breathe i get a mouthful of water and panic. how do people breathe in front crawl",
+          "reply": "Breathe out the whole time your face is in, slowly through the nose, so there's nothing to do but inhale when you turn. Turn with the body roll, not the neck, and keep one goggle in the water. Practise holding the pool edge, face down, turning to breathe. Dull but it works.",
+          "paraphrase": "why I gulp water and freak out every time I try to take in air mid stroke"
+        },
+        {
+          "id": "fitness-t3-c3",
+          "title": "Goggles that keep fogging up",
+          "question": "my goggles fog up after 2 laps and leak. is it me or the goggles",
+          "reply": "A bit of both. Fog is warmth and no coating; a dab of baby shampoo rinsed lightly, or just spit, works for ages. Leaks mean the seal doesn't match your face, so try a few shapes in the shop and press them to your eyes without the strap. They should stick for a second.",
+          "paraphrase": "misty, leaky eyewear that gives up after a couple of lengths"
+        },
+        {
+          "id": "fitness-t3-c4",
+          "title": "Kicking without going backwards",
+          "question": "when i kick with a float i basically dont move. my legs are strong from cycling so what gives",
+          "reply": "Cyclists' ankles are stiff, that's the culprit. Kick from the hips with floppy ankles and toes pointed, small and fast rather than big and splashy. Try fins for a few sessions to loosen the ankles, and sit on your heels on dry land for a minute each day. It'll come.",
+          "paraphrase": "my legs barely move me even though they're strong from the bike"
+        },
+        {
+          "id": "fitness-t3-c5",
+          "title": "Lane etiquette at the pool",
+          "question": "ok swimming is going well but i keep getting in people's way. how do lanes work, nobody explains it",
+          "reply": "Pick the lane whose speed matches yours, not your ambitions. Swim on one side, up on the left or right as the sign says, and pause at the wall in the corner so others can turn. Tap a foot to pass, let faster people go at the ends. A nod fixes most awkwardness.",
+          "paraphrase": "the unwritten rules for sharing a roped off section with strangers"
+        },
+        {
+          "id": "fitness-t3-c6",
+          "title": "Building up to a continuous kilometre",
+          "question": "i can do 100m front crawl then im wrecked. how do i get to swimming a whole km without stopping",
+          "reply": "Swim slower than you think you need; most new swimmers sprint by accident. Do sets, like ten lots of a hundred with short rests, then shrink the rests week by week. Longer, calmer strokes and a steady breath every two or three. Within a couple of months the wall stops being necessary.",
+          "paraphrase": "stretching my distance from one hundred metres to a thousand"
+        },
+        {
+          "id": "fitness-t3-c7",
+          "title": "First open water swim",
+          "question": "friend wants me to do a lake swim with her. cold, no walls, no lane lines, cant see the bottom. talk me through it",
+          "reply": "Go with a group or lifeguarded venue, never alone. Get in slowly, let your breathing settle before you swim, and lift your head every few strokes to sight a landmark. A bright cap and tow float help people see you. The murk is weird for five minutes, then it's just swimming. It's wonderful.",
+          "paraphrase": "nerves about trying a lake with no sides to hold onto"
+        },
+        {
+          "id": "fitness-t3-c8",
+          "title": "Wetsuit or no wetsuit",
+          "question": "doing a 1.5k lake event next month. do i need a wetsuit? they look expensive and like a hassle",
+          "reply": "In cold water a wetsuit adds warmth and buoyancy, which makes the distance feel kinder. Hire one for a season before buying, and swim in it at least twice first, since it changes your stroke. Rub lubricant on the neck and wrists against chafing. In warm water, skip it and feel free.",
+          "paraphrase": "whether the neoprene suit is worth it for my first proper lake event"
+        }
+      ],
+      "continuation": {
+        "question": "finished the 1.5k! now im eyeing a triathlon, is that a stupid leap?",
+        "reply": "Not stupid, quite natural. You've already done the hard part: the swim leg is what scares most newcomers, and you've been through {{chat:7}} and {{chat:8}}. The cycling you mentioned back in {{chat:4}} means two of three legs are covered. Add some easy running, practise coming out of the water onto a bike, and pick a short sprint distance first. Then we'll plan it."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "fitness-o1",
+      "title": "Stretching before a workout",
+      "question": "do i actually need to stretch before a workout or is that an old pe teacher myth",
+      "reply": "Half myth. Long static stretches before training don't prevent injury and can make you feel weaker for a bit. What helps is a few minutes of easy movement that mimics the workout: leg swings, arm circles, light reps. Save the long holds for afterwards or a lazy evening, when they feel lovely.",
+      "paraphrase": "whether warming up with the old hold-and-count routine is worth it"
+    },
+    {
+      "id": "fitness-o2",
+      "title": "Why my face goes bright red",
+      "question": "why does my face go tomato red when i exercise when my mates look totally fine, its embarrassing",
+      "reply": "Your body is dumping heat by sending blood to the skin, and some people simply have more visible vessels or paler skin. It's not fitness, it's plumbing. Cooler rooms, a fan and splashing water on your wrists help a bit. Wear it as proof you turned up. Nobody else notices after a minute.",
+      "paraphrase": "turning the colour of a beetroot during a session while everyone else stays pale"
+    },
+    {
+      "id": "fitness-o3",
+      "title": "Skipping rope as real cardio",
+      "question": "is skipping rope actually a workout or is it just a playground thing. found one in a drawer and now im curious",
+      "reply": "Properly a workout. A few minutes leaves most people gasping, it is cheap, portable and oddly calming because you have to concentrate. Start with short bouts of thirty seconds, rest, repeat, on a soft surface in flat shoes. Expect to trip a lot the first week; that is the lesson, not failure.",
+      "paraphrase": "whether the jumping thing kids do in the playground counts as proper exercise"
+    },
+    {
+      "id": "fitness-o4",
+      "title": "Working out with a hangover",
+      "question": "slightly hungover, planned a workout. sweat it out or go back to bed",
+      "reply": "Sweating it out is a myth, sadly. If it's mild, a gentle walk or easy session can lift your mood, but drink water first and skip anything heavy or technical, since balance and judgement are off. If you feel rough, rest and go tomorrow. One missed day changes nothing.",
+      "paraphrase": "whether exercising after a big night helps or makes it worse"
+    },
+    {
+      "id": "fitness-o5",
+      "title": "Why stairs feel so hard",
+      "question": "i can walk for hours but three flights of stairs and im gasping. what is going on",
+      "reply": "Stairs make you lift your whole body weight against gravity every step, which is a different kind of work from walking on the flat. It also ramps up fast with no warm-up, so your heart lags behind. Climbing a few flights daily fixes it surprisingly quickly.",
+      "paraphrase": "being out of breath after a few floors despite having good endurance on flat ground"
+    },
+    {
+      "id": "fitness-o6",
+      "title": "Cold showers after training",
+      "question": "my friend swears by ice cold showers after every workout. actual benefit or just suffering for fun",
+      "reply": "A bit of both. Cold feels refreshing and may ease soreness a little, though some coaches think it blunts the gains from a hard session, so save it for rest days or after easy cardio if you like it. If you hate it, skip it. Nothing you dread will stick anyway.",
+      "paraphrase": "whether freezing water after exercise does anything real"
+    }
+  ]
+}

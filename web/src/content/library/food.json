@@ -1,0 +1,248 @@
+{
+  "interest": "food",
+  "label": "Food and cooking",
+  "threads": [
+    {
+      "id": "food-t1",
+      "topic": "Learning to bake sourdough bread",
+      "chats": [
+        {
+          "id": "food-t1-c1",
+          "title": "Starting a sourdough starter",
+          "question": "ok so i want to make a sourdough starter from scratch, is it really just flour and water?? how long does it take",
+          "reply": "Yes, just flour and water. Mix equal weights in a jar, leave it loosely covered at room temperature, and each day throw out most of it and feed it fresh flour and water. Around the end of the first week you should see it bubble and roughly double a few hours after feeding. Whole-grain flour gets it going faster.",
+          "paraphrase": "how to grow my own bread culture from nothing but flour and water"
+        },
+        {
+          "id": "food-t1-c2",
+          "title": "Starter smells like acetone",
+          "question": "my starter smells like nail polish remover is it dead",
+          "reply": "Not dead, just hungry. That sharp acetone smell is alcohol building up because the yeast ran out of food. Feed it, and if it keeps happening, feed twice a day or use a bit less starter each time so it has more to eat. It should smell pleasantly sour and yeasty again within a couple of feeds.",
+          "paraphrase": "when my jar of bubbly flour stuff gave off a sharp chemical whiff and I panicked"
+        },
+        {
+          "id": "food-t1-c3",
+          "title": "First loaf came out flat",
+          "question": "first loaf came out flat as a dinner plate. tasted fine tho. what did i do wrong",
+          "reply": "Flat but tasty usually means it spread instead of rising, so either the dough was too wet to hold itself up, or it over-proofed and the gluten gave out. Try a little less water next time, shape it tightly, and bake it as soon as it passes the poke test. A hot pot with a lid helps it climb.",
+          "paraphrase": "the time my bread turned into a pancake and I wanted to know why"
+        },
+        {
+          "id": "food-t1-c4",
+          "title": "Knowing when bulk fermentation is done",
+          "question": "how do i know when the dough is done bulk fermenting? everyone says 'until doubled' but mine never doubles",
+          "reply": "Forget doubling; watch the dough instead. It is ready when the surface is domed and jiggly, there are bubbles along the sides of the container, and it smells faintly sweet and boozy. A straight-sided clear tub with a tape mark makes judging the rise much easier than a round bowl. Warm kitchens finish faster, cold ones slower.",
+          "paraphrase": "how to tell if the dough had risen enough before shaping"
+        },
+        {
+          "id": "food-t1-c5",
+          "title": "Scoring without tearing the dough",
+          "question": "scoring. my blade drags and tears the dough instead of cutting. tips?",
+          "reply": "Dragging means the surface is sticky or the blade is dull. Chill the shaped loaf in the fridge so the skin firms up, dust it lightly with rice flour, and use a fresh blade held at a shallow angle. Make one confident swipe about half a centimetre deep rather than sawing. Hesitation is what tears it.",
+          "paraphrase": "making clean cuts on top of the loaf before it goes in the oven"
+        },
+        {
+          "id": "food-t1-c6",
+          "title": "Gummy dense crumb at the bottom",
+          "question": "crumb is super dense and gummy at the bottom but the top looks great?? what gives",
+          "reply": "A gummy base usually means the loaf was underbaked or cut too soon. Bake until the crust is deep brown, not golden, and let it cool completely before slicing, which can take a couple of hours. If the bottom is also pale, the oven floor is too cool; preheat your pot longer or move the rack down.",
+          "paraphrase": "when the inside of my bread was wet and heavy near the base"
+        },
+        {
+          "id": "food-t1-c7",
+          "title": "Fitting sourdough around a work week",
+          "question": "i want to bake on a weekday but the schedule is insane. can i do the overnight thing in the fridge",
+          "reply": "Absolutely. Mix and do your stretch and folds in the evening, let it bulk ferment on the counter overnight if your kitchen is cool, or for a few hours before bed if it is warm, then shape and refrigerate. It can sit there a day or two, and you bake straight from cold when you get home.",
+          "paraphrase": "making the bread timeline survive office days"
+        },
+        {
+          "id": "food-t1-c8",
+          "title": "What to bake after plain sourdough",
+          "question": "feeling confident now lol. whats a good next bread to try after plain sourdough",
+          "reply": "Try a seeded loaf first; the method is identical, you just fold in toasted seeds. After that, focaccia is forgiving and spectacular, and sourdough pizza dough uses the same starter. If you want a challenge, a high-hydration country loaf will teach you dough handling. Baking with some rye or wholewheat changes the flavour a lot too.",
+          "paraphrase": "where to go next once the basic loaf stopped scaring me"
+        }
+      ],
+      "continuation": {
+        "question": "ok it's been a while and my starter has sat in the fridge untouched for weeks. can i revive it or do i start over?",
+        "reply": "You can almost certainly revive it. Pour off any grey liquid, keep a spoonful, and feed it twice a day for three or four days, the same way you did back in {{chat:1}}. If it smells sharp like in {{chat:2}}, that is just hunger. Once it doubles reliably, bake a plain loaf first and lean on what you learned in {{chat:4}} before going back to the fancier breads."
+      }
+    },
+    {
+      "id": "food-t2",
+      "topic": "Hosting a first dinner party for eight",
+      "chats": [
+        {
+          "id": "food-t2-c1",
+          "title": "Planning a first dinner party",
+          "question": "i've never hosted a proper dinner party and 8 people are coming in 3 weeks. where do i even start",
+          "reply": "Start with the menu, not the shopping. Pick one main you have cooked before and feel calm about, two sides that can sit in the oven, and a dessert you make the day before. Then write a guest list and a timeline backwards from when people arrive. Three weeks is plenty; test the main this weekend.",
+          "paraphrase": "where I panicked about eight guests coming over and asked where to begin"
+        },
+        {
+          "id": "food-t2-c2",
+          "title": "Menu for mixed dietary needs",
+          "question": "one guest is vegetarian and another cant have dairy. do i cook 3 separate meals or what",
+          "reply": "One meal, built flexibly. Make the main something naturally dairy-free, like a roast with a herb and olive oil sauce, and cook a generous vegetarian centrepiece such as a stuffed squash or a bean and tomato bake that everyone will want anyway. Keep cheese and butter as optional extras on the table rather than inside the dishes.",
+          "paraphrase": "feeding someone who skips meat and someone who skips milk without cooking three dinners"
+        },
+        {
+          "id": "food-t2-c3",
+          "title": "What to make ahead the day before",
+          "question": "what can i actually make the day before so i'm not cooking while people arrive",
+          "reply": "Loads. Soups, stews and braises taste better the next day. Dessert, salad dressings, roasted vegetables for reheating, and anything sauce-based can all be done ahead. Peel and chop everything, then store it in labelled containers. The only things to leave for the day are green salad, fresh bread and whatever needs to be crisp.",
+          "paraphrase": "which dishes survive being cooked early and reheated"
+        },
+        {
+          "id": "food-t2-c4",
+          "title": "Starter course and portion sizes",
+          "question": "do i need a starter course or is that trying too hard. also how much food per person",
+          "reply": "A starter is optional; a bowl of something to nibble while people arrive does the same job with less stress. Olives, warm bread, a dip and some toasted nuts are plenty. For the main, plan roughly a palm-sized portion of protein per person plus a fist-sized serving of each side, then add one extra portion for the table.",
+          "paraphrase": "whether to bother with a first plate and how much to cook so nobody goes hungry"
+        },
+        {
+          "id": "food-t2-c5",
+          "title": "Getting everything hot at the same time",
+          "question": "how do i time it so the main and the sides are all hot at once. this is the part that stresses me",
+          "reply": "Work backwards from serving time. Most sides can be cooked fully, then held in a low oven loosely covered with foil for half an hour without harm. Let the roast rest under a tea towel while you finish the sides and the gravy. Warm your plates too. If something is late, serve the nibbles and relax; nobody notices.",
+          "paraphrase": "the oven juggling so the roast and the veg finished together"
+        },
+        {
+          "id": "food-t2-c6",
+          "title": "Impressive but foolproof dessert",
+          "question": "dessert that looks impressive but is basically foolproof? i'm not a baker",
+          "reply": "A chocolate pot. Melt dark chocolate into hot cream, pour into little glasses, chill, and top with whipped cream and a pinch of salt before serving. It cannot fail and looks like a restaurant made it. A fruit crumble is the other safe bet: assemble it ahead, bake while you eat the main, serve warm with cream.",
+          "paraphrase": "a sweet finish that wouldn't fall apart in a non-baker's hands"
+        },
+        {
+          "id": "food-t2-c7",
+          "title": "Hour-by-hour timeline for the day",
+          "question": "it's tomorrow!! can you write me an hour by hour timeline for the day",
+          "reply": "Morning: lay the table, chill the drinks, make the dessert if it is not done. Early afternoon: prep all vegetables, make the sauce, set out serving dishes with notes. Three hours out: roast goes in. One hour out: sides in, shower, change. Thirty minutes: nibbles out, music on, one glass of wine for you. Doors open.",
+          "paraphrase": "where I asked for a schedule for the big night so nothing got forgotten"
+        },
+        {
+          "id": "food-t2-c8",
+          "title": "Turning party leftovers into new meals",
+          "question": "it went great!! now i have a fridge full of leftovers. ideas that aren't just reheating",
+          "reply": "Roast meat becomes tomorrow's sandwiches or a quick fried rice. Leftover vegetables blitz into a soup or fold into a frittata with a few eggs. Bread goes stale beautifully for croutons or a savoury bread pudding. Any sauce or gravy freezes in small pots. Dessert, honestly, is breakfast; you earned it.",
+          "paraphrase": "what to do with the mountain of food left after the guests went home"
+        }
+      ],
+      "continuation": {
+        "question": "so i'm doing it again next month, this time 12 people and two of them are kids. what changes?",
+        "reply": "Mostly scale and simplicity. Reread {{chat:3}} and prep even more in advance; with twelve, the stove is the bottleneck, so pick a main that bakes in one big tray. Revisit {{chat:4}} and round portions up, since kids eat less but snack more. Keep the dessert from {{chat:6}}, children love it. And redo {{chat:7}} with an extra hour of slack built in."
+      }
+    },
+    {
+      "id": "food-t3",
+      "topic": "Learning to cook curries from scratch",
+      "chats": [
+        {
+          "id": "food-t3-c1",
+          "title": "Bare minimum spice cabinet for curries",
+          "question": "i want to stop buying curry paste in jars and actually learn to cook curries. what spices do i need to start, like the bare minimum",
+          "reply": "Start with five: cumin seeds, coriander powder, turmeric, a chilli powder of whatever heat you like, and a good garam masala for finishing. Add mustard seeds and dried red chillies when you can. With onion, garlic, ginger and tomatoes in the fridge, those cover most everyday curries. Buy small amounts; ground spices fade within months.",
+          "paraphrase": "which seasonings to buy first to stop relying on ready-made jars"
+        },
+        {
+          "id": "food-t3-c2",
+          "title": "Whole versus ground spices",
+          "question": "whole spices or ground? i bought both and now im confused when to use which",
+          "reply": "Whole spices go in hot oil at the start, where they crackle and perfume the fat. Ground spices go in later, with the onion and tomato, where moisture stops them scorching. So cumin seeds first, coriander and turmeric powder later. If a recipe says to grind your own, toast the whole ones first; it makes a huge difference.",
+          "paraphrase": "when to use the seeds and when to use the powder"
+        },
+        {
+          "id": "food-t3-c3",
+          "title": "Getting onions properly browned",
+          "question": "my onions never go that deep brown colour the recipes show. i've been standing here 20 mins",
+          "reply": "Twenty minutes is normal, honestly, but two things speed it up. Slice thinner and add a pinch of salt early, which pulls water out so they fry rather than steam. Use a wider pan so they are not piled up, and medium heat with occasional stirring, not constant. A splash of water when they stick helps the colour spread evenly.",
+          "paraphrase": "why my base took forever to darken in the pan"
+        },
+        {
+          "id": "food-t3-c4",
+          "title": "Curry tastes raw and bitter",
+          "question": "my curry tastes kind of raw and bitter. like the spices didn't cook. what am i doing wrong",
+          "reply": "The ground spices probably hit the pan too late or too dry. Add them to the browned onion with a splash of water or the tomatoes right behind, then cook, stirring, until the mixture darkens and oil separates at the edges. That stage, often called bhuna, takes several minutes and is where rawness disappears. Finish with a pinch of sugar.",
+          "paraphrase": "the dish had a harsh, uncooked flavour and I needed a fix"
+        },
+        {
+          "id": "food-t3-c5",
+          "title": "Making dal that isn't boring",
+          "question": "how do i make a simple dal that doesn't taste like boring lentil soup",
+          "reply": "Two moves fix most dal. First, cook the lentils with turmeric and salt until completely soft, then whisk them a little so they go creamy. Second, make a tadka: fry cumin seeds, garlic, dried chilli and a pinch of asafoetida in ghee or oil until fragrant, and pour it sizzling over the top. Lemon and fresh coriander to finish.",
+          "paraphrase": "turning plain lentils into something I would actually want seconds of"
+        },
+        {
+          "id": "food-t3-c6",
+          "title": "Fluffy rice every time",
+          "question": "my rice is always either mushy or crunchy. what's the trick for fluffy basmati",
+          "reply": "Rinse the rice until the water runs nearly clear, then soak it for twenty minutes. Use about one and a half parts water to one part rice, bring to a boil, cover tightly, and drop to the lowest heat for ten minutes. Turn it off and leave it covered for ten more without peeking. Fluff with a fork.",
+          "paraphrase": "fixing grains that came out either soggy or undercooked"
+        },
+        {
+          "id": "food-t3-c7",
+          "title": "What tempering spices means",
+          "question": "what's tempering? recipes keep saying 'temper the spices in oil and pour over' and i have no idea",
+          "reply": "Tempering is blooming whole spices in hot fat so their flavour moves into the oil, then pouring that oil over a finished dish. Heat a spoon of oil or ghee in a small pan, add mustard or cumin seeds until they pop, then garlic or dried chilli for a few seconds. Pour it over your dal and hear it sizzle.",
+          "paraphrase": "the sizzling oil step recipes kept mentioning that I did not understand"
+        },
+        {
+          "id": "food-t3-c8",
+          "title": "Freezing a batch of curry base",
+          "question": "can i batch make the onion tomato base and freeze it? weeknights are chaos",
+          "reply": "Yes, and it is the best shortcut there is. Cook a big batch of onion, ginger, garlic and tomato down until thick and the oil separates, cool it, and freeze in portions. On a weeknight, defrost one, add your spices and whatever protein or vegetable you have, simmer, and dinner is twenty minutes away. It keeps for months frozen.",
+          "paraphrase": "whether I could cook the gravy foundation in bulk for chaotic weeknights"
+        }
+      ],
+      "continuation": {
+        "question": "my friend who grew up eating this food is coming for dinner. what should i cook to show off without embarrassing myself",
+        "reply": "Cook what you have already nailed. Make the dal from {{chat:5}} and finish it with the sizzling oil from {{chat:7}}, which always impresses. Serve it with the rice from {{chat:6}}. Brown your onions properly as in {{chat:3}} for one meat or vegetable curry on the side. Three dishes, all practised. Make the base the night before so you are relaxed, not sweating over the pan."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "food-o1",
+      "title": "Ripening a rock-hard avocado",
+      "question": "bought avocados for tonight and theyre rock hard. any way to speed this up or am i doomed",
+      "reply": "Tonight is ambitious, but you can shave off a day or two. Put them in a paper bag with a ripe banana, fold it shut and leave it somewhere warm; the ripening gas from the banana does the work. For tonight, honestly, pick a different side and let them catch up.",
+      "paraphrase": "when the green fruit I bought for dinner was solid as a stone"
+    },
+    {
+      "id": "food-o2",
+      "title": "Honey gone solid and grainy",
+      "question": "my honey has gone solid and grainy in the jar. is it off or can i still eat it",
+      "reply": "It is fine, just crystallised. Honey is a concentrated sugar solution, and over time some of that sugar settles into grains, especially in a cool cupboard. Stand the jar in warm water for twenty minutes and stir, and it turns clear again. Keep it off the boil, which dulls the flavour. Some people prefer it grainy.",
+      "paraphrase": "whether the sweet stuff that turned to sugar in the cupboard was still good"
+    },
+    {
+      "id": "food-o3",
+      "title": "Does searing seal in juices",
+      "question": "does searing meat actually seal in the juices or is that a myth, my dad swears by it",
+      "reply": "Mostly a myth, sorry to your dad. A seared crust is not waterproof; the meat loses about the same moisture either way. What searing does do is build flavour through browning, and that is reason enough. Juiciness comes from not overcooking and from resting the meat before cutting, so the juices settle rather than run out.",
+      "paraphrase": "the chat about whether a hot crust really locks moisture inside a steak"
+    },
+    {
+      "id": "food-o4",
+      "title": "Rust spots on cast iron",
+      "question": "my cast iron pan has orange spots on it. did i ruin it",
+      "reply": "Not ruined; cast iron is nearly indestructible. Scrub the orange spots off with steel wool or coarse salt and a little oil, rinse, and dry it completely on the hob. Rub a thin film of neutral oil all over and bake it upside down in a hot oven for an hour. Dry it after every wash and it stays away.",
+      "paraphrase": "the chat about my heavy black skillet going orange in places"
+    },
+    {
+      "id": "food-o5",
+      "title": "Checking if eggs are still fresh",
+      "question": "how do i tell if eggs are still good, the date on the box was last week",
+      "reply": "The box date is a guide, not a cliff. Fill a bowl with water and gently lower an egg in. Fresh eggs sink and lie flat, older ones stand on end but are fine for baking, and floaters have too much air inside and should go. Crack it into a separate bowl first; a bad one announces itself instantly.",
+      "paraphrase": "the floating water test for a carton past its printed date"
+    },
+    {
+      "id": "food-o6",
+      "title": "Why cilantro tastes like soap",
+      "question": "why does cilantro taste like soap to me but my partner loves it",
+      "reply": "You are not being fussy. Some people carry a gene variant that makes them pick up the soapy-smelling compounds in the leaves far more strongly, so it genuinely tastes different to you. Finely chopping or crushing the herb breaks those compounds down a bit, and cooking reduces the effect. Or swap in parsley and let your partner have the lot.",
+      "paraphrase": "the green herb my partner loves that reminds me of dish detergent"
+    }
+  ]
+}

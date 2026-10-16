@@ -1,0 +1,248 @@
+{
+  "interest": "sample",
+  "label": "Games and puzzles",
+  "threads": [
+    {
+      "id": "sample-t1",
+      "topic": "Learning chess from scratch",
+      "chats": [
+        {
+          "id": "sample-t1-c1",
+          "title": "Chess basics for a beginner",
+          "question": "ok i want to learn chess properly, where do i even start",
+          "reply": "Start with how each piece moves, then play full games against an easy computer. Learn checkmate with a king and queen against a lone king. Do not memorise openings yet; focus on not losing pieces for free.",
+          "paraphrase": "where to begin learning chess as a complete beginner"
+        },
+        {
+          "id": "sample-t1-c2",
+          "title": "Controlling the centre",
+          "question": "why does everyone say control the center of the board",
+          "reply": "Pieces in the centre reach more squares, so they attack and defend more. Pawns on d4 and e4 also cramp your opponent. Early on, put a pawn in the centre and develop knights before bishops.",
+          "paraphrase": "the reason central squares matter so much in chess"
+        },
+        {
+          "id": "sample-t1-c3",
+          "title": "Castling early",
+          "question": "when should i castle, like move 5 or later?",
+          "reply": "Usually within the first ten moves, once a knight and a bishop are out. Castle towards the side that is safer, and avoid moving the pawns in front of your king afterwards.",
+          "paraphrase": "the right moment to tuck the king away behind its pawns"
+        },
+        {
+          "id": "sample-t1-c4",
+          "title": "A simple opening repertoire",
+          "question": "give me one opening for white and one for black that are easy to remember",
+          "reply": "As white, the Italian Game: e4, Nf3, Bc4 with natural development. As black, answer e4 with e5 and d4 with d5, then develop normally. Understand the ideas rather than long lines.",
+          "paraphrase": "a small set of openings an improving player can rely on"
+        },
+        {
+          "id": "sample-t1-c5",
+          "title": "Blunder checks",
+          "question": "i keep hanging pieces, how do i stop",
+          "reply": "Before each move, ask what your opponent can capture or check. Look at every piece your move leaves undefended. Slow down on recaptures: they are where most blunders happen.",
+          "paraphrase": "a habit for not giving away pieces for nothing"
+        },
+        {
+          "id": "sample-t1-c6",
+          "title": "Rook endgames",
+          "question": "how do i win when its just rooks and pawns left",
+          "reply": "Put the rook behind a passed pawn, yours or theirs. Keep the king active and cut the enemy king off with the rook. Learn the Lucena and Philidor positions; they decide most rook endings.",
+          "paraphrase": "finishing games when only rooks and pawns remain"
+        },
+        {
+          "id": "sample-t1-c7",
+          "title": "Reviewing lost games",
+          "question": "whats the best way to learn from games i lose",
+          "reply": "Replay the game without an engine first and mark where you felt lost. Then check with the engine only at those moments. Keep a short note of one lesson per game.",
+          "paraphrase": "getting lessons out of defeats instead of forgetting them"
+        },
+        {
+          "id": "sample-t1-c8",
+          "title": "First tournament nerves",
+          "question": "signed up for a local tournament, any tips for nerves",
+          "reply": "Arrive early, bring water and a snack, and play openings you know. Write moves down calmly; it slows you a little, which helps. One game at a time, and shake hands whatever happens.",
+          "paraphrase": "staying calm before playing in a competition for the first time"
+        }
+      ],
+      "continuation": {
+        "question": "ok im back, how do i get past 1200 now",
+        "reply": "Keep the habits that got you here: the blunder check from {{chat:5}}, castling early as in {{chat:3}}, and the small repertoire from {{chat:4}}. Add fifteen minutes of tactics a day and review every loss the way we discussed. Ratings climb in steps, so expect plateaus."
+      }
+    },
+    {
+      "id": "sample-t2",
+      "topic": "Hosting a monthly game night",
+      "chats": [
+        {
+          "id": "sample-t2-c1",
+          "title": "Games for six people",
+          "question": "hosting game night for 6, which games work for that many",
+          "reply": "Pick games that keep everyone involved: party deduction games, trading games with simultaneous turns, or team games. Avoid long strategy games with downtime between turns at this size.",
+          "paraphrase": "which tabletop games suit a group of half a dozen"
+        },
+        {
+          "id": "sample-t2-c2",
+          "title": "Teaching rules fast",
+          "question": "how do i explain rules without boring everyone",
+          "reply": "Set up the game first, explain the goal in one sentence, then teach one round by playing it open-handed. Skip edge cases until they come up. Keep the rulebook nearby for yourself.",
+          "paraphrase": "explaining a new game without a long lecture"
+        },
+        {
+          "id": "sample-t2-c3",
+          "title": "Snacks that keep cards clean",
+          "question": "what snacks wont wreck the cards",
+          "reply": "Dry, non-greasy things: pretzels, grapes, cut vegetables, popcorn without butter. Serve in bowls with spoons or tongs. Keep drinks on a side table away from the board.",
+          "paraphrase": "food that will not leave grease on game pieces"
+        },
+        {
+          "id": "sample-t2-c4",
+          "title": "Handling a sore loser",
+          "question": "one friend sulks when they lose, how do i deal with it",
+          "reply": "Choose more cooperative or team games for a while, and keep the mood light with quick rounds. Praise clever plays, not just wins. A quiet word in private often helps more than a joke in front of everyone.",
+          "paraphrase": "keeping the mood friendly when someone takes losing badly"
+        },
+        {
+          "id": "sample-t2-c5",
+          "title": "Scheduling a regular night",
+          "question": "how do i make game night actually happen every month",
+          "reply": "Fix a recurring date, like the first Friday, and send one reminder three days before. Rotate who picks the game. Start even if only three show up; consistency builds the habit.",
+          "paraphrase": "making a recurring social evening stick"
+        },
+        {
+          "id": "sample-t2-c6",
+          "title": "Cooperative games",
+          "question": "any good games where we all play together against the game",
+          "reply": "Cooperative games work well for mixed groups: everyone shares the win, so nobody sits out emotionally. Look for simple turns, a shared timer or threat, and a short play time, then grow from there.",
+          "paraphrase": "tabletop games where the whole table works as one team"
+        },
+        {
+          "id": "sample-t2-c7",
+          "title": "Keeping score fairly",
+          "question": "we always argue about scoring, fix?",
+          "reply": "Appoint one scorekeeper per game and read the scoring rule aloud before the last round. Use a shared sheet so everyone sees running totals. Ties are fine; call them shared wins.",
+          "paraphrase": "stopping disagreements about who actually won"
+        },
+        {
+          "id": "sample-t2-c8",
+          "title": "A game night playlist",
+          "question": "what music works in the background for game night",
+          "reply": "Instrumental and mid-tempo, quiet enough to talk over. Avoid anything with lyrics people will sing along to during a tense turn. Make a two-hour list so you are not fiddling with it.",
+          "paraphrase": "background sound that does not distract from the table"
+        }
+      ],
+      "continuation": {
+        "question": "planning our anniversary game night, how do i make it special",
+        "reply": "Lean on what already works: the six-player picks from {{chat:1}}, the open-hand teaching trick from {{chat:2}}, and the clean snacks from {{chat:3}}. Add a small prize for the most dramatic comeback and print a scoreboard of the year. Keep the start time the same so the habit holds."
+      }
+    },
+    {
+      "id": "sample-t3",
+      "topic": "Designing my own card game",
+      "chats": [
+        {
+          "id": "sample-t3-c1",
+          "title": "Card game core loop",
+          "question": "i want to design a card game, how do i start",
+          "reply": "Start with one decision you want players to feel: bluffing, timing, or set collection. Prototype with index cards and a pen within an hour. Play it badly, then fix the biggest problem first.",
+          "paraphrase": "the first steps of inventing a card game"
+        },
+        {
+          "id": "sample-t3-c2",
+          "title": "Prototype with index cards",
+          "question": "do i need nice art for a prototype",
+          "reply": "No. Plain index cards with hand-written text test the rules faster and cost nothing to throw away. Art comes last, after the game is fun with ugly cards.",
+          "paraphrase": "whether a rough version needs proper artwork"
+        },
+        {
+          "id": "sample-t3-c3",
+          "title": "Balancing card power",
+          "question": "some cards are way too strong, how do i balance",
+          "reply": "Track how often each card wins the game across ten plays. Nerf the outliers with a cost increase rather than removing them. Keep a few strong cards; they create exciting moments if they are rare.",
+          "paraphrase": "making sure no single card dominates every game"
+        },
+        {
+          "id": "sample-t3-c4",
+          "title": "Writing clear card text",
+          "question": "players misread my cards, help with wording",
+          "reply": "Use one short sentence per effect, present tense, and the same verb for the same action everywhere. Put timing first: when this happens, do that. Test by having someone read a card aloud cold.",
+          "paraphrase": "rules text on cards that nobody misreads"
+        },
+        {
+          "id": "sample-t3-c5",
+          "title": "Playtesting with strangers",
+          "question": "my friends are too nice, where do i find honest testers",
+          "reply": "Local game cafes and designer meetups often run blind playtests. Give testers a short form with three questions and watch without explaining. Your silence reveals the rules that fail.",
+          "paraphrase": "getting candid feedback on a homemade game"
+        },
+        {
+          "id": "sample-t3-c6",
+          "title": "Card counts and deck size",
+          "question": "how many cards should the deck have",
+          "reply": "Enough that a full game sees most of the deck once but rarely runs out. For a thirty-minute game with four players, sixty to ninety cards is a common range. Adjust after timing real plays.",
+          "paraphrase": "deciding how many cards to print"
+        },
+        {
+          "id": "sample-t3-c7",
+          "title": "Printing a prototype",
+          "question": "cheap way to print decent looking cards",
+          "reply": "Print on heavy paper, cut with a guillotine cutter, and slide each card into a sleeve with a cheap trading card behind it. It feels fine in hand and costs little. Print-on-demand comes later.",
+          "paraphrase": "producing a tidy homemade deck without spending much"
+        },
+        {
+          "id": "sample-t3-c8",
+          "title": "Rulebook structure",
+          "question": "how should i structure the rulebook",
+          "reply": "Overview and goal, components, setup with a picture, turn structure, end of game and scoring, then a glossary. Put examples in boxes. Ask a new player to set up using only the book.",
+          "paraphrase": "organising the written rules for a new game"
+        }
+      ],
+      "continuation": {
+        "question": "ready to make a proper version, whats next",
+        "reply": "Lock the deck size you settled on in {{chat:6}}, re-run the balance count from {{chat:3}}, and tidy the wording using the rules from {{chat:4}}. Then do two more blind tests before paying for print. Commission art only for cards whose text is final."
+      }
+    }
+  ],
+  "oneOffs": [
+    {
+      "id": "sample-o1",
+      "title": "Dice probability",
+      "question": "whats the chance of rolling at least one six with two dice",
+      "reply": "About 31 percent. The chance of no six on one die is five sixths; on two dice it is twenty-five thirty-sixths, so at least one six is eleven thirty-sixths.",
+      "paraphrase": "odds of seeing a six when two dice are thrown"
+    },
+    {
+      "id": "sample-o2",
+      "title": "Storing game boxes",
+      "question": "best way to store a growing shelf of board games",
+      "reply": "Store boxes flat if they are heavy, upright if light, and keep them away from sunlight and damp. Bag loose components inside each box. A list of what you own prevents duplicate purchases.",
+      "paraphrase": "keeping a collection of boxed games organised"
+    },
+    {
+      "id": "sample-o3",
+      "title": "Solo games",
+      "question": "any games that are good to play alone",
+      "reply": "Many modern games include a solo mode with an automated opponent. Puzzle-like games and campaign games work well alone. Look for a solo rating in reviews before you buy.",
+      "paraphrase": "tabletop options for playing by yourself"
+    },
+    {
+      "id": "sample-o4",
+      "title": "Learning backgammon",
+      "question": "is backgammon hard to learn",
+      "reply": "The rules take ten minutes; the skill takes years. Learn the opening moves, how to build points, and when to hit. The doubling cube adds a layer, so add it once the basics feel comfortable.",
+      "paraphrase": "how difficult it is to pick up backgammon"
+    },
+    {
+      "id": "sample-o5",
+      "title": "Games for a long flight",
+      "question": "small games i can play with my partner on a plane",
+      "reply": "Pick card games with a tiny footprint and no board, or dice games played on a tray table. Magnetic travel sets of classic games also work. Keep pieces in a zip bag.",
+      "paraphrase": "compact two-player games for travelling"
+    },
+    {
+      "id": "sample-o6",
+      "title": "Shuffling cards well",
+      "question": "how many times should i shuffle a deck",
+      "reply": "Seven riffle shuffles make an ordinary deck close to random. If you cannot riffle, do a few overhand shuffles followed by cutting the deck into several piles and restacking.",
+      "paraphrase": "how much shuffling makes a deck truly mixed"
+    }
+  ]
+}

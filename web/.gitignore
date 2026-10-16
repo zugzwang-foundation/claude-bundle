@@ -1,0 +1,2 @@
+# Copied from node_modules/onnxruntime-web/dist by scripts/copy-ort.mjs
+public/ort/

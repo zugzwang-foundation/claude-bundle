@@ -1,0 +1,58 @@
+# 30-nightly.service — Bundle's nightly loop on the DGX Spark, as a systemd USER unit.
+#
+# WRITTEN IN BDL-3, NEVER RUN YET; VERIFY ON THE SPARK IN BDL-4. NOT ENABLED BY DEFAULT.
+#
+# Install, only after 20-run-loop.sh has finished once by hand in tmux:
+#   mkdir -p ~/.config/systemd/user
+#   cp ~/bundle/scripts/spark/30-nightly.service ~/bundle/scripts/spark/30-nightly.timer ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now 30-nightly.timer        # enable the TIMER, not the service
+#   loginctl enable-linger "$USER"   # NOT VERIFIED on DGX OS: keeps the user manager, and so the
+#                                    # timer, alive with nobody logged in; without it 01:00 never fires
+# Check:   systemctl --user list-timers --all;  journalctl --user -u 30-nightly -f
+# Run now: systemctl --user start 30-nightly.service
+# Remove:  systemctl --user disable --now 30-nightly.timer
+#
+# Why systemd and not cron (docs/research/dgx-spark.md, R6, checked 16 Oct 2026): long
+# jobs must survive the hard power-offs and thermal stops users report, so they run
+# under systemd with Restart=on-failure, RestartSec=30 and journald logs; the generation
+# step skips people already on disk, so a restart resumes. R6's own example is a SYSTEM
+# unit (sudo systemctl enable --now ...); scripts/spark/README.md says how to use this
+# file that way, which also lets it order after docker.service.
+#
+# Documentation: scripts/spark/README.md in the repository.
+
+[Unit]
+Description=Bundle nightly learning loop (teacher -> student -> sealed exam -> scoreboard)
+# A user unit cannot order itself after the system's docker.service; 20-run-loop.sh
+# waits for the teacher's health check instead.
+# Stop retrying after three failed starts within four hours instead of looping all
+# night. NOT VERIFIED against R6: StartLimit* are standard systemd directives.
+StartLimitIntervalSec=4h
+StartLimitBurst=3
+
+[Service]
+# simple rather than oneshot: the loop runs for hours and the timer will not start a
+# second copy while this one is active. NOT VERIFIED: whether this systemd accepts
+# Restart= on a Type=oneshot unit, which is why oneshot is not used.
+Type=simple
+# %h is the user's home. Edit if the repository is not at ~/bundle.
+WorkingDirectory=%h/bundle
+ExecStart=%h/bundle/scripts/spark/20-run-loop.sh
+Restart=on-failure
+RestartSec=30
+# uv installs to ~/.local/bin, which a user service's PATH may not include.
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+# Parameter overrides for 20-run-loop.sh (PEOPLE=..., DEVICE=..., GEN_TIME_BUDGET_MIN=...)
+# and, if one is ever needed, a token: ~/.config/bundle/env, mode 600, never in the
+# repository (R6). The leading "-" makes a missing file harmless. NOT VERIFIED against R6.
+EnvironmentFile=-%h/.config/bundle/env
+StandardOutput=journal
+StandardError=journal
+# Let a running stage finish writing before the unit is killed.
+TimeoutStopSec=600
+KillMode=mixed
+Nice=5
+
+[Install]
+WantedBy=default.target
