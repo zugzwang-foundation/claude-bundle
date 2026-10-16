@@ -1,5 +1,5 @@
 # Bundle (claude-bundle)
-<!-- CI badge: added in W7 -->
+[![CI](https://github.com/zugzwang-foundation/claude-bundle/actions/workflows/ci.yml/badge.svg)](https://github.com/zugzwang-foundation/claude-bundle/actions/workflows/ci.yml)
 
 Status: DRAFT — work in progress; the foundation is being laid (BDL-3). Where it stands: [STATUS.md](STATUS.md).
 
